@@ -1,0 +1,1 @@
+﻿select * from Users Where (Contact = 0341029531 AND Password = 123)
