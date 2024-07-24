@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,4 +28,5 @@ namespace Login_User
             public static String LastNameUser 
             { get; set; }
         }
+
 }

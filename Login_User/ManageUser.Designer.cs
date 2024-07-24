@@ -48,6 +48,10 @@
             this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
             this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
             this.UserControlPanel = new System.Windows.Forms.Label();
+            this.BtnCreate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCSharpDataSet)).BeginInit();
@@ -55,7 +59,9 @@
             // 
             // ListUsers
             // 
-            this.ListUsers.AllowUserToOrderColumns = true;
+            this.ListUsers.AccessibleName = "AccesListUser";
+            this.ListUsers.AllowUserToAddRows = false;
+            this.ListUsers.AllowUserToDeleteRows = false;
             this.ListUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -87,11 +93,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ListUsers.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ListUsers.Location = new System.Drawing.Point(12, 138);
+            this.ListUsers.Location = new System.Drawing.Point(12, 90);
             this.ListUsers.Name = "ListUsers";
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
-            this.ListUsers.Size = new System.Drawing.Size(900, 346);
+            this.ListUsers.Size = new System.Drawing.Size(900, 277);
             this.ListUsers.TabIndex = 9;
             // 
             // idDataGridViewTextBoxColumn
@@ -203,24 +209,99 @@
             // 
             // UserControlPanel
             // 
-            this.UserControlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.UserControlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UserControlPanel.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserControlPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.UserControlPanel.Location = new System.Drawing.Point(328, 23);
+            this.UserControlPanel.Location = new System.Drawing.Point(321, 26);
             this.UserControlPanel.Name = "UserControlPanel";
-            this.UserControlPanel.Size = new System.Drawing.Size(329, 31);
+            this.UserControlPanel.Size = new System.Drawing.Size(329, 40);
             this.UserControlPanel.TabIndex = 14;
             this.UserControlPanel.Text = " Manage Users";
             this.UserControlPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // BtnCreate
+            // 
+            this.BtnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCreate.BorderRadius = 10;
+            this.BtnCreate.CheckedState.Parent = this.BtnCreate;
+            this.BtnCreate.CustomImages.Parent = this.BtnCreate;
+            this.BtnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.BtnCreate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreate.ForeColor = System.Drawing.Color.White;
+            this.BtnCreate.HoverState.Parent = this.BtnCreate;
+            this.BtnCreate.Location = new System.Drawing.Point(225, 420);
+            this.BtnCreate.Name = "BtnCreate";
+            this.BtnCreate.ShadowDecoration.Parent = this.BtnCreate;
+            this.BtnCreate.Size = new System.Drawing.Size(100, 30);
+            this.BtnCreate.TabIndex = 16;
+            this.BtnCreate.Text = "Create";
+            this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.BorderRadius = 10;
+            this.btnUpdate.CheckedState.Parent = this.btnUpdate;
+            this.btnUpdate.CustomImages.Parent = this.btnUpdate;
+            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.HoverState.Parent = this.btnUpdate;
+            this.btnUpdate.Location = new System.Drawing.Point(352, 420);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
+            this.btnUpdate.Size = new System.Drawing.Size(100, 30);
+            this.btnUpdate.TabIndex = 17;
+            this.btnUpdate.Text = "Update";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderRadius = 10;
+            this.btnDelete.CheckedState.Parent = this.btnDelete;
+            this.btnDelete.CustomImages.Parent = this.btnDelete;
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.HoverState.Parent = this.btnDelete;
+            this.btnDelete.Location = new System.Drawing.Point(485, 420);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
+            this.btnDelete.Size = new System.Drawing.Size(100, 30);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrint.BorderRadius = 10;
+            this.btnPrint.CheckedState.Parent = this.btnPrint;
+            this.btnPrint.CustomImages.Parent = this.btnPrint;
+            this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.HoverState.Parent = this.btnPrint;
+            this.btnPrint.Location = new System.Drawing.Point(625, 420);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
+            this.btnPrint.Size = new System.Drawing.Size(100, 30);
+            this.btnPrint.TabIndex = 19;
+            this.btnPrint.Text = "Print";
             // 
             // ManageUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(924, 496);
+            this.ClientSize = new System.Drawing.Size(924, 474);
+            this.Controls.Add(this.btnPrint);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.BtnCreate);
             this.Controls.Add(this.UserControlPanel);
             this.Controls.Add(this.ListUsers);
             this.Controls.Add(this.BtnExit);
@@ -255,5 +336,9 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn supervisorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn adminDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Label UserControlPanel;
+        private Guna.UI2.WinForms.Guna2Button BtnCreate;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }

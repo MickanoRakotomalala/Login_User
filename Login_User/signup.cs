@@ -16,6 +16,7 @@ namespace Login_User
 {
     public partial class signup : Form
     {
+        SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Perso\\PROJET C#\\Login\\Login_User\\dbCSharp.mdf\";Integrated Security=True;Connect Timeout=30");
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -36,6 +37,7 @@ namespace Login_User
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
+            RefreshData();
             this.Close();
         }
 
@@ -85,6 +87,16 @@ namespace Login_User
         private void signup_Load(object sender, EventArgs e)
         {
             //this.Register.Enabled = false;  
+        }
+
+        private void RefreshData()
+        {
+            string sql = "Select * from Users";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataSet set = new DataSet();
+            adapter.Fill(set);
+            //ManageUser.ListUsers.DataSource = set.Tables[0];
         }
 
         Image IMG;
@@ -144,7 +156,6 @@ namespace Login_User
             }
             else
             {
-                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Perso\\PROJET C#\\Login\\Login_User\\dbCSharp.mdf\";Integrated Security=True;Connect Timeout=30");
                 SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@User ,@Supervisor,@Admin)", conn);
                 conn.Open();
 

@@ -42,5 +42,11 @@ namespace Login_User
             RefreshData();
 
         }
+
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            signup snup = new signup();
+            snup.Show();
+        }
     }
 }
