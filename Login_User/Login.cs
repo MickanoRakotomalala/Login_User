@@ -19,7 +19,7 @@ namespace Login_User
 {
     public partial class Login : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=INFOSMC;Initial Catalog=dbCSharp;Integrated Security=True");
+        SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Perso\\PROJET C#\\Login\\Login_User\\dbCSharp.mdf\";Integrated Security=True;Connect Timeout=30");
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (

@@ -144,7 +144,7 @@ namespace Login_User
             }
             else
             {
-                SqlConnection conn = new SqlConnection("Data Source=INFOSMC;Initial Catalog=dbCSharp;Integrated Security=True");
+                SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Perso\\PROJET C#\\Login\\Login_User\\dbCSharp.mdf\";Integrated Security=True;Connect Timeout=30");
                 SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@User ,@Supervisor,@Admin)", conn);
                 conn.Open();
 

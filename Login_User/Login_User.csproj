@@ -239,6 +239,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="dbCSharp.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbCSharp_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dbCSharp.mdf</DependentUpon>
+    </Content>
     <Content Include="Properties\Asset\Add_User.ico" />
     <Content Include="Properties\Asset\Address_User.png" />
     <Content Include="Properties\Asset\icons8_add_user_male_240px.png" />
