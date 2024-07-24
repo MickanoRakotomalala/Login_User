@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login_User", "Login_User.cs
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DB.Net", "..\DB.Net\DB.Net.sqlproj", "{9A648656-8D2B-4A83-A9FE-362848FC8411}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{D53E097E-D5CF-47BE-881C-2E769ABD77DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,12 @@ Global
 		{9A648656-8D2B-4A83-A9FE-362848FC8411}.Release|x86.ActiveCfg = Release|Any CPU
 		{9A648656-8D2B-4A83-A9FE-362848FC8411}.Release|x86.Build.0 = Release|Any CPU
 		{9A648656-8D2B-4A83-A9FE-362848FC8411}.Release|x86.Deploy.0 = Release|Any CPU
+		{D53E097E-D5CF-47BE-881C-2E769ABD77DE}.Debug|Any CPU.ActiveCfg = Debug
+		{D53E097E-D5CF-47BE-881C-2E769ABD77DE}.Debug|x86.ActiveCfg = Debug
+		{D53E097E-D5CF-47BE-881C-2E769ABD77DE}.Login|Any CPU.ActiveCfg = Debug
+		{D53E097E-D5CF-47BE-881C-2E769ABD77DE}.Login|x86.ActiveCfg = Debug
+		{D53E097E-D5CF-47BE-881C-2E769ABD77DE}.Release|Any CPU.ActiveCfg = Release
+		{D53E097E-D5CF-47BE-881C-2E769ABD77DE}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
