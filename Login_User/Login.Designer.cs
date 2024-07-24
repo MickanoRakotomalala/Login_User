@@ -258,7 +258,7 @@
             this.UserName.Name = "UserName";
             this.UserName.PasswordChar = '\0';
             this.UserName.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.UserName.PlaceholderText = "Number User";
+            this.UserName.PlaceholderText = "Phone or Registration Number";
             this.UserName.SelectedText = "";
             this.UserName.ShadowDecoration.Parent = this.UserName;
             this.UserName.Size = new System.Drawing.Size(226, 32);

@@ -149,11 +149,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbCSharpDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dbNETDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dbNETDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,17 +207,6 @@
     </None>
     <None Include="dbCSharpDataSet.xss">
       <DependentUpon>dbCSharpDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbNETDataSet.xsc">
-      <DependentUpon>dbNETDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="dbNETDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dbNETDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dbNETDataSet.xss">
-      <DependentUpon>dbNETDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

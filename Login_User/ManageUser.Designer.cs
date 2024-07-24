@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ListUsers = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,25 +48,24 @@
             this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
             this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
             this.UserControlPanel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCSharpDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // ListUsers
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ListUsers.AllowUserToOrderColumns = true;
+            this.ListUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ListUsers.AutoGenerateColumns = false;
+            this.ListUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ListUsers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.ListUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.ListUsers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.ListUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
@@ -79,7 +78,7 @@
             this.userDataGridViewCheckBoxColumn,
             this.supervisorDataGridViewCheckBoxColumn,
             this.adminDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.usersBindingSource;
+            this.ListUsers.DataSource = this.usersBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,13 +86,13 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 138);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(827, 346);
-            this.dataGridView1.TabIndex = 9;
+            this.ListUsers.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ListUsers.Location = new System.Drawing.Point(12, 138);
+            this.ListUsers.Name = "ListUsers";
+            this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListUsers.ShowCellErrors = false;
+            this.ListUsers.Size = new System.Drawing.Size(900, 346);
+            this.ListUsers.TabIndex = 9;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -191,7 +190,7 @@
             this.BtnExit.ForeColor = System.Drawing.Color.White;
             this.BtnExit.HoverState.Parent = this.BtnExit;
             this.BtnExit.Image = global::Login_User.Properties.Resources.Exit1;
-            this.BtnExit.Location = new System.Drawing.Point(821, 2);
+            this.BtnExit.Location = new System.Drawing.Point(894, 2);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.ShadowDecoration.Parent = this.BtnExit;
             this.BtnExit.Size = new System.Drawing.Size(27, 24);
@@ -211,7 +210,7 @@
             this.UserControlPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UserControlPanel.Location = new System.Drawing.Point(328, 23);
             this.UserControlPanel.Name = "UserControlPanel";
-            this.UserControlPanel.Size = new System.Drawing.Size(256, 31);
+            this.UserControlPanel.Size = new System.Drawing.Size(329, 31);
             this.UserControlPanel.TabIndex = 14;
             this.UserControlPanel.Text = " Manage Users";
             this.UserControlPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,16 +220,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(851, 496);
+            this.ClientSize = new System.Drawing.Size(924, 496);
             this.Controls.Add(this.UserControlPanel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ListUsers);
             this.Controls.Add(this.BtnExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ManageUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage_User";
             this.Load += new System.EventHandler(this.UserControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ListUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCSharpDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -239,7 +238,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button BtnExit;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ListUsers;
         private dbCSharpDataSet dbCSharpDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private dbCSharpDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
