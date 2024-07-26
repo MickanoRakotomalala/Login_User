@@ -26,19 +26,8 @@ namespace Login_User.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INFOSMC\\SQLEXPRESS;Initial Catalog=dbNET;Integrated Security=True;Poo" +
-            "ling=False;Encrypt=True;TrustServerCertificate=True")]
-        public string dbNETConnectionString {
-            get {
-                return ((string)(this["dbNETConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=INFOSMC;Initial Catalog=dbCSharp;Integrated Security=True;Encrypt=Fal" +
-            "se")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;" +
+            "Integrated Security=True;Connect Timeout=30")]
         public string dbCSharpConnectionString {
             get {
                 return ((string)(this["dbCSharpConnectionString"]));

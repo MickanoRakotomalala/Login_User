@@ -16,7 +16,7 @@ namespace Login_User
 {
     public partial class signup : Form
     {
-        SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"E:\\Perso\\PROJET C#\\Login\\Login_User\\dbCSharp.mdf\";Integrated Security=True;Connect Timeout=30");
+        SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -141,6 +141,12 @@ namespace Login_User
             else if (this.ConfirmPassword.Text == "")
             {
                 MessageBox.Show("This field must not be empty", "Password Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ConfirmPassword.TabIndex = 7;
+                ConfirmPassword.Focus();
+            }
+            else if (this.Password.Text != this.ConfirmPassword.Text)
+            {
+                MessageBox.Show("incorrect Password", "Check Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ConfirmPassword.TabIndex = 7;
                 ConfirmPassword.Focus();
             }
