@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login_User", "Login_User.csproj", "{1AE93748-E183-4904-A85F-4FB52AF01982}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{DF63B5A4-377B-47AF-93EB-4A227B97DC15}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,16 +41,17 @@ Global
 		{1AE93748-E183-4904-A85F-4FB52AF01982}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1AE93748-E183-4904-A85F-4FB52AF01982}.Release|x86.ActiveCfg = Release|x86
 		{1AE93748-E183-4904-A85F-4FB52AF01982}.Release|x86.Build.0 = Release|x86
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.All|Any CPU.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.All|x86.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.Debug|Any CPU.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.Debug|x86.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.DefaultBuild|Any CPU.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.DefaultBuild|x86.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.Login|Any CPU.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.Login|x86.ActiveCfg = Debug
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.Release|Any CPU.ActiveCfg = Release
-		{DF63B5A4-377B-47AF-93EB-4A227B97DC15}.Release|x86.ActiveCfg = Release
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.All|Any CPU.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.All|x86.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Debug|Any CPU.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Debug|Any CPU.Build.0 = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Debug|x86.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.DefaultBuild|Any CPU.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.DefaultBuild|x86.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Login|Any CPU.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Login|x86.ActiveCfg = Debug
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Release|Any CPU.ActiveCfg = Release
+		{506786DC-F8F3-4D48-BEF3-A75EC1530F2C}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

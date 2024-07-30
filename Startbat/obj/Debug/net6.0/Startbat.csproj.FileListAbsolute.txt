@@ -1,0 +1,15 @@
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.GeneratedMSBuildEditorConfig.editorconfig
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.AssemblyInfoInputs.cache
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.AssemblyInfo.cs
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.csproj.CoreCompileInputs.cache
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.sourcelink.json
+E:\Perso\PROJET C#\Login\Startbat\bin\Debug\net6.0\Startbat.exe
+E:\Perso\PROJET C#\Login\Startbat\bin\Debug\net6.0\Startbat.deps.json
+E:\Perso\PROJET C#\Login\Startbat\bin\Debug\net6.0\Startbat.runtimeconfig.json
+E:\Perso\PROJET C#\Login\Startbat\bin\Debug\net6.0\Startbat.dll
+E:\Perso\PROJET C#\Login\Startbat\bin\Debug\net6.0\Startbat.pdb
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.dll
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\refint\Startbat.dll
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.pdb
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\Startbat.genruntimeconfig.cache
+E:\Perso\PROJET C#\Login\Startbat\obj\Debug\net6.0\ref\Startbat.dll
