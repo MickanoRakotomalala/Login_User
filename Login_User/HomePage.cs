@@ -24,7 +24,7 @@ namespace Login_User
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Your are sure to Logout this Session ?", "Exit", MessageBoxButtons.YesNo);
+            DialogResult dialog = MessageBox.Show("Your are sure to Logout this Session ?", "Logout", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
                 this.Close();

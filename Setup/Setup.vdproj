@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_190287ED515349FE869874DF549A7F31"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1C32F0C81363403C8D076094A971E977"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,12 +58,6 @@
         "Entry"
         {
         "MsmKey" = "8:_8CF8E075EF6B475F85205950C46D3BAD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_A9F19451799249738DF848A1A8B4EDD7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -154,6 +154,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -161,17 +169,17 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_BBA9C1F72B014774923B47A2CC293BE4"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_FF581DD33FD7405C971F8842CFF7C91E"
             {
-            "Name" = "8:Fullcontrol.exe"
+            "Name" = "8:FullcontrolFolder.exe"
             "Condition" = "8:"
-            "Object" = "8:_A9F19451799249738DF848A1A8B4EDD7"
+            "Object" = "8:_190287ED515349FE869874DF549A7F31"
             "FileType" = "3:2"
             "InstallAction" = "3:2"
             "Arguments" = "8:/Commit"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_A6C78F62_4326_4813_BA60_660819954A03"
+            "Identifier" = "8:_C6F4E758_7983_4FDF_A82C_E3904F1DBFE8"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -198,6 +206,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_190287ED515349FE869874DF549A7F31"
+            {
+            "SourcePath" = "8:..\\..\\..\\Tutoman CSharp\\FullcontrolFolder.exe"
+            "TargetName" = "8:FullcontrolFolder.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:TRUE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C32F0C81363403C8D076094A971E977"
             {
             "SourcePath" = "8:..\\Login_User\\Properties\\Asset\\Login.ico"
@@ -313,26 +341,6 @@
             {
             "SourcePath" = "8:..\\Login_User\\dbCSharpDataSet.Designer.cs"
             "TargetName" = "8:dbCSharpDataSet.Designer.cs"
-            "Tag" = "8:"
-            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A9F19451799249738DF848A1A8B4EDD7"
-            {
-            "SourcePath" = "8:..\\..\\..\\Tutoman CSharp\\Fullcontrol.exe"
-            "TargetName" = "8:Fullcontrol.exe"
             "Tag" = "8:"
             "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
             "Condition" = "8:"
@@ -487,9 +495,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
+        "ProductName" = "8:Setup_Login"
         "ProductCode" = "8:{FF3F7DD4-8638-4AFE-B773-373369AE6150}"
-        "PackageCode" = "8:{C5255D2F-24A7-4998-845F-3510F5088499}"
+        "PackageCode" = "8:{33EA5DFC-409A-4DE5-9410-0BF1131CEED8}"
         "UpgradeCode" = "8:{26F9E28C-18EC-4251-A1DE-B6B0806F391D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -497,12 +505,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Login"
+        "Manufacturer" = "8:Mickano_Corporation"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Mickano"
+        "ARPCONTACT" = "8:Mickano Corporation"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
