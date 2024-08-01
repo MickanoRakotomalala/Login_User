@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_190287ED515349FE869874DF549A7F31"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1C32F0C81363403C8D076094A971E977"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,6 +46,12 @@
         "Entry"
         {
         "MsmKey" = "8:_6C090581DC484A8696A82E54795CFC3B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_89389F235E164DCC81EC3C76856F268E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -169,17 +169,17 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_FF581DD33FD7405C971F8842CFF7C91E"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_3CAE28B62B9B458C8E296A22568BD7F9"
             {
             "Name" = "8:FullcontrolFolder.exe"
             "Condition" = "8:"
-            "Object" = "8:_190287ED515349FE869874DF549A7F31"
+            "Object" = "8:_89389F235E164DCC81EC3C76856F268E"
             "FileType" = "3:2"
             "InstallAction" = "3:2"
             "Arguments" = "8:/Commit"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_C6F4E758_7983_4FDF_A82C_E3904F1DBFE8"
+            "Identifier" = "8:_E5330058_7230_4D1F_9A62_376337BE4305"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -206,26 +206,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_190287ED515349FE869874DF549A7F31"
-            {
-            "SourcePath" = "8:..\\..\\..\\Tutoman CSharp\\FullcontrolFolder.exe"
-            "TargetName" = "8:FullcontrolFolder.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1C32F0C81363403C8D076094A971E977"
             {
             "SourcePath" = "8:..\\Login_User\\Properties\\Asset\\Login.ico"
@@ -328,6 +308,26 @@
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_89389F235E164DCC81EC3C76856F268E"
+            {
+            "SourcePath" = "8:..\\..\\..\\TutomanCSharp\\FullcontrolFolder.exe"
+            "TargetName" = "8:FullcontrolFolder.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:TRUE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
@@ -497,7 +497,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_Login"
         "ProductCode" = "8:{FF3F7DD4-8638-4AFE-B773-373369AE6150}"
-        "PackageCode" = "8:{33EA5DFC-409A-4DE5-9410-0BF1131CEED8}"
+        "PackageCode" = "8:{22541BAF-D21C-4977-8C35-4EC9C05106BB}"
         "UpgradeCode" = "8:{26F9E28C-18EC-4251-A1DE-B6B0806F391D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
