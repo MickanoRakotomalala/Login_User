@@ -31,7 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ListUsers = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbCSharpDataSet = new Login_User.dbCSharpDataSet();
+            this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
+            this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
+            this.UserControlPanel = new System.Windows.Forms.Label();
+            this.BtnCreate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderMaleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -43,15 +52,6 @@
             this.userDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.supervisorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbCSharpDataSet = new Login_User.dbCSharpDataSet();
-            this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
-            this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
-            this.UserControlPanel = new System.Windows.Forms.Label();
-            this.BtnCreate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCSharpDataSet)).BeginInit();
@@ -72,7 +72,7 @@
             this.ListUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.ListUsers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.ListUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
+            this.Id,
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
             this.genderMaleDataGridViewCheckBoxColumn,
@@ -94,84 +94,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ListUsers.DefaultCellStyle = dataGridViewCellStyle1;
             this.ListUsers.Location = new System.Drawing.Point(12, 90);
+            this.ListUsers.MultiSelect = false;
             this.ListUsers.Name = "ListUsers";
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
             this.ListUsers.Size = new System.Drawing.Size(900, 277);
             this.ListUsers.TabIndex = 9;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // genderMaleDataGridViewCheckBoxColumn
-            // 
-            this.genderMaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderMale";
-            this.genderMaleDataGridViewCheckBoxColumn.HeaderText = "GenderMale";
-            this.genderMaleDataGridViewCheckBoxColumn.Name = "genderMaleDataGridViewCheckBoxColumn";
-            // 
-            // genderFemaleDataGridViewCheckBoxColumn
-            // 
-            this.genderFemaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderFemale";
-            this.genderFemaleDataGridViewCheckBoxColumn.HeaderText = "GenderFemale";
-            this.genderFemaleDataGridViewCheckBoxColumn.Name = "genderFemaleDataGridViewCheckBoxColumn";
-            // 
-            // contactDataGridViewTextBoxColumn
-            // 
-            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
-            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
-            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // profilDataGridViewImageColumn
-            // 
-            this.profilDataGridViewImageColumn.DataPropertyName = "Profil";
-            this.profilDataGridViewImageColumn.HeaderText = "Profil";
-            this.profilDataGridViewImageColumn.Name = "profilDataGridViewImageColumn";
-            // 
-            // userDataGridViewCheckBoxColumn
-            // 
-            this.userDataGridViewCheckBoxColumn.DataPropertyName = "User";
-            this.userDataGridViewCheckBoxColumn.HeaderText = "User";
-            this.userDataGridViewCheckBoxColumn.Name = "userDataGridViewCheckBoxColumn";
-            // 
-            // supervisorDataGridViewCheckBoxColumn
-            // 
-            this.supervisorDataGridViewCheckBoxColumn.DataPropertyName = "Supervisor";
-            this.supervisorDataGridViewCheckBoxColumn.HeaderText = "Supervisor";
-            this.supervisorDataGridViewCheckBoxColumn.Name = "supervisorDataGridViewCheckBoxColumn";
-            // 
-            // adminDataGridViewCheckBoxColumn
-            // 
-            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
-            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
-            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
+            this.ListUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentClick);
             // 
             // usersBindingSource
             // 
@@ -273,6 +202,7 @@
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnPrint
             // 
@@ -291,6 +221,80 @@
             this.btnPrint.Size = new System.Drawing.Size(100, 30);
             this.btnPrint.TabIndex = 19;
             this.btnPrint.Text = "Print";
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // genderMaleDataGridViewCheckBoxColumn
+            // 
+            this.genderMaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderMale";
+            this.genderMaleDataGridViewCheckBoxColumn.HeaderText = "GenderMale";
+            this.genderMaleDataGridViewCheckBoxColumn.Name = "genderMaleDataGridViewCheckBoxColumn";
+            // 
+            // genderFemaleDataGridViewCheckBoxColumn
+            // 
+            this.genderFemaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderFemale";
+            this.genderFemaleDataGridViewCheckBoxColumn.HeaderText = "GenderFemale";
+            this.genderFemaleDataGridViewCheckBoxColumn.Name = "genderFemaleDataGridViewCheckBoxColumn";
+            // 
+            // contactDataGridViewTextBoxColumn
+            // 
+            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
+            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
+            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // profilDataGridViewImageColumn
+            // 
+            this.profilDataGridViewImageColumn.DataPropertyName = "Profil";
+            this.profilDataGridViewImageColumn.HeaderText = "Profil";
+            this.profilDataGridViewImageColumn.Name = "profilDataGridViewImageColumn";
+            // 
+            // userDataGridViewCheckBoxColumn
+            // 
+            this.userDataGridViewCheckBoxColumn.DataPropertyName = "User";
+            this.userDataGridViewCheckBoxColumn.HeaderText = "User";
+            this.userDataGridViewCheckBoxColumn.Name = "userDataGridViewCheckBoxColumn";
+            // 
+            // supervisorDataGridViewCheckBoxColumn
+            // 
+            this.supervisorDataGridViewCheckBoxColumn.DataPropertyName = "Supervisor";
+            this.supervisorDataGridViewCheckBoxColumn.HeaderText = "Supervisor";
+            this.supervisorDataGridViewCheckBoxColumn.Name = "supervisorDataGridViewCheckBoxColumn";
+            // 
+            // adminDataGridViewCheckBoxColumn
+            // 
+            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
+            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
+            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
             // 
             // ManageUser
             // 
@@ -323,7 +327,12 @@
         private dbCSharpDataSet dbCSharpDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private dbCSharpDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label UserControlPanel;
+        private Guna.UI2.WinForms.Guna2Button BtnCreate;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn genderMaleDataGridViewCheckBoxColumn;
@@ -335,10 +344,5 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn userDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn supervisorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn adminDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.Label UserControlPanel;
-        private Guna.UI2.WinForms.Guna2Button BtnCreate;
-        private Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }
