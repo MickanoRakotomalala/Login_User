@@ -16,17 +16,19 @@ namespace databaseInstaller
         [RunInstaller(true)]
     public class DatabaseInstaller : Installer
     {
-            public override void Install(IDictionary stateSaver)
-            {
-                base.Install(stateSaver);
-                ExecuteSqlScript();
-            }
+        public override void Install(IDictionary stateSaver)
+        {
+            base.Install(stateSaver);
+            ExecuteSqlScript();
+        }
 
-            private void ExecuteSqlScript()
-            {
-                string scriptPath = Path.Combine(Context.Parameters["targetdir"], "reset_database.sql");
-                string connectionString = "data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30";
+        private void ExecuteSqlScript()
+        {
+            string scriptPath = Context.Parameters["scriptPath"];
+            string connectionString = Context.Parameters["connectionString"];
 
+            if (File.Exists(scriptPath))
+            {
                 string script = File.ReadAllText(scriptPath);
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -36,5 +38,10 @@ namespace databaseInstaller
                     command.ExecuteNonQuery();
                 }
             }
+            else
+            {
+                throw new FileNotFoundException($"Script file not found: {scriptPath}");
+            }
+        }
     }
 }

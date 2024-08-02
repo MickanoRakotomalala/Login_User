@@ -61,7 +61,7 @@ namespace Login_User
 
                     DeleteRowFromDatabase(id);
                     ListUsers.Rows.RemoveAt(selectedRowIndex);
-                    MessageBox.Show(id.ToString());
+                    //MessageBox.Show(id.ToString());
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace Login_User
                     {
                         command.Parameters.AddWithValue("@Id", id);
                         command.ExecuteNonQuery();
-                        MessageBox.Show(id.ToString());
+                        //MessageBox.Show(id.ToString());
                     }
                 }
                 catch (Exception ex)
