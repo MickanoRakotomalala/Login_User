@@ -39,6 +39,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_4FCC8211D7454959AAE8E5B0E5214DD5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_56692F8D53DE48D6A7659051338656F2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -46,12 +52,6 @@
         "Entry"
         {
         "MsmKey" = "8:_6C090581DC484A8696A82E54795CFC3B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_89389F235E164DCC81EC3C76856F268E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -169,17 +169,17 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_3CAE28B62B9B458C8E296A22568BD7F9"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_012E18A738AB45D1814F1247FF74FB5C"
             {
             "Name" = "8:FullcontrolFolder.exe"
             "Condition" = "8:"
-            "Object" = "8:_89389F235E164DCC81EC3C76856F268E"
+            "Object" = "8:_4FCC8211D7454959AAE8E5B0E5214DD5"
             "FileType" = "3:2"
             "InstallAction" = "3:2"
             "Arguments" = "8:/Commit"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_E5330058_7230_4D1F_9A62_376337BE4305"
+            "Identifier" = "8:_97ECC920_8BD9_4252_9C36_96171CDD4493"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -297,10 +297,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_56692F8D53DE48D6A7659051338656F2"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4FCC8211D7454959AAE8E5B0E5214DD5"
             {
-            "SourcePath" = "8:..\\Login_User\\dbCSharpDataSet.xsd"
-            "TargetName" = "8:dbCSharpDataSet.xsd"
+            "SourcePath" = "8:..\\..\\..\\TutomanCSharp\\FullcontrolFolder.exe"
+            "TargetName" = "8:FullcontrolFolder.exe"
             "Tag" = "8:"
             "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
             "Condition" = "8:"
@@ -317,17 +317,17 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_89389F235E164DCC81EC3C76856F268E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_56692F8D53DE48D6A7659051338656F2"
             {
-            "SourcePath" = "8:..\\..\\..\\TutomanCSharp\\FullcontrolFolder.exe"
-            "TargetName" = "8:FullcontrolFolder.exe"
+            "SourcePath" = "8:..\\Login_User\\dbCSharpDataSet.xsd"
+            "TargetName" = "8:dbCSharpDataSet.xsd"
             "Tag" = "8:"
             "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:TRUE"
+            "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
