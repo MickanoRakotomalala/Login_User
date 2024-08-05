@@ -130,24 +130,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B337400A7E4FEE8150FA52D212F8E9DD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_055C5D60D42614307688BDEE890C8BC2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3B74BC85DDA58D4D50631AA496A54194"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3FEBA09AA2CD452094A016CE4FAA25DD"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -161,6 +143,24 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3FCADFB2220521270A906EF04B46391B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B337400A7E4FEE8150FA52D212F8E9DD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_055C5D60D42614307688BDEE890C8BC2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3B74BC85DDA58D4D50631AA496A54194"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -248,20 +248,6 @@
             "Identifier" = "8:_97ECC920_8BD9_4252_9C36_96171CDD4493"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F2140B8F8F084717B048EEEE147C8FDD"
-            {
-            "Name" = "8:Sortie principale from databaseInstaller (Active)"
-            "Condition" = "8:"
-            "Object" = "8:_1C53E103BAFA450098DDA709C370101F"
-            "FileType" = "3:1"
-            "InstallAction" = "3:1"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_A62BA415_4D78_451C_8000_26F113AD2F7A"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:/scriptPath=\"[TARGETDIR]\\reset_database.sql\" /connectionString=\"data source=(LocalDB)\\\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30\""
             }
         }
         "DefaultFeature"

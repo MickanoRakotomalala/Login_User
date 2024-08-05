@@ -50,9 +50,10 @@ namespace Login_User
             this.BtnExit.TabIndex = 6;
         }
 
+
         private void Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            signup signup = new signup();
+            signup signup = new signup(this);
             signup.Show();
 
         }

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
 using System.Security.AccessControl;
+using System.Data.SqlTypes;
 
 namespace Login_User
 {
@@ -29,6 +30,23 @@ namespace Login_User
             int nHeightEllipse // width of ellipse
         );
 
+        private ManageUser manageUser;
+        private Login login;
+        public signup(ManageUser manageUser)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.manageUser = manageUser;
+            //manageUser.RefreshData();
+        }        
+        public signup(Login login)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.login = login;
+        }        
         public signup()
         {
             InitializeComponent();
@@ -38,7 +56,6 @@ namespace Login_User
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            RefreshData();
             this.Close();
         }
 
@@ -187,7 +204,12 @@ namespace Login_User
                 cmd.ExecuteNonQuery();
                 conn.Close();
 
+                if (this.manageUser != null)
+                {
+                    manageUser.RefreshData();
+                }
                 MessageBox.Show("Successfully saved");
+
             }
 
         }

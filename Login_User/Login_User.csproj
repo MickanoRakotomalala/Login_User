@@ -260,6 +260,7 @@
     <Content Include="Properties\Asset\Hidden_password.png" />
     <Content Include="Properties\Asset\home.ico" />
     <Content Include="Properties\Asset\ForgotPassword.png" />
+    <Content Include="Properties\Asset\User_list.ico" />
     <Content Include="Properties\Asset\Login_Form_icon.ico" />
     <Content Include="Properties\Asset\logout.ico" />
     <Content Include="Properties\Asset\Show_password.png" />

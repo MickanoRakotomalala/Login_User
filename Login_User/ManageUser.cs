@@ -17,6 +17,31 @@ namespace Login_User
         public ManageUser()
         {
             InitializeComponent();
+            buttonCenter();
+        }
+        private void buttonCenter()
+        {
+            // Obtient la taille du formulaire
+            int formWidth = this.ClientSize.Width;
+            int formHeight = this.ClientSize.Height;
+
+            // Obtient la taille du bouton
+            int buttonWidthbtnPanel = btnPanel.Width;
+            int buttonHeightbtnPanel = btnPanel.Height;
+
+            // Calcule les nouvelles positions pour centrer le bouton
+            int newButtonX = (formWidth - buttonWidthbtnPanel) / 2;
+            //int newButtonY = (formHeight - buttonWidthbtnPanel)/1;
+            int newButtonY = 85;
+
+            // Applique les nouvelles positions
+            btnPanel.Location = new System.Drawing.Point(newButtonX, newButtonY);
+        }
+        // S'assure que le bouton reste centré si la taille du formulaire change
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            buttonCenter();
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -24,7 +49,7 @@ namespace Login_User
             this.Close();
         }
 
-        private void RefreshData()
+        public void RefreshData()
         {
             SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
             string sql = "Select * from Users";
@@ -46,9 +71,9 @@ namespace Login_User
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            signup snup = new signup();
+            signup snup = new signup(this);
             snup.Show();
-            this.Close();
+            //this.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -61,7 +86,7 @@ namespace Login_User
 
                     DeleteRowFromDatabase(id);
                     ListUsers.Rows.RemoveAt(selectedRowIndex);
-                    //MessageBox.Show(id.ToString());
+                    MessageBox.Show("Deleting a line successfully");
                 }
                 else
                 {
@@ -81,13 +106,18 @@ namespace Login_User
                     {
                         command.Parameters.AddWithValue("@Id", id);
                         command.ExecuteNonQuery();
-                        //MessageBox.Show(id.ToString());
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Une erreur s'est produite lors de la suppression : " + ex.Message);
+                    MessageBox.Show("An error occurred while deleting : " + ex.Message);
                 }
+        }
+
+        public void AddDataToGrid(string FirstName, string LastName, bool GenderMale,bool GenderFemale,string Contact, string Address, string Password,Image Profil)
+        {
+            string[] row = { FirstName, LastName,GenderMale.ToString(),GenderFemale.ToString(),Contact,Address,Password,Profil.ToString()};
+            ListUsers.Rows.Add(row);
         }
 
         private void ListUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
