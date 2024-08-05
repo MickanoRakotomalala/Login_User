@@ -78,6 +78,8 @@ namespace Login_User
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            DialogResult dialog = MessageBox.Show("You are sure to delete this line ?", "Delete Line selected", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
             {
                 if (ListUsers.SelectedRows.Count > 0)
                 {
