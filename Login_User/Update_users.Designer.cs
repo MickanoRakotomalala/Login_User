@@ -1,6 +1,6 @@
 ﻿namespace Login_User
 {
-    partial class signup
+    partial class Update_users
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_users));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.RegisterAccount = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -74,16 +74,16 @@
             this.RegisterAccount.AutoSize = true;
             this.RegisterAccount.Font = new System.Drawing.Font("Calisto MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterAccount.ForeColor = System.Drawing.Color.White;
-            this.RegisterAccount.Location = new System.Drawing.Point(25, 339);
+            this.RegisterAccount.Location = new System.Drawing.Point(28, 339);
             this.RegisterAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RegisterAccount.Name = "RegisterAccount";
-            this.RegisterAccount.Size = new System.Drawing.Size(232, 32);
+            this.RegisterAccount.Size = new System.Drawing.Size(218, 32);
             this.RegisterAccount.TabIndex = 12;
-            this.RegisterAccount.Text = "Register Account";
+            this.RegisterAccount.Text = "Update Account";
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::Login_User.Properties.Resources.icons8_add_user_male_240px;
+            this.guna2PictureBox1.Image = global::Login_User.Properties.Resources.Edit_user;
             this.guna2PictureBox1.Location = new System.Drawing.Point(22, 79);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
@@ -159,13 +159,14 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(446, 24);
+            this.label1.Location = new System.Drawing.Point(355, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 31);
+            this.label1.Size = new System.Drawing.Size(374, 39);
             this.label1.TabIndex = 13;
-            this.label1.Text = "User Profile";
+            this.label1.Text = "Update User Profile";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Profil
@@ -176,7 +177,7 @@
             this.Profil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Profil.ErrorImage = null;
             this.Profil.InitialImage = null;
-            this.Profil.Location = new System.Drawing.Point(642, 65);
+            this.Profil.Location = new System.Drawing.Point(642, 72);
             this.Profil.Name = "Profil";
             this.Profil.ShadowDecoration.Parent = this.Profil;
             this.Profil.Size = new System.Drawing.Size(142, 139);
@@ -476,7 +477,7 @@
             this.btnAddPicture.HoverState.Parent = this.btnAddPicture;
             this.btnAddPicture.Image = global::Login_User.Properties.Resources.Add_Picture;
             this.btnAddPicture.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddPicture.Location = new System.Drawing.Point(628, 209);
+            this.btnAddPicture.Location = new System.Drawing.Point(628, 216);
             this.btnAddPicture.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddPicture.Name = "btnAddPicture";
             this.btnAddPicture.ShadowDecoration.Parent = this.btnAddPicture;
@@ -485,17 +486,17 @@
             this.btnAddPicture.Text = "Profile Picture";
             this.btnAddPicture.Click += new System.EventHandler(this.btnAddPicture_Click);
             // 
-            // signup
+            // Update_users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(801, 565);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddPicture);
             this.Controls.Add(this.Admin);
             this.Controls.Add(this.Supervisor);
             this.Controls.Add(this.User);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Profil);
             this.Controls.Add(this.Register);
             this.Controls.Add(this.ShowPassword);
@@ -511,10 +512,10 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "signup";
+            this.Name = "Update_users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "signup";
-            this.Load += new System.EventHandler(this.signup_Load);
+            this.Text = "Update_users";
+            this.Load += new System.EventHandler(this.Update_users_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -529,22 +530,22 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button BtnExit;
-        private Guna.UI2.WinForms.Guna2TextBox FirstName;
-        private Guna.UI2.WinForms.Guna2TextBox LastName;
-        private Guna.UI2.WinForms.Guna2CheckBox GenderFemale;
-        private Guna.UI2.WinForms.Guna2TextBox Contact;
-        private Guna.UI2.WinForms.Guna2TextBox Address;
-        private Guna.UI2.WinForms.Guna2TextBox Password;
-        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
-        private Guna.UI2.WinForms.Guna2CheckBox ShowPassword;
         private System.Windows.Forms.Label RegisterAccount;
-        private Guna.UI2.WinForms.Guna2Button Register;
-        private Guna.UI2.WinForms.Guna2PictureBox Profil;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2CheckBox GenderMale;
-        private Guna.UI2.WinForms.Guna2CheckBox User;
-        private Guna.UI2.WinForms.Guna2CheckBox Supervisor;
-        private Guna.UI2.WinForms.Guna2CheckBox Admin;
-        private Guna.UI2.WinForms.Guna2Button btnAddPicture;
+        public Guna.UI2.WinForms.Guna2TextBox FirstName;
+        public Guna.UI2.WinForms.Guna2TextBox LastName;
+        public Guna.UI2.WinForms.Guna2CheckBox GenderFemale;
+        public Guna.UI2.WinForms.Guna2TextBox Contact;
+        public Guna.UI2.WinForms.Guna2TextBox Address;
+        public Guna.UI2.WinForms.Guna2TextBox Password;
+        public Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
+        public Guna.UI2.WinForms.Guna2CheckBox ShowPassword;
+        public Guna.UI2.WinForms.Guna2Button Register;
+        public Guna.UI2.WinForms.Guna2PictureBox Profil;
+        public Guna.UI2.WinForms.Guna2CheckBox GenderMale;
+        public Guna.UI2.WinForms.Guna2CheckBox User;
+        public Guna.UI2.WinForms.Guna2CheckBox Supervisor;
+        public Guna.UI2.WinForms.Guna2CheckBox Admin;
+        public Guna.UI2.WinForms.Guna2Button btnAddPicture;
     }
 }

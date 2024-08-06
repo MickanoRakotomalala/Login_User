@@ -62,6 +62,7 @@
             // ListUsers
             // 
             this.ListUsers.AccessibleName = "AccesListUser";
+            this.ListUsers.AllowDrop = true;
             this.ListUsers.AllowUserToAddRows = false;
             this.ListUsers.AllowUserToDeleteRows = false;
             this.ListUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -103,7 +104,7 @@
             this.ListUsers.ShowCellErrors = false;
             this.ListUsers.Size = new System.Drawing.Size(900, 345);
             this.ListUsers.TabIndex = 9;
-            this.ListUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentClick);
+            this.ListUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentDoubleClick);
             // 
             // Id
             // 
@@ -209,11 +210,12 @@
             // 
             this.UserControlPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UserControlPanel.Font = new System.Drawing.Font("Calisto MT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserControlPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.UserControlPanel.Location = new System.Drawing.Point(321, 25);
+            this.UserControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.UserControlPanel.Font = new System.Drawing.Font("Calisto MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserControlPanel.ForeColor = System.Drawing.Color.White;
+            this.UserControlPanel.Location = new System.Drawing.Point(12, 0);
             this.UserControlPanel.Name = "UserControlPanel";
-            this.UserControlPanel.Size = new System.Drawing.Size(329, 40);
+            this.UserControlPanel.Size = new System.Drawing.Size(900, 60);
             this.UserControlPanel.TabIndex = 14;
             this.UserControlPanel.Text = " Manage Users";
             this.UserControlPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,6 +256,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(98, 29);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 

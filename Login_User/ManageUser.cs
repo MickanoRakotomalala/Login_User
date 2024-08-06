@@ -14,10 +14,17 @@ namespace Login_User
 {
     public partial class ManageUser : Form
     {
+        private Update_users update_Users;
         public ManageUser()
         {
             InitializeComponent();
             buttonCenter();
+        }        
+        public ManageUser(Update_users update_Users)
+        {
+            InitializeComponent();
+            buttonCenter();
+            this.update_Users = update_Users;
         }
         private void buttonCenter()
         {
@@ -115,9 +122,40 @@ namespace Login_User
                 }
         }
 
-        private void ListUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            Update_users update_Users = new Update_users();
+            update_Users.ShowDialog();
+        }
 
+        private void ListUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) 
+            {
+                DataGridViewRow row = this.ListUsers.Rows[e.RowIndex];
+                Update_users.FirstName.Text = row.Cells["FirstName"].Value.ToString();
+            }    
+            Update_users update_Users = new Update_users();
+            update_Users.ShowDialog();
+        }
+
+        public void UpdateRowFromDatabase(int id)
+        {
+            SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+            try
+            {
+                conn.Open();
+                string query = "DELETE FROM Users WHERE Id = @Id";
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while deleting : " + ex.Message);
+            }
         }
     }
 }

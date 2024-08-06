@@ -186,6 +186,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Update_users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_users.Designer.cs">
+      <DependentUpon>Update_users.cs</DependentUpon>
+    </Compile>
     <Compile Include="signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_users.resx">
+      <DependentUpon>Update_users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signup.resx">
       <DependentUpon>signup.cs</DependentUpon>
@@ -261,6 +270,7 @@
     <Content Include="Properties\Asset\Hidden_password.png" />
     <Content Include="Properties\Asset\home.ico" />
     <Content Include="Properties\Asset\ForgotPassword.png" />
+    <Content Include="Properties\Asset\Edit_user.png" />
     <Content Include="Properties\Asset\User_list.ico" />
     <Content Include="Properties\Asset\Login_Form_icon.ico" />
     <Content Include="Properties\Asset\logout.ico" />
