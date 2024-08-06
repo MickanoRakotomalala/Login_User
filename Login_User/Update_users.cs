@@ -116,8 +116,10 @@ namespace Login_User
                 Supervisor.Visible = true;
                 Admin.Visible = true;
             }
+
             //this.Register.Enabled = false;  
         }
+
         Image IMG;
         private void Register_Click(object sender, EventArgs e)
         {

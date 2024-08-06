@@ -9,23 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.AccessControl;
+using System.Drawing.Imaging;
 
 namespace Login_User
 {
     public partial class ManageUser : Form
     {
-        private Update_users update_Users;
+
         public ManageUser()
         {
             InitializeComponent();
             buttonCenter();
         }        
-        public ManageUser(Update_users update_Users)
-        {
-            InitializeComponent();
-            buttonCenter();
-            this.update_Users = update_Users;
-        }
         private void buttonCenter()
         {
             // Obtient la taille du formulaire
@@ -69,7 +64,7 @@ namespace Login_User
 
         private void UserControl_Load(object sender, EventArgs e)
         {
-            profilDataGridViewImageColumn.Visible = true;
+            Profil.Visible = true;
             // TODO: cette ligne de code charge les données dans la table 'dbCSharpDataSet.Users'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.usersTableAdapter.Fill(this.dbCSharpDataSet.Users);
             RefreshData();
@@ -124,21 +119,9 @@ namespace Login_User
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Update_users update_Users = new Update_users();
-            update_Users.ShowDialog();
+            Update_users upD = new Update_users();
+            upD.ShowDialog();
         }
-
-        private void ListUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) 
-            {
-                DataGridViewRow row = this.ListUsers.Rows[e.RowIndex];
-                Update_users.FirstName.Text = row.Cells["FirstName"].Value.ToString();
-            }    
-            Update_users update_Users = new Update_users();
-            update_Users.ShowDialog();
-        }
-
         public void UpdateRowFromDatabase(int id)
         {
             SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
@@ -155,6 +138,27 @@ namespace Login_User
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while deleting : " + ex.Message);
+            }
+        }
+
+        private void ListUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                Update_users up = new Update_users();
+                DataGridViewRow row = this.ListUsers.Rows[e.RowIndex];
+                up.FirstName.Text = row.Cells["FirstName"].Value.ToString();
+                up.LastName.Text = row.Cells["LastName"].Value.ToString();
+                string GenderM = row.Cells["GenderMale"].Value.ToString();
+                up.GenderMale.Checked = Convert.ToBoolean(GenderM);
+                string GenderF = row.Cells["GenderFemale"].Value.ToString();
+                up.GenderFemale.Checked = Convert.ToBoolean(GenderF);
+
+                //string img = row.Cells["Profil"].Value.ToString();
+                //up.Profil.Image = Convert.TO(img);
+
+                MessageBox.Show(up.GenderFemale.Checked.ToString());
+                up.ShowDialog();
             }
         }
     }

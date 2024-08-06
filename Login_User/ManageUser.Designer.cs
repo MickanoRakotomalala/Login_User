@@ -33,17 +33,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUser));
             this.ListUsers = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderMaleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.genderFemaleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.profilDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.userDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.supervisorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GenderMale = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.GenderFemale = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profil = new System.Windows.Forms.DataGridViewImageColumn();
+            this.User = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Supervisor = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Admin = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCSharpDataSet = new Login_User.dbCSharpDataSet();
             this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
@@ -76,17 +76,17 @@
             this.ListUsers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.ListUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.genderMaleDataGridViewCheckBoxColumn,
-            this.genderFemaleDataGridViewCheckBoxColumn,
-            this.contactDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.profilDataGridViewImageColumn,
-            this.userDataGridViewCheckBoxColumn,
-            this.supervisorDataGridViewCheckBoxColumn,
-            this.adminDataGridViewCheckBoxColumn});
+            this.FirstName,
+            this.LastName,
+            this.GenderMale,
+            this.GenderFemale,
+            this.Contact,
+            this.Address,
+            this.Password,
+            this.Profil,
+            this.User,
+            this.Supervisor,
+            this.Admin});
             this.ListUsers.DataSource = this.usersBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -96,13 +96,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ListUsers.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ListUsers.Location = new System.Drawing.Point(12, 128);
+            this.ListUsers.Location = new System.Drawing.Point(16, 158);
+            this.ListUsers.Margin = new System.Windows.Forms.Padding(4);
             this.ListUsers.MultiSelect = false;
             this.ListUsers.Name = "ListUsers";
             this.ListUsers.ReadOnly = true;
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
-            this.ListUsers.Size = new System.Drawing.Size(900, 345);
+            this.ListUsers.Size = new System.Drawing.Size(1200, 425);
             this.ListUsers.TabIndex = 9;
             this.ListUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentDoubleClick);
             // 
@@ -114,82 +115,82 @@
             this.Id.ReadOnly = true;
             this.Id.Visible = false;
             // 
-            // firstNameDataGridViewTextBoxColumn
+            // FirstName
             // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
-            // lastNameDataGridViewTextBoxColumn
+            // LastName
             // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "LastName";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
-            // genderMaleDataGridViewCheckBoxColumn
+            // GenderMale
             // 
-            this.genderMaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderMale";
-            this.genderMaleDataGridViewCheckBoxColumn.HeaderText = "GenderMale";
-            this.genderMaleDataGridViewCheckBoxColumn.Name = "genderMaleDataGridViewCheckBoxColumn";
-            this.genderMaleDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.GenderMale.DataPropertyName = "GenderMale";
+            this.GenderMale.HeaderText = "GenderMale";
+            this.GenderMale.Name = "GenderMale";
+            this.GenderMale.ReadOnly = true;
             // 
-            // genderFemaleDataGridViewCheckBoxColumn
+            // GenderFemale
             // 
-            this.genderFemaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderFemale";
-            this.genderFemaleDataGridViewCheckBoxColumn.HeaderText = "GenderFemale";
-            this.genderFemaleDataGridViewCheckBoxColumn.Name = "genderFemaleDataGridViewCheckBoxColumn";
-            this.genderFemaleDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.GenderFemale.DataPropertyName = "GenderFemale";
+            this.GenderFemale.HeaderText = "GenderFemale";
+            this.GenderFemale.Name = "GenderFemale";
+            this.GenderFemale.ReadOnly = true;
             // 
-            // contactDataGridViewTextBoxColumn
+            // Contact
             // 
-            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
-            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
-            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
-            this.contactDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Contact.DataPropertyName = "Contact";
+            this.Contact.HeaderText = "Contact";
+            this.Contact.Name = "Contact";
+            this.Contact.ReadOnly = true;
             // 
-            // addressDataGridViewTextBoxColumn
+            // Address
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // Password
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
             // 
-            // profilDataGridViewImageColumn
+            // Profil
             // 
-            this.profilDataGridViewImageColumn.DataPropertyName = "Profil";
-            this.profilDataGridViewImageColumn.HeaderText = "Profil";
-            this.profilDataGridViewImageColumn.Name = "profilDataGridViewImageColumn";
-            this.profilDataGridViewImageColumn.ReadOnly = true;
+            this.Profil.DataPropertyName = "Profil";
+            this.Profil.HeaderText = "Profil";
+            this.Profil.Name = "Profil";
+            this.Profil.ReadOnly = true;
             // 
-            // userDataGridViewCheckBoxColumn
+            // User
             // 
-            this.userDataGridViewCheckBoxColumn.DataPropertyName = "User";
-            this.userDataGridViewCheckBoxColumn.HeaderText = "User";
-            this.userDataGridViewCheckBoxColumn.Name = "userDataGridViewCheckBoxColumn";
-            this.userDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.User.DataPropertyName = "User";
+            this.User.HeaderText = "User";
+            this.User.Name = "User";
+            this.User.ReadOnly = true;
             // 
-            // supervisorDataGridViewCheckBoxColumn
+            // Supervisor
             // 
-            this.supervisorDataGridViewCheckBoxColumn.DataPropertyName = "Supervisor";
-            this.supervisorDataGridViewCheckBoxColumn.HeaderText = "Supervisor";
-            this.supervisorDataGridViewCheckBoxColumn.Name = "supervisorDataGridViewCheckBoxColumn";
-            this.supervisorDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.Supervisor.DataPropertyName = "Supervisor";
+            this.Supervisor.HeaderText = "Supervisor";
+            this.Supervisor.Name = "Supervisor";
+            this.Supervisor.ReadOnly = true;
             // 
-            // adminDataGridViewCheckBoxColumn
+            // Admin
             // 
-            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
-            this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
-            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
-            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.Admin.DataPropertyName = "Admin";
+            this.Admin.HeaderText = "Admin";
+            this.Admin.Name = "Admin";
+            this.Admin.ReadOnly = true;
             // 
             // usersBindingSource
             // 
@@ -213,9 +214,10 @@
             this.UserControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.UserControlPanel.Font = new System.Drawing.Font("Calisto MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserControlPanel.ForeColor = System.Drawing.Color.White;
-            this.UserControlPanel.Location = new System.Drawing.Point(12, 0);
+            this.UserControlPanel.Location = new System.Drawing.Point(16, 0);
+            this.UserControlPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserControlPanel.Name = "UserControlPanel";
-            this.UserControlPanel.Size = new System.Drawing.Size(900, 60);
+            this.UserControlPanel.Size = new System.Drawing.Size(1200, 74);
             this.UserControlPanel.TabIndex = 14;
             this.UserControlPanel.Text = " Manage Users";
             this.UserControlPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -231,10 +233,11 @@
             this.BtnCreate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCreate.ForeColor = System.Drawing.Color.White;
             this.BtnCreate.HoverState.Parent = this.BtnCreate;
-            this.BtnCreate.Location = new System.Drawing.Point(25, 5);
+            this.BtnCreate.Location = new System.Drawing.Point(34, 6);
+            this.BtnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.ShadowDecoration.Parent = this.BtnCreate;
-            this.BtnCreate.Size = new System.Drawing.Size(98, 29);
+            this.BtnCreate.Size = new System.Drawing.Size(131, 36);
             this.BtnCreate.TabIndex = 16;
             this.BtnCreate.Text = "Create";
             this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
@@ -250,10 +253,11 @@
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(149, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(200, 6);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
-            this.btnUpdate.Size = new System.Drawing.Size(98, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(131, 36);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -269,10 +273,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(273, 5);
+            this.btnDelete.Location = new System.Drawing.Point(366, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(98, 29);
+            this.btnDelete.Size = new System.Drawing.Size(131, 36);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -288,10 +293,11 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.HoverState.Parent = this.btnPrint;
-            this.btnPrint.Location = new System.Drawing.Point(398, 5);
+            this.btnPrint.Location = new System.Drawing.Point(531, 6);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
-            this.btnPrint.Size = new System.Drawing.Size(100, 29);
+            this.btnPrint.Size = new System.Drawing.Size(133, 36);
             this.btnPrint.TabIndex = 19;
             this.btnPrint.Text = "Print";
             // 
@@ -307,25 +313,27 @@
             this.btnPanel.Controls.Add(this.btnUpdate, 1, 0);
             this.btnPanel.Controls.Add(this.btnDelete, 2, 0);
             this.btnPanel.Controls.Add(this.BtnCreate, 0, 0);
-            this.btnPanel.Location = new System.Drawing.Point(236, 87);
+            this.btnPanel.Location = new System.Drawing.Point(315, 107);
+            this.btnPanel.Margin = new System.Windows.Forms.Padding(4);
             this.btnPanel.Name = "btnPanel";
-            this.btnPanel.Padding = new System.Windows.Forms.Padding(2);
+            this.btnPanel.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnPanel.RowCount = 1;
             this.btnPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.btnPanel.Size = new System.Drawing.Size(503, 39);
+            this.btnPanel.Size = new System.Drawing.Size(671, 48);
             this.btnPanel.TabIndex = 20;
             // 
             // ManageUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(924, 486);
+            this.ClientSize = new System.Drawing.Size(1232, 598);
             this.Controls.Add(this.btnPanel);
             this.Controls.Add(this.UserControlPanel);
             this.Controls.Add(this.ListUsers);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -339,7 +347,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView ListUsers;
         private dbCSharpDataSet dbCSharpDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private dbCSharpDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
@@ -348,18 +355,19 @@
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn genderMaleDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn genderFemaleDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn profilDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn userDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn supervisorDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn adminDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TableLayoutPanel btnPanel;
+        public System.Windows.Forms.DataGridView ListUsers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn GenderMale;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn GenderFemale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridViewImageColumn Profil;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn User;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Supervisor;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Admin;
     }
 }
