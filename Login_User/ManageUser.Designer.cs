@@ -98,6 +98,7 @@
             this.ListUsers.Location = new System.Drawing.Point(12, 128);
             this.ListUsers.MultiSelect = false;
             this.ListUsers.Name = "ListUsers";
+            this.ListUsers.ReadOnly = true;
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
             this.ListUsers.Size = new System.Drawing.Size(900, 345);
@@ -117,66 +118,77 @@
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // genderMaleDataGridViewCheckBoxColumn
             // 
             this.genderMaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderMale";
             this.genderMaleDataGridViewCheckBoxColumn.HeaderText = "GenderMale";
             this.genderMaleDataGridViewCheckBoxColumn.Name = "genderMaleDataGridViewCheckBoxColumn";
+            this.genderMaleDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // genderFemaleDataGridViewCheckBoxColumn
             // 
             this.genderFemaleDataGridViewCheckBoxColumn.DataPropertyName = "GenderFemale";
             this.genderFemaleDataGridViewCheckBoxColumn.HeaderText = "GenderFemale";
             this.genderFemaleDataGridViewCheckBoxColumn.Name = "genderFemaleDataGridViewCheckBoxColumn";
+            this.genderFemaleDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // contactDataGridViewTextBoxColumn
             // 
             this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
             this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
             this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
+            this.contactDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // passwordDataGridViewTextBoxColumn
             // 
             this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
             this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // profilDataGridViewImageColumn
             // 
             this.profilDataGridViewImageColumn.DataPropertyName = "Profil";
             this.profilDataGridViewImageColumn.HeaderText = "Profil";
             this.profilDataGridViewImageColumn.Name = "profilDataGridViewImageColumn";
+            this.profilDataGridViewImageColumn.ReadOnly = true;
             // 
             // userDataGridViewCheckBoxColumn
             // 
             this.userDataGridViewCheckBoxColumn.DataPropertyName = "User";
             this.userDataGridViewCheckBoxColumn.HeaderText = "User";
             this.userDataGridViewCheckBoxColumn.Name = "userDataGridViewCheckBoxColumn";
+            this.userDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // supervisorDataGridViewCheckBoxColumn
             // 
             this.supervisorDataGridViewCheckBoxColumn.DataPropertyName = "Supervisor";
             this.supervisorDataGridViewCheckBoxColumn.HeaderText = "Supervisor";
             this.supervisorDataGridViewCheckBoxColumn.Name = "supervisorDataGridViewCheckBoxColumn";
+            this.supervisorDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // adminDataGridViewCheckBoxColumn
             // 
             this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
             this.adminDataGridViewCheckBoxColumn.HeaderText = "Admin";
             this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
+            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // usersBindingSource
             // 

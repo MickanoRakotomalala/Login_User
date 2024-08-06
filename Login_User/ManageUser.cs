@@ -62,7 +62,7 @@ namespace Login_User
 
         private void UserControl_Load(object sender, EventArgs e)
         {
-            profilDataGridViewImageColumn.Visible = false;
+            profilDataGridViewImageColumn.Visible = true;
             // TODO: cette ligne de code charge les données dans la table 'dbCSharpDataSet.Users'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.usersTableAdapter.Fill(this.dbCSharpDataSet.Users);
             RefreshData();
@@ -72,8 +72,7 @@ namespace Login_User
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             signup snup = new signup(this);
-            snup.Show();
-            //this.Close();
+            snup.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

@@ -41,10 +41,9 @@
             this.SessionName.AutoSize = true;
             this.SessionName.Font = new System.Drawing.Font("Calisto MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SessionName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SessionName.Location = new System.Drawing.Point(24, 48);
-            this.SessionName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SessionName.Location = new System.Drawing.Point(4, 39);
             this.SessionName.Name = "SessionName";
-            this.SessionName.Size = new System.Drawing.Size(197, 34);
+            this.SessionName.Size = new System.Drawing.Size(162, 28);
             this.SessionName.TabIndex = 0;
             this.SessionName.Text = "Session Name";
             this.SessionName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -62,11 +61,10 @@
             this.BtnLogout.HoverState.Parent = this.BtnLogout;
             this.BtnLogout.Image = global::Login_User.Properties.Resources.logout;
             this.BtnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.BtnLogout.Location = new System.Drawing.Point(89, 4);
-            this.BtnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLogout.Location = new System.Drawing.Point(67, 3);
             this.BtnLogout.Name = "BtnLogout";
             this.BtnLogout.ShadowDecoration.Parent = this.BtnLogout;
-            this.BtnLogout.Size = new System.Drawing.Size(132, 30);
+            this.BtnLogout.Size = new System.Drawing.Size(99, 24);
             this.BtnLogout.TabIndex = 9;
             this.BtnLogout.Text = "Logout";
             this.BtnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -80,24 +78,22 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.BtnLogout, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.SessionName, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(783, 2);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(711, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(225, 82);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(169, 67);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 446);
+            this.ClientSize = new System.Drawing.Size(885, 501);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";

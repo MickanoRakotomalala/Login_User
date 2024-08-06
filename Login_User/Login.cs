@@ -54,7 +54,7 @@ namespace Login_User
         private void Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             signup signup = new signup(this);
-            signup.Show();
+            signup.ShowDialog();
 
         }
 
@@ -63,6 +63,7 @@ namespace Login_User
             
         }
 
+        //LOGIN
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             conn.Open();
@@ -76,12 +77,13 @@ namespace Login_User
                 Globals.NameUser = reader["FirstName"].ToString();
                 Globals.LastNameUser = reader["LastName"].ToString();
                 HomePage homePage = new HomePage();
-                homePage.Show();
+                this.Hide();
+                homePage.ShowDialog();
+                this.Close();
             }
             else
             {
                 Error.Text = "User or password not found ?";
-                //MessageBox.Show("User or Password Not found", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.UserName.TabIndex = 1;
                 this.UserName.Focus();
             }
@@ -183,14 +185,14 @@ namespace Login_User
         private void ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Forgot_password forgot_Password = new Forgot_password();
-            forgot_Password.Show();
+            forgot_Password.ShowDialog();
         }
 
 
         private void ManageUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ManageUser manageUser = new ManageUser();
-            manageUser.Show();
+            manageUser.ShowDialog();
 
         }
     }

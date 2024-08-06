@@ -104,6 +104,19 @@ namespace Login_User
 
         private void signup_Load(object sender, EventArgs e)
         {
+            if(this.login != null)
+            {
+                User.Visible = false;
+                Supervisor.Visible = false;
+                Admin.Visible = false;
+                User.Checked = true;
+            }
+            else if (this.manageUser != null)
+            {
+                User.Visible = true;
+                Supervisor.Visible = true;
+                Admin.Visible = true;
+            }
             //this.Register.Enabled = false;  
         }
 
@@ -198,9 +211,9 @@ namespace Login_User
                 cmd.Parameters.AddWithValue("@Address",Address.Text);
                 cmd.Parameters.AddWithValue("@Password",Password.Text);
                 cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
-                cmd.Parameters.AddWithValue("@User",SqlDbType.Bit).Value = false;
-                cmd.Parameters.AddWithValue("@Supervisor",SqlDbType.Bit).Value =false;
-                cmd.Parameters.AddWithValue("@Admin",SqlDbType.Bit).Value =false;
+                cmd.Parameters.AddWithValue("@User",SqlDbType.Bit).Value = User.Checked;
+                cmd.Parameters.AddWithValue("@Supervisor",SqlDbType.Bit).Value = Supervisor.Checked;
+                cmd.Parameters.AddWithValue("@Admin",SqlDbType.Bit).Value = Admin.Checked;
                 cmd.ExecuteNonQuery();
                 conn.Close();
 

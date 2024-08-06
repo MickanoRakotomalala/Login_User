@@ -46,6 +46,9 @@
             this.FirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
             this.ProfilePicture = new System.Windows.Forms.Label();
+            this.User = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.Supervisor = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.Admin = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Profil)).BeginInit();
@@ -190,8 +193,8 @@
             this.Register.HoverState.Parent = this.Register;
             this.Register.Image = global::Login_User.Properties.Resources.Register;
             this.Register.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Register.Location = new System.Drawing.Point(470, 434);
-            this.Register.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Register.Location = new System.Drawing.Point(470, 477);
+            this.Register.Margin = new System.Windows.Forms.Padding(2);
             this.Register.Name = "Register";
             this.Register.ShadowDecoration.Parent = this.Register;
             this.Register.Size = new System.Drawing.Size(138, 27);
@@ -218,7 +221,7 @@
             this.ConfirmPassword.HoverState.Parent = this.ConfirmPassword;
             this.ConfirmPassword.IconLeft = global::Login_User.Properties.Resources.Password_User;
             this.ConfirmPassword.Location = new System.Drawing.Point(549, 356);
-            this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.ConfirmPassword.Name = "ConfirmPassword";
             this.ConfirmPassword.PasswordChar = '\0';
             this.ConfirmPassword.PlaceholderText = "Password Confirmation";
@@ -248,7 +251,7 @@
             this.Password.HoverState.Parent = this.Password;
             this.Password.IconLeft = global::Login_User.Properties.Resources.Password_User;
             this.Password.Location = new System.Drawing.Point(294, 356);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '\0';
             this.Password.PlaceholderText = "Password";
@@ -278,7 +281,7 @@
             this.Address.HoverState.Parent = this.Address;
             this.Address.IconLeft = global::Login_User.Properties.Resources.Address_User;
             this.Address.Location = new System.Drawing.Point(548, 301);
-            this.Address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Address.Margin = new System.Windows.Forms.Padding(4);
             this.Address.Name = "Address";
             this.Address.PasswordChar = '\0';
             this.Address.PlaceholderText = "Address";
@@ -307,7 +310,7 @@
             this.Contact.HoverState.Parent = this.Contact;
             this.Contact.IconLeft = global::Login_User.Properties.Resources.Contact_User;
             this.Contact.Location = new System.Drawing.Point(292, 301);
-            this.Contact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Contact.Margin = new System.Windows.Forms.Padding(4);
             this.Contact.Name = "Contact";
             this.Contact.PasswordChar = '\0';
             this.Contact.PlaceholderText = "Contact : 034 12 345 67";
@@ -337,7 +340,7 @@
             this.LastName.HoverState.Parent = this.LastName;
             this.LastName.IconLeft = global::Login_User.Properties.Resources.New_User;
             this.LastName.Location = new System.Drawing.Point(548, 236);
-            this.LastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LastName.Margin = new System.Windows.Forms.Padding(4);
             this.LastName.Name = "LastName";
             this.LastName.PasswordChar = '\0';
             this.LastName.PlaceholderText = "Last Name";
@@ -366,7 +369,7 @@
             this.FirstName.HoverState.Parent = this.FirstName;
             this.FirstName.IconLeft = global::Login_User.Properties.Resources.New_User;
             this.FirstName.Location = new System.Drawing.Point(294, 236);
-            this.FirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.FirstName.Name = "FirstName";
             this.FirstName.PasswordChar = '\0';
             this.FirstName.PlaceholderText = "First Name";
@@ -408,12 +411,81 @@
             this.ProfilePicture.TabIndex = 14;
             this.ProfilePicture.Text = "Profile Picture";
             // 
+            // User
+            // 
+            this.User.AutoSize = true;
+            this.User.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.User.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.User.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(140)))), ((int)(((byte)(179)))));
+            this.User.CheckedState.BorderRadius = 0;
+            this.User.CheckedState.BorderThickness = 0;
+            this.User.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.User.Location = new System.Drawing.Point(308, 401);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(48, 17);
+            this.User.TabIndex = 15;
+            this.User.Text = "User";
+            this.User.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.User.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.User.UncheckedState.BorderRadius = 2;
+            this.User.UncheckedState.BorderThickness = 0;
+            this.User.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.User.UseVisualStyleBackColor = true;
+            // 
+            // Supervisor
+            // 
+            this.Supervisor.AutoSize = true;
+            this.Supervisor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Supervisor.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.Supervisor.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(140)))), ((int)(((byte)(179)))));
+            this.Supervisor.CheckedState.BorderRadius = 0;
+            this.Supervisor.CheckedState.BorderThickness = 0;
+            this.Supervisor.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Supervisor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Supervisor.Location = new System.Drawing.Point(308, 424);
+            this.Supervisor.Name = "Supervisor";
+            this.Supervisor.Size = new System.Drawing.Size(76, 17);
+            this.Supervisor.TabIndex = 16;
+            this.Supervisor.Text = "Supervisor";
+            this.Supervisor.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.Supervisor.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Supervisor.UncheckedState.BorderRadius = 2;
+            this.Supervisor.UncheckedState.BorderThickness = 0;
+            this.Supervisor.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Supervisor.UseVisualStyleBackColor = true;
+            // 
+            // Admin
+            // 
+            this.Admin.AutoSize = true;
+            this.Admin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Admin.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.Admin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(140)))), ((int)(((byte)(179)))));
+            this.Admin.CheckedState.BorderRadius = 0;
+            this.Admin.CheckedState.BorderThickness = 0;
+            this.Admin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Admin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Admin.Location = new System.Drawing.Point(308, 447);
+            this.Admin.Name = "Admin";
+            this.Admin.Size = new System.Drawing.Size(55, 17);
+            this.Admin.TabIndex = 17;
+            this.Admin.Text = "Admin";
+            this.Admin.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.Admin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Admin.UncheckedState.BorderRadius = 2;
+            this.Admin.UncheckedState.BorderThickness = 0;
+            this.Admin.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Admin.UseVisualStyleBackColor = true;
+            // 
             // signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(801, 532);
+            this.Controls.Add(this.Admin);
+            this.Controls.Add(this.Supervisor);
+            this.Controls.Add(this.User);
             this.Controls.Add(this.ProfilePicture);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Profil);
@@ -463,5 +535,8 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CheckBox GenderMale;
         private System.Windows.Forms.Label ProfilePicture;
+        private Guna.UI2.WinForms.Guna2CheckBox User;
+        private Guna.UI2.WinForms.Guna2CheckBox Supervisor;
+        private Guna.UI2.WinForms.Guna2CheckBox Admin;
     }
 }
