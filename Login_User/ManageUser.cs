@@ -115,12 +115,6 @@ namespace Login_User
                 }
         }
 
-        public void AddDataToGrid(string FirstName, string LastName, bool GenderMale,bool GenderFemale,string Contact, string Address, string Password,Image Profil)
-        {
-            string[] row = { FirstName, LastName,GenderMale.ToString(),GenderFemale.ToString(),Contact,Address,Password,Profil.ToString()};
-            ListUsers.Rows.Add(row);
-        }
-
         private void ListUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

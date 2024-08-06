@@ -119,17 +119,6 @@ namespace Login_User
             }
             //this.Register.Enabled = false;  
         }
-
-        private void RefreshData()
-        {
-            string sql = "Select * from Users";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataSet set = new DataSet();
-            adapter.Fill(set);
-            //ManageUser.ListUsers.DataSource = set.Tables[0];
-        }
-
         Image IMG;
         private void Register_Click(object sender, EventArgs e)
         {
@@ -183,48 +172,72 @@ namespace Login_User
             }
             else if (this.Profil.Image == null)
             {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "AllImages|*.JPEG;*.BMP;*.GIF;*.PNG;*.TIFF;*.JPG";
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    IMG = Image.FromFile(ofd.FileName);
-                    Profil.Image = IMG;
-                }
+                MessageBox.Show("This field must not be empty", "Profile Picture", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                btnAddPicture.TabIndex = 10;
+                btnAddPicture.Focus();
+                Profil.FillColor = Color.Teal;
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@User ,@Supervisor,@Admin)", conn);
+                SqlCommand commandContact = new SqlCommand("select Contact from Users Where Contact = @contact",conn);
                 conn.Open();
-
-
-                //Get types from PictureBox
-                Image img = Profil.Image;
-                MemoryStream ms = new MemoryStream();
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] bytes = ms.ToArray();
-
-                cmd.Parameters.AddWithValue("@FirstName",FirstName.Text);
-                cmd.Parameters.AddWithValue("@LastName",LastName.Text);
-                cmd.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
-                cmd.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
-                cmd.Parameters.AddWithValue("@Contact",Contact.Text);
-                cmd.Parameters.AddWithValue("@Address",Address.Text);
-                cmd.Parameters.AddWithValue("@Password",Password.Text);
-                cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
-                cmd.Parameters.AddWithValue("@User",SqlDbType.Bit).Value = User.Checked;
-                cmd.Parameters.AddWithValue("@Supervisor",SqlDbType.Bit).Value = Supervisor.Checked;
-                cmd.Parameters.AddWithValue("@Admin",SqlDbType.Bit).Value = Admin.Checked;
-                cmd.ExecuteNonQuery();
-                conn.Close();
-
-                if (this.manageUser != null)
+                commandContact.CommandType = CommandType.Text;
+                commandContact.Parameters.AddWithValue("@contact", Contact.Text);
+                SqlDataReader reader = commandContact.ExecuteReader();
+                if (reader.Read())
                 {
-                    manageUser.RefreshData();
+                    MessageBox.Show("This Contact already exists","Error Contact",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    Contact.TabIndex = 4;
+                    Contact.Focus();
                 }
-                MessageBox.Show("Successfully saved");
+                else
+                {
+                    SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+                    //Add values to Table Users
+                    SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@User ,@Supervisor,@Admin)", conn);
+                    conn.Open();
+
+                    //Get types from PictureBox
+                    Image img = Profil.Image;
+                    MemoryStream ms = new MemoryStream();
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    byte[] bytes = ms.ToArray();
+
+                    cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                    cmd.Parameters.AddWithValue("@LastName", LastName.Text);
+                    cmd.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
+                    cmd.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
+                    cmd.Parameters.AddWithValue("@Contact", Contact.Text);
+                    cmd.Parameters.AddWithValue("@Address", Address.Text);
+                    cmd.Parameters.AddWithValue("@Password", Password.Text);
+                    cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
+                    cmd.Parameters.AddWithValue("@User", SqlDbType.Bit).Value = User.Checked;
+                    cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
+                    cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    if (this.manageUser != null)
+                    {
+                        manageUser.RefreshData();
+                    }
+                    MessageBox.Show("Successfully saved");
+                }
+                conn.Close();
 
             }
 
+        }
+
+        private void btnAddPicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "AllImages|*.JPEG;*.BMP;*.GIF;*.PNG;*.TIFF;*.JPG";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                IMG = Image.FromFile(ofd.FileName);
+                Profil.Image = IMG;
+            }
         }
     }
 }

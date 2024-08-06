@@ -254,6 +254,7 @@
     <Content Include="Login.ico" />
     <Content Include="Properties\Asset\Add_User.ico" />
     <Content Include="Properties\Asset\Address_User.png" />
+    <Content Include="Properties\Asset\Add_Picture.ico" />
     <Content Include="Properties\Asset\icons8_add_user_male_240px.png" />
     <Content Include="Properties\Asset\Contact_User.png" />
     <Content Include="Properties\Asset\Exit.png" />

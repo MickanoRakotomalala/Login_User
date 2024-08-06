@@ -63,6 +63,16 @@ namespace Login_User.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Picture {
+            get {
+                object obj = ResourceManager.GetObject("Add_Picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Address_User {
             get {
                 object obj = ResourceManager.GetObject("Address_User", resourceCulture);
