@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.AccessControl;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace Login_User
 {
@@ -149,15 +150,34 @@ namespace Login_User
                 DataGridViewRow row = this.ListUsers.Rows[e.RowIndex];
                 up.FirstName.Text = row.Cells["FirstName"].Value.ToString();
                 up.LastName.Text = row.Cells["LastName"].Value.ToString();
+
                 string GenderM = row.Cells["GenderMale"].Value.ToString();
                 up.GenderMale.Checked = Convert.ToBoolean(GenderM);
+
                 string GenderF = row.Cells["GenderFemale"].Value.ToString();
                 up.GenderFemale.Checked = Convert.ToBoolean(GenderF);
 
-                //string img = row.Cells["Profil"].Value.ToString();
-                //up.Profil.Image = Convert.TO(img);
+                up.Contact.Text = row.Cells["Contact"].Value.ToString();
+                up.Address.Text = row.Cells["Address"].Value.ToString();
+                up.Password.Text = row.Cells["Password"].Value.ToString();
+                up.ConfirmPassword.Text = row.Cells["Password"].Value.ToString();
 
-                MessageBox.Show(up.GenderFemale.Checked.ToString());
+                string TypeUser = row.Cells["User"].Value.ToString();
+                up.User.Checked = Convert.ToBoolean(TypeUser);
+
+                string TypeSupervisor = row.Cells["Supervisor"].Value.ToString();
+                up.Supervisor.Checked = Convert.ToBoolean(TypeSupervisor);
+
+                string TypeAdmin = row.Cells["Admin"].Value.ToString();
+                up.Admin.Checked = Convert.ToBoolean(TypeAdmin);
+
+                byte[] imageData = (byte[])row.Cells["Profil"].Value;
+                using (MemoryStream ms = new MemoryStream(imageData))
+                {
+                    up.Profil.Image = Image.FromStream(ms);
+                    //up.Profil.Image.Save("Propeties\\Asset");
+                }
+                //MessageBox.Show(up.GenderFemale.Checked.ToString());
                 up.ShowDialog();
             }
         }
