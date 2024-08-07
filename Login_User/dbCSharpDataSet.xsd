@@ -106,7 +106,7 @@ SELECT Id, FirstName, LastName, GenderMale, GenderFemale, Contact, Address, Pass
               <Mapping SourceColumn="Address" DataSetColumn="Address" />
               <Mapping SourceColumn="Password" DataSetColumn="Password" />
               <Mapping SourceColumn="Profil" DataSetColumn="Profil" />
-              <Mapping SourceColumn="User" DataSetColumn="UserAccount" />
+              <Mapping SourceColumn="UserAccount" DataSetColumn="UserAccount" />
               <Mapping SourceColumn="Supervisor" DataSetColumn="Supervisor" />
               <Mapping SourceColumn="Admin" DataSetColumn="Admin" />
             </Mappings>
@@ -120,51 +120,51 @@ SELECT Id, FirstName, LastName, GenderMale, GenderFemale, Contact, Address, Pass
   <xs:element name="dbCSharpDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dbCSharpDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dbCSharpDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Users" msprop:Generator_RowClassName="UsersRow" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_TablePropName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers">
+        <xs:element name="Users" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_TablePropName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowClassName="UsersRow" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
-              <xs:element name="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName">
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName">
+              <xs:element name="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="GenderMale" msprop:Generator_UserColumnName="GenderMale" msprop:Generator_ColumnPropNameInTable="GenderMaleColumn" msprop:Generator_ColumnPropNameInRow="GenderMale" msprop:Generator_ColumnVarNameInTable="columnGenderMale" type="xs:boolean" minOccurs="0" />
-              <xs:element name="GenderFemale" msprop:Generator_UserColumnName="GenderFemale" msprop:Generator_ColumnPropNameInTable="GenderFemaleColumn" msprop:Generator_ColumnPropNameInRow="GenderFemale" msprop:Generator_ColumnVarNameInTable="columnGenderFemale" type="xs:boolean" minOccurs="0" />
-              <xs:element name="Contact" msprop:Generator_UserColumnName="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_ColumnVarNameInTable="columnContact">
+              <xs:element name="GenderMale" msprop:Generator_ColumnPropNameInTable="GenderMaleColumn" msprop:Generator_ColumnPropNameInRow="GenderMale" msprop:Generator_UserColumnName="GenderMale" msprop:Generator_ColumnVarNameInTable="columnGenderMale" type="xs:boolean" minOccurs="0" />
+              <xs:element name="GenderFemale" msprop:Generator_ColumnPropNameInTable="GenderFemaleColumn" msprop:Generator_ColumnPropNameInRow="GenderFemale" msprop:Generator_UserColumnName="GenderFemale" msprop:Generator_ColumnVarNameInTable="columnGenderFemale" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Contact" msprop:Generator_ColumnPropNameInTable="ContactColumn" msprop:Generator_ColumnPropNameInRow="Contact" msprop:Generator_UserColumnName="Contact" msprop:Generator_ColumnVarNameInTable="columnContact">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnVarNameInTable="columnAddress">
+              <xs:element name="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_UserColumnName="Address" msprop:Generator_ColumnVarNameInTable="columnAddress">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Password" msprop:Generator_UserColumnName="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnVarNameInTable="columnPassword">
+              <xs:element name="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_UserColumnName="Password" msprop:Generator_ColumnVarNameInTable="columnPassword">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Profil" msprop:Generator_UserColumnName="Profil" msprop:Generator_ColumnPropNameInTable="ProfilColumn" msprop:Generator_ColumnPropNameInRow="Profil" msprop:Generator_ColumnVarNameInTable="columnProfil" type="xs:base64Binary" />
-              <xs:element name="UserAccount" msprop:Generator_UserColumnName="UserAccount" msprop:Generator_ColumnPropNameInTable="UserAccountColumn" msprop:Generator_ColumnPropNameInRow="UserAccount" msprop:Generator_ColumnVarNameInTable="columnUserAccount" type="xs:boolean" minOccurs="0" />
-              <xs:element name="Supervisor" msprop:Generator_UserColumnName="Supervisor" msprop:Generator_ColumnPropNameInTable="SupervisorColumn" msprop:Generator_ColumnPropNameInRow="Supervisor" msprop:Generator_ColumnVarNameInTable="columnSupervisor" type="xs:boolean" minOccurs="0" />
-              <xs:element name="Admin" msprop:Generator_UserColumnName="Admin" msprop:Generator_ColumnPropNameInTable="AdminColumn" msprop:Generator_ColumnPropNameInRow="Admin" msprop:Generator_ColumnVarNameInTable="columnAdmin" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Profil" msprop:Generator_ColumnPropNameInTable="ProfilColumn" msprop:Generator_ColumnPropNameInRow="Profil" msprop:Generator_UserColumnName="Profil" msprop:Generator_ColumnVarNameInTable="columnProfil" type="xs:base64Binary" />
+              <xs:element name="UserAccount" msprop:Generator_ColumnPropNameInTable="UserAccountColumn" msprop:Generator_ColumnPropNameInRow="UserAccount" msprop:Generator_UserColumnName="UserAccount" msprop:Generator_ColumnVarNameInTable="columnUserAccount" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Supervisor" msprop:Generator_ColumnPropNameInTable="SupervisorColumn" msprop:Generator_ColumnPropNameInRow="Supervisor" msprop:Generator_UserColumnName="Supervisor" msprop:Generator_ColumnVarNameInTable="columnSupervisor" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Admin" msprop:Generator_ColumnPropNameInTable="AdminColumn" msprop:Generator_ColumnPropNameInRow="Admin" msprop:Generator_UserColumnName="Admin" msprop:Generator_ColumnVarNameInTable="columnAdmin" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

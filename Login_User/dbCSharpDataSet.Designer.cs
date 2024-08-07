@@ -1099,7 +1099,7 @@ namespace Login_User.dbCSharpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("Password", "Password");
             tableMapping.ColumnMappings.Add("Profil", "Profil");
-            tableMapping.ColumnMappings.Add("User", "UserAccount");
+            tableMapping.ColumnMappings.Add("UserAccount", "UserAccount");
             tableMapping.ColumnMappings.Add("Supervisor", "Supervisor");
             tableMapping.ColumnMappings.Add("Admin", "Admin");
             this._adapter.TableMappings.Add(tableMapping);

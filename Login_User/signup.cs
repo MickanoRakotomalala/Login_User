@@ -194,7 +194,7 @@ namespace Login_User
                 {
                     SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
                     //Add values to Table Users
-                    SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@User ,@Supervisor,@Admin)", conn);
+                    SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@UserAccount ,@Supervisor,@Admin)", conn);
                     conn.Open();
 
                     //Get types from PictureBox
@@ -211,7 +211,7 @@ namespace Login_User
                     cmd.Parameters.AddWithValue("@Address", Address.Text);
                     cmd.Parameters.AddWithValue("@Password", Password.Text);
                     cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
-                    cmd.Parameters.AddWithValue("@User", SqlDbType.Bit).Value = UserAccount.Checked;
+                    cmd.Parameters.AddWithValue("@UserAccount", SqlDbType.Bit).Value = UserAccount.Checked;
                     cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
                     cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;
                     cmd.ExecuteNonQuery();

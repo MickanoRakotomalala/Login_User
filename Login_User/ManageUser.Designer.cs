@@ -96,13 +96,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ListUsers.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ListUsers.Location = new System.Drawing.Point(12, 128);
+            this.ListUsers.Location = new System.Drawing.Point(16, 158);
+            this.ListUsers.Margin = new System.Windows.Forms.Padding(4);
             this.ListUsers.MultiSelect = false;
             this.ListUsers.Name = "ListUsers";
             this.ListUsers.ReadOnly = true;
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
-            this.ListUsers.Size = new System.Drawing.Size(900, 345);
+            this.ListUsers.Size = new System.Drawing.Size(1200, 425);
             this.ListUsers.TabIndex = 9;
             this.ListUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentDoubleClick);
             // 
@@ -128,9 +129,10 @@
             this.UserControlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.UserControlPanel.Font = new System.Drawing.Font("Calisto MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserControlPanel.ForeColor = System.Drawing.Color.White;
-            this.UserControlPanel.Location = new System.Drawing.Point(12, 0);
+            this.UserControlPanel.Location = new System.Drawing.Point(16, 0);
+            this.UserControlPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.UserControlPanel.Name = "UserControlPanel";
-            this.UserControlPanel.Size = new System.Drawing.Size(900, 60);
+            this.UserControlPanel.Size = new System.Drawing.Size(1200, 74);
             this.UserControlPanel.TabIndex = 14;
             this.UserControlPanel.Text = " Manage Users";
             this.UserControlPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,10 +148,11 @@
             this.BtnCreate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCreate.ForeColor = System.Drawing.Color.White;
             this.BtnCreate.HoverState.Parent = this.BtnCreate;
-            this.BtnCreate.Location = new System.Drawing.Point(25, 5);
+            this.BtnCreate.Location = new System.Drawing.Point(34, 6);
+            this.BtnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.ShadowDecoration.Parent = this.BtnCreate;
-            this.BtnCreate.Size = new System.Drawing.Size(98, 29);
+            this.BtnCreate.Size = new System.Drawing.Size(131, 36);
             this.BtnCreate.TabIndex = 16;
             this.BtnCreate.Text = "Create";
             this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
@@ -165,10 +168,11 @@
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.HoverState.Parent = this.btnUpdate;
-            this.btnUpdate.Location = new System.Drawing.Point(149, 5);
+            this.btnUpdate.Location = new System.Drawing.Point(200, 6);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
-            this.btnUpdate.Size = new System.Drawing.Size(98, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(131, 36);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -184,10 +188,11 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.HoverState.Parent = this.btnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(273, 5);
+            this.btnDelete.Location = new System.Drawing.Point(366, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ShadowDecoration.Parent = this.btnDelete;
-            this.btnDelete.Size = new System.Drawing.Size(98, 29);
+            this.btnDelete.Size = new System.Drawing.Size(131, 36);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -203,10 +208,11 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.HoverState.Parent = this.btnPrint;
-            this.btnPrint.Location = new System.Drawing.Point(398, 5);
+            this.btnPrint.Location = new System.Drawing.Point(531, 6);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.ShadowDecoration.Parent = this.btnPrint;
-            this.btnPrint.Size = new System.Drawing.Size(100, 29);
+            this.btnPrint.Size = new System.Drawing.Size(133, 36);
             this.btnPrint.TabIndex = 19;
             this.btnPrint.Text = "Print";
             // 
@@ -222,13 +228,14 @@
             this.btnPanel.Controls.Add(this.btnUpdate, 1, 0);
             this.btnPanel.Controls.Add(this.btnDelete, 2, 0);
             this.btnPanel.Controls.Add(this.BtnCreate, 0, 0);
-            this.btnPanel.Location = new System.Drawing.Point(236, 87);
+            this.btnPanel.Location = new System.Drawing.Point(315, 107);
+            this.btnPanel.Margin = new System.Windows.Forms.Padding(4);
             this.btnPanel.Name = "btnPanel";
-            this.btnPanel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPanel.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPanel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnPanel.RowCount = 1;
             this.btnPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.btnPanel.Size = new System.Drawing.Size(503, 39);
+            this.btnPanel.Size = new System.Drawing.Size(671, 48);
             this.btnPanel.TabIndex = 20;
             // 
             // Id
@@ -318,14 +325,15 @@
             // 
             // ManageUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(924, 486);
+            this.ClientSize = new System.Drawing.Size(1232, 598);
             this.Controls.Add(this.btnPanel);
             this.Controls.Add(this.UserControlPanel);
             this.Controls.Add(this.ListUsers);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
