@@ -123,24 +123,6 @@ namespace Login_User
             Update_users upD = new Update_users();
             upD.ShowDialog();
         }
-        public void UpdateRowFromDatabase(int id)
-        {
-            SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
-            try
-            {
-                conn.Open();
-                string query = "DELETE FROM Users WHERE Id = @Id";
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@Id", id);
-                    command.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred while deleting : " + ex.Message);
-            }
-        }
 
         private void ListUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -148,6 +130,7 @@ namespace Login_User
             {
                 Update_users up = new Update_users();
                 DataGridViewRow row = this.ListUsers.Rows[e.RowIndex];
+                ID.id = row.Cells["Id"].Value.ToString();
                 up.FirstName.Text = row.Cells["FirstName"].Value.ToString();
                 up.LastName.Text = row.Cells["LastName"].Value.ToString();
 

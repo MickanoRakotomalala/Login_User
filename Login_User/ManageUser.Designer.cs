@@ -32,15 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUser));
             this.ListUsers = new System.Windows.Forms.DataGridView();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dbCSharpDataSet = new Login_User.dbCSharpDataSet();
-            this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
-            this.UserControlPanel = new System.Windows.Forms.Label();
-            this.BtnCreate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPanel = new System.Windows.Forms.TableLayoutPanel();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +44,15 @@
             this.UserAccount = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Supervisor = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Admin = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbCSharpDataSet = new Login_User.dbCSharpDataSet();
+            this.usersTableAdapter = new Login_User.dbCSharpDataSetTableAdapters.UsersTableAdapter();
+            this.UserControlPanel = new System.Windows.Forms.Label();
+            this.BtnCreate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPanel = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.ListUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCSharpDataSet)).BeginInit();
@@ -106,6 +106,91 @@
             this.ListUsers.Size = new System.Drawing.Size(1200, 425);
             this.ListUsers.TabIndex = 9;
             this.ListUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentDoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "FirstName";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "LastName";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // GenderMale
+            // 
+            this.GenderMale.DataPropertyName = "GenderMale";
+            this.GenderMale.HeaderText = "GenderMale";
+            this.GenderMale.Name = "GenderMale";
+            this.GenderMale.ReadOnly = true;
+            // 
+            // GenderFemale
+            // 
+            this.GenderFemale.DataPropertyName = "GenderFemale";
+            this.GenderFemale.HeaderText = "GenderFemale";
+            this.GenderFemale.Name = "GenderFemale";
+            this.GenderFemale.ReadOnly = true;
+            // 
+            // Contact
+            // 
+            this.Contact.DataPropertyName = "Contact";
+            this.Contact.HeaderText = "Contact";
+            this.Contact.Name = "Contact";
+            this.Contact.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.ReadOnly = true;
+            // 
+            // Profil
+            // 
+            this.Profil.DataPropertyName = "Profil";
+            this.Profil.HeaderText = "Profil";
+            this.Profil.Name = "Profil";
+            this.Profil.ReadOnly = true;
+            // 
+            // UserAccount
+            // 
+            this.UserAccount.DataPropertyName = "UserAccount";
+            this.UserAccount.HeaderText = "UserAccount";
+            this.UserAccount.Name = "UserAccount";
+            this.UserAccount.ReadOnly = true;
+            // 
+            // Supervisor
+            // 
+            this.Supervisor.DataPropertyName = "Supervisor";
+            this.Supervisor.HeaderText = "Supervisor";
+            this.Supervisor.Name = "Supervisor";
+            this.Supervisor.ReadOnly = true;
+            // 
+            // Admin
+            // 
+            this.Admin.DataPropertyName = "Admin";
+            this.Admin.HeaderText = "Admin";
+            this.Admin.Name = "Admin";
+            this.Admin.ReadOnly = true;
             // 
             // usersBindingSource
             // 
@@ -238,91 +323,6 @@
             this.btnPanel.Size = new System.Drawing.Size(671, 48);
             this.btnPanel.TabIndex = 20;
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "FirstName";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "LastName";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            // 
-            // GenderMale
-            // 
-            this.GenderMale.DataPropertyName = "GenderMale";
-            this.GenderMale.HeaderText = "GenderMale";
-            this.GenderMale.Name = "GenderMale";
-            this.GenderMale.ReadOnly = true;
-            // 
-            // GenderFemale
-            // 
-            this.GenderFemale.DataPropertyName = "GenderFemale";
-            this.GenderFemale.HeaderText = "GenderFemale";
-            this.GenderFemale.Name = "GenderFemale";
-            this.GenderFemale.ReadOnly = true;
-            // 
-            // Contact
-            // 
-            this.Contact.DataPropertyName = "Contact";
-            this.Contact.HeaderText = "Contact";
-            this.Contact.Name = "Contact";
-            this.Contact.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.ReadOnly = true;
-            // 
-            // Profil
-            // 
-            this.Profil.DataPropertyName = "Profil";
-            this.Profil.HeaderText = "Profil";
-            this.Profil.Name = "Profil";
-            this.Profil.ReadOnly = true;
-            // 
-            // UserAccount
-            // 
-            this.UserAccount.DataPropertyName = "UserAccount";
-            this.UserAccount.HeaderText = "UserAccount";
-            this.UserAccount.Name = "UserAccount";
-            this.UserAccount.ReadOnly = true;
-            // 
-            // Supervisor
-            // 
-            this.Supervisor.DataPropertyName = "Supervisor";
-            this.Supervisor.HeaderText = "Supervisor";
-            this.Supervisor.Name = "Supervisor";
-            this.Supervisor.ReadOnly = true;
-            // 
-            // Admin
-            // 
-            this.Admin.DataPropertyName = "Admin";
-            this.Admin.HeaderText = "Admin";
-            this.Admin.Name = "Admin";
-            this.Admin.ReadOnly = true;
-            // 
             // ManageUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -357,7 +357,7 @@
         private Guna.UI2.WinForms.Guna2Button btnPrint;
         private System.Windows.Forms.TableLayoutPanel btnPanel;
         public System.Windows.Forms.DataGridView ListUsers;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn User;
+        //private System.Windows.Forms.DataGridViewCheckBoxColumn User;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;

@@ -31,5 +31,8 @@ namespace Login_User
             public static String LastNameUser 
             { get; set; }
         }
-
+        public static class ID
+        {
+         public static String id { get; set; }
+        }
 }

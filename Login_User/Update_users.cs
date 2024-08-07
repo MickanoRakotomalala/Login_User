@@ -31,21 +31,13 @@ namespace Login_User
         );
 
         private ManageUser manageUser;
-        private Login login;
         public Update_users(ManageUser manageUser)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             this.manageUser = manageUser;
-        }        
-        public Update_users(Login login)
-        {
-            InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
-            this.login = login;
-        }        
+        }
         public Update_users()
         {
             InitializeComponent();
@@ -103,19 +95,12 @@ namespace Login_User
 
         private void Update_users_Load(object sender, EventArgs e)
         {
-            if(this.login != null)
-            {
-                UserAccount.Visible = false;
-                Supervisor.Visible = false;
-                Admin.Visible = false;
-                UserAccount.Checked = true;
-            }
-            else if (this.manageUser != null)
-            {
-                UserAccount.Visible = true;
-                Supervisor.Visible = true;
-                Admin.Visible = true;
-            }
+            //if (this.manageUser != null)
+            //{
+            //    UserAccount.Visible = false;
+            //    Supervisor.Visible = true;
+            //    Admin.Visible = true;
+            //}
 
             //this.Register.Enabled = false;  
         }
@@ -195,7 +180,8 @@ namespace Login_User
                 {
                     SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
                     //Add values to Table Users
-                    SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@UserAccount ,@Supervisor,@Admin)", conn);
+                    //SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@UserAccount ,@Supervisor,@Admin)", conn);
+                    SqlCommand cmd = new SqlCommand("UPDATE Users set FirstName = @FirstName, LastName = @LastName, GenderMale = @GenderMale, GenderFemale = @GenderFemale, Contact = @Contact, Address = @Address, Password = @Password, UserAccount = @UserAccount, Supervisor = @Supervisor, Admin = @Admin Where id = @Id", conn);
                     conn.Open();
 
                     //Get types from PictureBox
@@ -204,6 +190,7 @@ namespace Login_User
                     img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                     byte[] bytes = ms.ToArray();
 
+                    cmd.Parameters.AddWithValue("@Id",ID.id);
                     cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
                     cmd.Parameters.AddWithValue("@LastName", LastName.Text);
                     cmd.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
@@ -221,8 +208,11 @@ namespace Login_User
                     if (this.manageUser != null)
                     {
                         manageUser.RefreshData();
+                        MessageBox.Show("KO");
                     }
-                    MessageBox.Show("Successfully saved");
+                    //ManageUser manageUser = new ManageUser();
+                    //manageUser.RefreshData();   
+                    MessageBox.Show("Successfully Updated");
                 }
                 conn.Close();
 
