@@ -297,7 +297,7 @@ namespace Login_User {
             
             private global::System.Data.DataColumn columnProfil;
             
-            private global::System.Data.DataColumn columnUser;
+            private global::System.Data.DataColumn columnUserAccount;
             
             private global::System.Data.DataColumn columnSupervisor;
             
@@ -410,9 +410,9 @@ namespace Login_User {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UserColumn {
+            public global::System.Data.DataColumn UserAccountColumn {
                 get {
-                    return this.columnUser;
+                    return this.columnUserAccount;
                 }
             }
             
@@ -469,7 +469,7 @@ namespace Login_User {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UsersRow AddUsersRow(string FirstName, string LastName, bool GenderMale, bool GenderFemale, string Contact, string Address, string Password, byte[] Profil, bool User, bool Supervisor, bool Admin) {
+            public UsersRow AddUsersRow(string FirstName, string LastName, bool GenderMale, bool GenderFemale, string Contact, string Address, string Password, byte[] Profil, bool UserAccount, bool Supervisor, bool Admin) {
                 UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -481,7 +481,7 @@ namespace Login_User {
                         Address,
                         Password,
                         Profil,
-                        User,
+                        UserAccount,
                         Supervisor,
                         Admin};
                 rowUsersRow.ItemArray = columnValuesArray;
@@ -522,7 +522,7 @@ namespace Login_User {
                 this.columnAddress = base.Columns["Address"];
                 this.columnPassword = base.Columns["Password"];
                 this.columnProfil = base.Columns["Profil"];
-                this.columnUser = base.Columns["User"];
+                this.columnUserAccount = base.Columns["UserAccount"];
                 this.columnSupervisor = base.Columns["Supervisor"];
                 this.columnAdmin = base.Columns["Admin"];
             }
@@ -548,8 +548,8 @@ namespace Login_User {
                 base.Columns.Add(this.columnPassword);
                 this.columnProfil = new global::System.Data.DataColumn("Profil", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProfil);
-                this.columnUser = new global::System.Data.DataColumn("User", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUser);
+                this.columnUserAccount = new global::System.Data.DataColumn("UserAccount", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserAccount);
                 this.columnSupervisor = new global::System.Data.DataColumn("Supervisor", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSupervisor);
                 this.columnAdmin = new global::System.Data.DataColumn("Admin", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -824,17 +824,17 @@ namespace Login_User {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool User {
+            public bool UserAccount {
                 get {
                     try {
-                        return ((bool)(this[this.tableUsers.UserColumn]));
+                        return ((bool)(this[this.tableUsers.UserAccountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'User\' dans la table \'Users\' est DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'UserAccount\' dans la table \'Users\' est DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUsers.UserColumn] = value;
+                    this[this.tableUsers.UserAccountColumn] = value;
                 }
             }
             
@@ -896,14 +896,14 @@ namespace Login_User {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsUserNull() {
-                return this.IsNull(this.tableUsers.UserColumn);
+            public bool IsUserAccountNull() {
+                return this.IsNull(this.tableUsers.UserAccountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetUserNull() {
-                this[this.tableUsers.UserColumn] = global::System.Convert.DBNull;
+            public void SetUserAccountNull() {
+                this[this.tableUsers.UserAccountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1099,7 +1099,7 @@ namespace Login_User.dbCSharpDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("Password", "Password");
             tableMapping.ColumnMappings.Add("Profil", "Profil");
-            tableMapping.ColumnMappings.Add("User", "User");
+            tableMapping.ColumnMappings.Add("User", "UserAccount");
             tableMapping.ColumnMappings.Add("Supervisor", "Supervisor");
             tableMapping.ColumnMappings.Add("Admin", "Admin");
             this._adapter.TableMappings.Add(tableMapping);
@@ -1188,7 +1188,7 @@ SELECT Id, FirstName, LastName, GenderMale, GenderFemale, Contact, Address, Pass
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, FirstName, LastName, GenderMale, GenderFemale, Contact, Address, Passw" +
-                "ord, Profil, [User], Supervisor, Admin FROM dbo.Users";
+                "ord, Profil, UserAccount, Supervisor, Admin FROM dbo.Users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

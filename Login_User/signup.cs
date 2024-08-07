@@ -106,14 +106,14 @@ namespace Login_User
         {
             if(this.login != null)
             {
-                User.Visible = false;
+                UserAccount.Visible = false;
                 Supervisor.Visible = false;
                 Admin.Visible = false;
-                User.Checked = true;
+                UserAccount.Checked = true;
             }
             else if (this.manageUser != null)
             {
-                User.Visible = true;
+                UserAccount.Visible = true;
                 Supervisor.Visible = true;
                 Admin.Visible = true;
             }
@@ -211,7 +211,7 @@ namespace Login_User
                     cmd.Parameters.AddWithValue("@Address", Address.Text);
                     cmd.Parameters.AddWithValue("@Password", Password.Text);
                     cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
-                    cmd.Parameters.AddWithValue("@User", SqlDbType.Bit).Value = User.Checked;
+                    cmd.Parameters.AddWithValue("@User", SqlDbType.Bit).Value = UserAccount.Checked;
                     cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
                     cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;
                     cmd.ExecuteNonQuery();

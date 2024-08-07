@@ -45,7 +45,7 @@
             this.LastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.FirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
-            this.User = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.UserAccount = new Guna.UI2.WinForms.Guna2CheckBox();
             this.Supervisor = new Guna.UI2.WinForms.Guna2CheckBox();
             this.Admin = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnAddPicture = new Guna.UI2.WinForms.Guna2Button();
@@ -399,27 +399,27 @@
             this.BtnExit.TabIndex = 11;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // User
+            // UserAccount
             // 
-            this.User.AutoSize = true;
-            this.User.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.User.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.User.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(140)))), ((int)(((byte)(179)))));
-            this.User.CheckedState.BorderRadius = 0;
-            this.User.CheckedState.BorderThickness = 0;
-            this.User.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.User.Location = new System.Drawing.Point(308, 406);
-            this.User.Name = "User";
-            this.User.Size = new System.Drawing.Size(48, 17);
-            this.User.TabIndex = 15;
-            this.User.Text = "User";
-            this.User.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.User.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.User.UncheckedState.BorderRadius = 2;
-            this.User.UncheckedState.BorderThickness = 0;
-            this.User.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.User.UseVisualStyleBackColor = true;
+            this.UserAccount.AutoSize = true;
+            this.UserAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.UserAccount.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.UserAccount.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(140)))), ((int)(((byte)(179)))));
+            this.UserAccount.CheckedState.BorderRadius = 0;
+            this.UserAccount.CheckedState.BorderThickness = 0;
+            this.UserAccount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.UserAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UserAccount.Location = new System.Drawing.Point(308, 406);
+            this.UserAccount.Name = "UserAccount";
+            this.UserAccount.Size = new System.Drawing.Size(48, 17);
+            this.UserAccount.TabIndex = 15;
+            this.UserAccount.Text = "User";
+            this.UserAccount.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.UserAccount.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.UserAccount.UncheckedState.BorderRadius = 2;
+            this.UserAccount.UncheckedState.BorderThickness = 0;
+            this.UserAccount.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.UserAccount.UseVisualStyleBackColor = true;
             // 
             // Supervisor
             // 
@@ -494,7 +494,7 @@
             this.Controls.Add(this.btnAddPicture);
             this.Controls.Add(this.Admin);
             this.Controls.Add(this.Supervisor);
-            this.Controls.Add(this.User);
+            this.Controls.Add(this.UserAccount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Profil);
             this.Controls.Add(this.Register);
@@ -542,7 +542,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox Profil;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CheckBox GenderMale;
-        private Guna.UI2.WinForms.Guna2CheckBox User;
+        private Guna.UI2.WinForms.Guna2CheckBox UserAccount;
         private Guna.UI2.WinForms.Guna2CheckBox Supervisor;
         private Guna.UI2.WinForms.Guna2CheckBox Admin;
         private Guna.UI2.WinForms.Guna2Button btnAddPicture;

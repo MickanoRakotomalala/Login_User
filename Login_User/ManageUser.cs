@@ -162,8 +162,8 @@ namespace Login_User
                 up.Password.Text = row.Cells["Password"].Value.ToString();
                 up.ConfirmPassword.Text = row.Cells["Password"].Value.ToString();
 
-                string TypeUser = row.Cells["User"].Value.ToString();
-                up.User.Checked = Convert.ToBoolean(TypeUser);
+                string TypeUser = row.Cells["UserAccount"].Value.ToString();
+                up.UserAccount.Checked = Convert.ToBoolean(TypeUser);
 
                 string TypeSupervisor = row.Cells["Supervisor"].Value.ToString();
                 up.Supervisor.Checked = Convert.ToBoolean(TypeSupervisor);
