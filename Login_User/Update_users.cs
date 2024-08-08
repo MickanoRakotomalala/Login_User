@@ -211,13 +211,13 @@ namespace Login_User
         private void UPDATE()
         {
             SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlCommand cmd = new SqlCommand("UPDATE Users set FirstName = @FirstName, LastName = @LastName, GenderMale = @GenderMale, GenderFemale = @GenderFemale, Contact = @Contact, Address = @Address, Password = @Password, UserAccount = @UserAccount, Supervisor = @Supervisor, Admin = @Admin Where id = @Id", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE Users set FirstName = @FirstName, LastName = @LastName, GenderMale = @GenderMale, GenderFemale = @GenderFemale, Contact = @Contact, Address = @Address, Password = @Password, Profil = @Profil, UserAccount = @UserAccount, Supervisor = @Supervisor, Admin = @Admin Where id = @Id", conn);
             conn.Open();
 
             //Get types from PictureBox
             Image img = Profil.Image;
             MemoryStream ms = new MemoryStream();
-            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            img.Save(ms, Profil.Image.RawFormat);
             byte[] bytes = ms.ToArray();
 
             cmd.Parameters.AddWithValue("@Id", ID.id);
@@ -228,7 +228,7 @@ namespace Login_User
             cmd.Parameters.AddWithValue("@Contact", Contact.Text);
             cmd.Parameters.AddWithValue("@Address", Address.Text);
             cmd.Parameters.AddWithValue("@Password", Password.Text);
-            cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
+            cmd.Parameters.AddWithValue("@Profil", bytes);
             cmd.Parameters.AddWithValue("@UserAccount", SqlDbType.Bit).Value = UserAccount.Checked;
             cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
             cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;

@@ -194,7 +194,7 @@ namespace Login_User
                     //Get types from PictureBox
                     Image img = Profil.Image;
                     MemoryStream ms = new MemoryStream();
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                    img.Save(ms, Profil.Image.RawFormat);
                     byte[] bytes = ms.ToArray();
 
                     cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
@@ -204,7 +204,7 @@ namespace Login_User
                     cmd.Parameters.AddWithValue("@Contact", Contact.Text);
                     cmd.Parameters.AddWithValue("@Address", Address.Text);
                     cmd.Parameters.AddWithValue("@Password", Password.Text);
-                    cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
+                    cmd.Parameters.AddWithValue("@Profil",bytes);
                     cmd.Parameters.AddWithValue("@UserAccount", SqlDbType.Bit).Value = UserAccount.Checked;
                     cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
                     cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;

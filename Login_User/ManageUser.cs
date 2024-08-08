@@ -157,8 +157,7 @@ namespace Login_User
                 byte[] imageData = (byte[])row.Cells["Profil"].Value;
                 using (MemoryStream ms = new MemoryStream(imageData))
                 {
-                    up.Profil.Image = Image.FromStream(ms);
-                    //up.Profil.Image.Save("Propeties\\Asset");
+                    up.Profil.Image = Image.FromStream(ms); 
                 }
                 //MessageBox.Show(up.GenderFemale.Checked.ToString());
                 up.ShowDialog();
