@@ -30,19 +30,13 @@ namespace Login_User
             int nHeightEllipse // width of ellipse
         );
 
-        private ManageUser manageUser;
+        public ManageUser manageUser;
         public Update_users(ManageUser manageUser)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             this.manageUser = manageUser;
-        }
-        public Update_users()
-        {
-            InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -95,14 +89,13 @@ namespace Login_User
 
         private void Update_users_Load(object sender, EventArgs e)
         {
-            //if (this.manageUser != null)
-            //{
-            //    UserAccount.Visible = false;
-            //    Supervisor.Visible = true;
-            //    Admin.Visible = true;
-            //}
-
-            //this.Register.Enabled = false;  
+            if (this.manageUser != null)
+            {
+                UserAccount.Visible = true;
+                Supervisor.Visible = true;
+                Admin.Visible = true;
+            }
+            //this.Register.Enabled = false;
         }
 
         Image IMG;
@@ -179,8 +172,6 @@ namespace Login_User
                 else
                 {
                     SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
-                    //Add values to Table Users
-                    //SqlCommand cmd = new SqlCommand("insert into Users values (@FirstName,@LastName,@GenderMale,@GenderFemale,@Contact,@Address,@Password,@Profil,@UserAccount ,@Supervisor,@Admin)", conn);
                     SqlCommand cmd = new SqlCommand("UPDATE Users set FirstName = @FirstName, LastName = @LastName, GenderMale = @GenderMale, GenderFemale = @GenderFemale, Contact = @Contact, Address = @Address, Password = @Password, UserAccount = @UserAccount, Supervisor = @Supervisor, Admin = @Admin Where id = @Id", conn);
                     conn.Open();
 
@@ -205,13 +196,24 @@ namespace Login_User
                     cmd.ExecuteNonQuery();
                     conn.Close();
 
+
+
+                    //Refresh Datagridview in manageUser
                     if (this.manageUser != null)
                     {
                         manageUser.RefreshData();
-                        MessageBox.Show("KO");
+
+                        //Select a line update
+                        string ValueToFind = ID.id;
+                        foreach (DataGridViewRow row in manageUser.ListUsers.Rows)
+                        {
+                            if (row.Cells["Id"].Value !=null && row.Cells["Id"].Value.ToString() == ValueToFind)
+                            {
+                                row.Selected = true;
+                                break;
+                            }
+                        }
                     }
-                    //ManageUser manageUser = new ManageUser();
-                    //manageUser.RefreshData();   
                     MessageBox.Show("Successfully Updated");
                 }
                 conn.Close();

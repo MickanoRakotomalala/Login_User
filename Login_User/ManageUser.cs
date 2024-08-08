@@ -16,7 +16,6 @@ namespace Login_User
 {
     public partial class ManageUser : Form
     {
-
         public ManageUser()
         {
             InitializeComponent();
@@ -61,6 +60,7 @@ namespace Login_User
             DataSet set = new DataSet();
             adapter.Fill(set);
             ListUsers.DataSource = set.Tables[0];
+            ListUsers.ClearSelection();
         }
 
         private void UserControl_Load(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace Login_User
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Update_users upD = new Update_users();
+            Update_users upD = new Update_users(this);
             upD.ShowDialog();
         }
 
@@ -128,7 +128,7 @@ namespace Login_User
         {
             if (e.RowIndex >= 0)
             {
-                Update_users up = new Update_users();
+                Update_users up = new Update_users(this);
                 DataGridViewRow row = this.ListUsers.Rows[e.RowIndex];
                 ID.id = row.Cells["Id"].Value.ToString();
                 up.FirstName.Text = row.Cells["FirstName"].Value.ToString();
