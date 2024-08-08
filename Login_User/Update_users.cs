@@ -158,63 +158,38 @@ namespace Login_User
             }
             else
             {
-                SqlCommand commandContact = new SqlCommand("select Contact from Users Where Contact = @contact",conn);
+                SqlCommand commandContact = new SqlCommand("select Contact from Users Where  Contact = @contact AND Id = @Id" ,conn);
                 conn.Open();
+
                 commandContact.CommandType = CommandType.Text;
                 commandContact.Parameters.AddWithValue("@contact", Contact.Text);
+                commandContact.Parameters.AddWithValue("@Id",ID.id);
                 SqlDataReader reader = commandContact.ExecuteReader();
-                if (reader.Read())
+                if (reader.Read() == true)
                 {
-                    MessageBox.Show("This Contact already exists","Error Contact",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                    Contact.TabIndex = 4;
-                    Contact.Focus();
+                    UPDATE();
                 }
                 else
                 {
                     SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
-                    SqlCommand cmd = new SqlCommand("UPDATE Users set FirstName = @FirstName, LastName = @LastName, GenderMale = @GenderMale, GenderFemale = @GenderFemale, Contact = @Contact, Address = @Address, Password = @Password, UserAccount = @UserAccount, Supervisor = @Supervisor, Admin = @Admin Where id = @Id", conn);
+                    SqlCommand command = new SqlCommand("select Contact from Users Where  Contact = @contact AND Id != @Id", conn);
                     conn.Open();
 
-                    //Get types from PictureBox
-                    Image img = Profil.Image;
-                    MemoryStream ms = new MemoryStream();
-                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                    byte[] bytes = ms.ToArray();
-
-                    cmd.Parameters.AddWithValue("@Id",ID.id);
-                    cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
-                    cmd.Parameters.AddWithValue("@LastName", LastName.Text);
-                    cmd.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
-                    cmd.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
-                    cmd.Parameters.AddWithValue("@Contact", Contact.Text);
-                    cmd.Parameters.AddWithValue("@Address", Address.Text);
-                    cmd.Parameters.AddWithValue("@Password", Password.Text);
-                    cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
-                    cmd.Parameters.AddWithValue("@UserAccount", SqlDbType.Bit).Value = UserAccount.Checked;
-                    cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
-                    cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
-
-
-
-                    //Refresh Datagridview in manageUser
-                    if (this.manageUser != null)
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@contact", Contact.Text);
+                    command.Parameters.AddWithValue("@Id", ID.id);
+                    SqlDataReader rdr = command.ExecuteReader();
+                    if (rdr.Read() == true)
                     {
-                        manageUser.RefreshData();
-
-                        //Select a line update
-                        string ValueToFind = ID.id;
-                        foreach (DataGridViewRow row in manageUser.ListUsers.Rows)
-                        {
-                            if (row.Cells["Id"].Value !=null && row.Cells["Id"].Value.ToString() == ValueToFind)
-                            {
-                                row.Selected = true;
-                                break;
-                            }
-                        }
+                        MessageBox.Show("This Contact already exists", "Error Contact", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Contact.TabIndex = 4;
+                        Contact.Focus();
                     }
-                    MessageBox.Show("Successfully Updated");
+                    else
+                    {
+                        UPDATE();
+                    }
+                    conn.Close();
                 }
                 conn.Close();
 
@@ -231,6 +206,54 @@ namespace Login_User
                 IMG = Image.FromFile(ofd.FileName);
                 Profil.Image = IMG;
             }
+        }
+
+        private void UPDATE()
+        {
+            SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlCommand cmd = new SqlCommand("UPDATE Users set FirstName = @FirstName, LastName = @LastName, GenderMale = @GenderMale, GenderFemale = @GenderFemale, Contact = @Contact, Address = @Address, Password = @Password, UserAccount = @UserAccount, Supervisor = @Supervisor, Admin = @Admin Where id = @Id", conn);
+            conn.Open();
+
+            //Get types from PictureBox
+            Image img = Profil.Image;
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] bytes = ms.ToArray();
+
+            cmd.Parameters.AddWithValue("@Id", ID.id);
+            cmd.Parameters.AddWithValue("@FirstName", FirstName.Text);
+            cmd.Parameters.AddWithValue("@LastName", LastName.Text);
+            cmd.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
+            cmd.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
+            cmd.Parameters.AddWithValue("@Contact", Contact.Text);
+            cmd.Parameters.AddWithValue("@Address", Address.Text);
+            cmd.Parameters.AddWithValue("@Password", Password.Text);
+            cmd.Parameters.Add("@Profil", SqlDbType.Binary).Value = bytes;
+            cmd.Parameters.AddWithValue("@UserAccount", SqlDbType.Bit).Value = UserAccount.Checked;
+            cmd.Parameters.AddWithValue("@Supervisor", SqlDbType.Bit).Value = Supervisor.Checked;
+            cmd.Parameters.AddWithValue("@Admin", SqlDbType.Bit).Value = Admin.Checked;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+
+
+            //Refresh Datagridview in manageUser
+            if (this.manageUser != null)
+            {
+                manageUser.RefreshData();
+
+                //Select a line update
+                string ValueToFind = ID.id;
+                foreach (DataGridViewRow row in manageUser.ListUsers.Rows)
+                {
+                    if (row.Cells["Id"].Value != null && row.Cells["Id"].Value.ToString() == ValueToFind)
+                    {
+                        row.Selected = true;
+                        break;
+                    }
+                }
+            }
+            MessageBox.Show("Successfully Updated");
         }
     }
 }
