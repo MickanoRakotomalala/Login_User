@@ -420,6 +420,7 @@
             this.UserAccount.UncheckedState.BorderThickness = 0;
             this.UserAccount.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.UserAccount.UseVisualStyleBackColor = true;
+            this.UserAccount.CheckedChanged += new System.EventHandler(this.UserAccount_CheckedChanged);
             // 
             // Supervisor
             // 
@@ -442,6 +443,7 @@
             this.Supervisor.UncheckedState.BorderThickness = 0;
             this.Supervisor.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Supervisor.UseVisualStyleBackColor = true;
+            this.Supervisor.CheckedChanged += new System.EventHandler(this.Supervisor_CheckedChanged);
             // 
             // Admin
             // 
@@ -464,6 +466,7 @@
             this.Admin.UncheckedState.BorderThickness = 0;
             this.Admin.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Admin.UseVisualStyleBackColor = true;
+            this.Admin.CheckedChanged += new System.EventHandler(this.Admin_CheckedChanged);
             // 
             // btnAddPicture
             // 

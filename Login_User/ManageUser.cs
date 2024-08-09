@@ -120,8 +120,52 @@ namespace Login_User
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Update_users upD = new Update_users(this);
-            upD.ShowDialog();
+            Update_users up = new Update_users(this);
+            // Assurez-vous qu'au moins une ligne est sélectionnée
+            if (ListUsers.SelectedRows.Count > 0)
+            {
+                // Récupérer l'index de la première ligne sélectionnée
+                int rowIndex = ListUsers.SelectedRows[0].Index;
+
+                // Récupérez la valeur de l'ID de la colonne "ID"
+                ID.id = ListUsers.Rows[rowIndex].Cells["ID"].Value.ToString();
+                var FirstName = ListUsers.Rows[rowIndex].Cells["FirstName"].Value;
+                var LastName = ListUsers.Rows[rowIndex].Cells["LastName"].Value;
+                var GenderMale = ListUsers.Rows[rowIndex].Cells["GenderMale"].Value;
+                var GenderFemale = ListUsers.Rows[rowIndex].Cells["GenderFemale"].Value;
+                var Contact = ListUsers.Rows[rowIndex].Cells["Contact"].Value;
+                var Address = ListUsers.Rows[rowIndex].Cells["Address"].Value;
+                var UserAccount = ListUsers.Rows[rowIndex].Cells["UserAccount"].Value;
+                var Supervisor = ListUsers.Rows[rowIndex].Cells["Supervisor"].Value;
+                var Admin = ListUsers.Rows[rowIndex].Cells["Admin"].Value;
+                var Password = ListUsers.Rows[rowIndex ].Cells["Password"].Value;
+
+                byte[] imageData = (byte[])ListUsers.Rows[rowIndex].Cells["Profil"].Value;
+                using (MemoryStream ms = new MemoryStream(imageData))
+                {
+                    up.Profil.Image = Image.FromStream(ms);
+                }
+
+                    //Attribution des valeurs au champs de la fenêtre Update_users
+                    up.FirstName.Text = FirstName.ToString();
+                    up.LastName.Text = LastName.ToString();
+                    up.GenderMale.Checked = Convert.ToBoolean(GenderMale.ToString());
+                    up.GenderFemale.Checked = Convert.ToBoolean(GenderFemale.ToString());
+                    up.Contact.Text = Contact.ToString();
+                    up.Address.Text = Address.ToString();
+                    up.Password.Text = Password.ToString();
+                    up.ConfirmPassword.Text = Password.ToString();
+                    up.UserAccount.Checked = Convert.ToBoolean(UserAccount.ToString());
+                    up.Supervisor.Checked = Convert.ToBoolean(Supervisor.ToString());
+                    up.Admin.Checked = Convert.ToBoolean(Admin.ToString());
+                    up.ShowDialog();
+
+            }
+            else
+            {
+                // Aucun ligne n'est sélectionnée
+                MessageBox.Show("No line selected");
+            }
         }
 
         private void ListUsers_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -163,5 +207,5 @@ namespace Login_User
                 up.ShowDialog();
             }
         }
-    }
+    }   
 }

@@ -118,7 +118,6 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ListUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.ListUsers.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Empty;
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
             this.ListUsers.Size = new System.Drawing.Size(900, 345);
