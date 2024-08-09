@@ -86,6 +86,45 @@ namespace Login_User
                 GenderMale.Enabled = true;
             }
         }
+        private void UserAccount_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UserAccount.Checked == true)
+            {
+                Supervisor.Enabled = false;
+                Admin.Enabled = false;
+            }
+            else if (UserAccount.Checked == false)
+            {
+                Supervisor.Enabled= true;
+                Admin.Enabled= true;
+            }
+        }
+        private void Supervisor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Supervisor.Checked == true)
+            {
+                UserAccount.Enabled = false;
+                Admin.Enabled = false ;
+            }
+            else if(Supervisor.Checked == false)
+            {
+                UserAccount.Enabled= true;
+                Admin.Enabled= true;
+            }
+        }
+        private void Admin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Admin.Checked == true)
+            {
+                UserAccount.Enabled = false;
+                Supervisor.Enabled = false ;
+            }
+            else if (Admin.Checked == false)
+            {
+                UserAccount.Enabled = true;
+                Supervisor.Enabled= true;
+            }
+        }
 
         private void Update_users_Load(object sender, EventArgs e)
         {
