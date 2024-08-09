@@ -185,6 +185,7 @@ namespace Login_User
         private void ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Forgot_password forgot_Password = new Forgot_password();
+
             forgot_Password.ShowDialog();
         }
 

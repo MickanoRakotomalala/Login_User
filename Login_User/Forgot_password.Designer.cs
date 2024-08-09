@@ -65,7 +65,7 @@
             this.RegisterAccount.AutoSize = true;
             this.RegisterAccount.Font = new System.Drawing.Font("Calisto MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterAccount.ForeColor = System.Drawing.Color.White;
-            this.RegisterAccount.Location = new System.Drawing.Point(69, 343);
+            this.RegisterAccount.Location = new System.Drawing.Point(64, 332);
             this.RegisterAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RegisterAccount.Name = "RegisterAccount";
             this.RegisterAccount.Size = new System.Drawing.Size(166, 32);
@@ -75,7 +75,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Login_User.Properties.Resources.ForgotPassword1;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(23, 79);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(249, 248);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
