@@ -41,6 +41,7 @@ namespace Login_User
 
         private void Login_Load(object sender, EventArgs e)
         {
+            this.ForgotPassword.Enabled = false;
             this.BtnLogin.Enabled = false;
             this.UserName.TabIndex = 1;
             this.Password.TabIndex = 2;
@@ -49,7 +50,6 @@ namespace Login_User
             this.ManageUser.TabIndex = 5;
             this.BtnExit.TabIndex = 6;
         }
-
 
         private void Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -112,11 +112,13 @@ namespace Login_User
             {
                     NameLogin.Text = reader["LastName"].ToString();
                     this.UserName.BorderColor = Color.Green;
+                    this.ForgotPassword.Enabled = true;
             }
             else
             {
                 //MessageBox.Show("User Not found","UserName",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 this.UserName.BorderColor = Color.Red;
+                this.ForgotPassword.Enabled = false;
                 //this.UserName.TabIndex = 1;
                 //this.UserName.Focus();
             }
@@ -152,11 +154,6 @@ namespace Login_User
                 //this.Password.Focus();
             }
             conn.Close();
-        }
-
-        private void UserName_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnExit_Click(object sender, EventArgs e)

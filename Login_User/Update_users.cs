@@ -163,9 +163,6 @@ namespace Login_User
                 MessageBox.Show("This field must not be empty", "Type User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 UserAccount.TabIndex = 15;
                 UserAccount.Focus();
-                UserAccount.BackColor = Color.Teal;
-                Supervisor.BackColor = Color.Teal;
-                Admin.BackColor = Color.Teal;
             }
             else if (this.Contact.Text == "")
             {
@@ -188,7 +185,7 @@ namespace Login_User
             else if (this.ConfirmPassword.Text == "")
             {
                 MessageBox.Show("This field must not be empty", "Password Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                ConfirmPassword.TabIndex = 7;
+                ConfirmPassword.TabIndex = 8;
                 ConfirmPassword.Focus();
             }
             else if (this.Password.Text != this.ConfirmPassword.Text)

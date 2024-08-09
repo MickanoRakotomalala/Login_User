@@ -204,7 +204,7 @@ namespace Login_User
             {
                 MessageBox.Show("This field must not be empty", "Password Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ConfirmPassword.TabIndex = 7;
-                ConfirmPassword.Focus();
+                ConfirmPassword.Focus();    
             }
             else if (this.Password.Text != this.ConfirmPassword.Text)
             {
