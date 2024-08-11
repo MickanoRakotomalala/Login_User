@@ -32,7 +32,6 @@
             this.BtnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.ManageUser = new System.Windows.Forms.LinkLabel();
             this.Register = new System.Windows.Forms.LinkLabel();
-            this.TypeUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.NameLogin = new System.Windows.Forms.Label();
             this.UserProfil = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -43,6 +42,7 @@
             this.BtnExit = new Guna.UI2.WinForms.Guna2Button();
             this.ForgotPassword = new System.Windows.Forms.LinkLabel();
             this.Error = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserProfil)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.BtnLogin.ForeColor = System.Drawing.Color.White;
             this.BtnLogin.HoverState.Parent = this.BtnLogin;
             this.BtnLogin.Location = new System.Drawing.Point(464, 286);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.ShadowDecoration.Parent = this.BtnLogin;
             this.BtnLogin.Size = new System.Drawing.Size(207, 37);
@@ -75,17 +75,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ManageUser.AutoSize = true;
-            this.ManageUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ManageUser.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.ManageUser.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ManageUser.Location = new System.Drawing.Point(500, 375);
             this.ManageUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ManageUser.Name = "ManageUser";
-            this.ManageUser.Size = new System.Drawing.Size(100, 17);
+            this.ManageUser.Size = new System.Drawing.Size(113, 17);
             this.ManageUser.TabIndex = 5;
             this.ManageUser.TabStop = true;
             this.ManageUser.Text = "Manage User !";
-            this.ManageUser.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ManageUser_LinkClicked);
+            this.ManageUser.DoubleClick += new System.EventHandler(this.ManageUser_DoubleClick);
             // 
             // Register
             // 
@@ -103,23 +103,7 @@
             this.Register.TabIndex = 6;
             this.Register.TabStop = true;
             this.Register.Text = "Register Here ?";
-            this.Register.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Register_LinkClicked);
-            // 
-            // TypeUser
-            // 
-            this.TypeUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TypeUser.BackColor = System.Drawing.Color.Transparent;
-            this.TypeUser.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TypeUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
-            this.TypeUser.Location = new System.Drawing.Point(517, 66);
-            this.TypeUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TypeUser.Name = "TypeUser";
-            this.TypeUser.Size = new System.Drawing.Size(93, 36);
-            this.TypeUser.TabIndex = 10;
-            this.TypeUser.Text = "Sign in";
-            this.TypeUser.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.TypeUser.Click += new System.EventHandler(this.TypeUser_Click);
+            this.Register.DoubleClick += new System.EventHandler(this.Register_DoubleClick);
             // 
             // guna2Panel2
             // 
@@ -130,7 +114,7 @@
             this.guna2Panel2.Controls.Add(this.UserProfil);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(352, 433);
@@ -156,7 +140,7 @@
             this.UserProfil.BackColor = System.Drawing.Color.Transparent;
             this.UserProfil.Image = global::Login_User.Properties.Resources.personne;
             this.UserProfil.Location = new System.Drawing.Point(27, 41);
-            this.UserProfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UserProfil.Margin = new System.Windows.Forms.Padding(4);
             this.UserProfil.Name = "UserProfil";
             this.UserProfil.ShadowDecoration.Parent = this.UserProfil;
             this.UserProfil.Size = new System.Drawing.Size(296, 268);
@@ -176,7 +160,7 @@
             this.ShowPw.HoverState.Parent = this.ShowPw;
             this.ShowPw.Image = global::Login_User.Properties.Resources.Show_password;
             this.ShowPw.Location = new System.Drawing.Point(687, 222);
-            this.ShowPw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShowPw.Margin = new System.Windows.Forms.Padding(4);
             this.ShowPw.Name = "ShowPw";
             this.ShowPw.PressedColor = System.Drawing.Color.Transparent;
             this.ShowPw.ShadowDecoration.Parent = this.ShowPw;
@@ -196,7 +180,7 @@
             this.HidePassword.HoverState.Parent = this.HidePassword;
             this.HidePassword.Image = global::Login_User.Properties.Resources.Hidden_password;
             this.HidePassword.Location = new System.Drawing.Point(685, 222);
-            this.HidePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HidePassword.Margin = new System.Windows.Forms.Padding(4);
             this.HidePassword.Name = "HidePassword";
             this.HidePassword.PressedColor = System.Drawing.Color.Transparent;
             this.HidePassword.ShadowDecoration.Parent = this.HidePassword;
@@ -227,7 +211,7 @@
             this.Password.HoverState.Parent = this.Password;
             this.Password.IconLeft = global::Login_User.Properties.Resources.Password_User;
             this.Password.Location = new System.Drawing.Point(420, 210);
-            this.Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Password.Margin = new System.Windows.Forms.Padding(5);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '\0';
             this.Password.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -263,7 +247,7 @@
             this.UserName.HoverState.Parent = this.UserName;
             this.UserName.IconLeft = global::Login_User.Properties.Resources.User;
             this.UserName.Location = new System.Drawing.Point(420, 134);
-            this.UserName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.UserName.Margin = new System.Windows.Forms.Padding(5);
             this.UserName.Name = "UserName";
             this.UserName.PasswordChar = '\0';
             this.UserName.PlaceholderForeColor = System.Drawing.Color.DimGray;
@@ -287,7 +271,7 @@
             this.BtnExit.HoverState.Parent = this.BtnExit;
             this.BtnExit.Image = global::Login_User.Properties.Resources.Exit1;
             this.BtnExit.Location = new System.Drawing.Point(731, 5);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.ShadowDecoration.Parent = this.BtnExit;
             this.BtnExit.Size = new System.Drawing.Size(36, 30);
@@ -300,17 +284,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ForgotPassword.AutoSize = true;
-            this.ForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.ForgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ForgotPassword.Location = new System.Drawing.Point(404, 340);
             this.ForgotPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ForgotPassword.Name = "ForgotPassword";
-            this.ForgotPassword.Size = new System.Drawing.Size(126, 17);
+            this.ForgotPassword.Size = new System.Drawing.Size(143, 17);
             this.ForgotPassword.TabIndex = 13;
             this.ForgotPassword.TabStop = true;
             this.ForgotPassword.Text = "Forgot Password ?";
-            this.ForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPassword_LinkClicked);
+            this.ForgotPassword.DoubleClick += new System.EventHandler(this.ForgotPassword_DoubleClick);
             // 
             // Error
             // 
@@ -326,18 +310,33 @@
             this.Error.TabIndex = 14;
             this.Error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.label1.Location = new System.Drawing.Point(360, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(407, 48);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Sign in";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 433);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Error);
             this.Controls.Add(this.ForgotPassword);
             this.Controls.Add(this.ShowPw);
             this.Controls.Add(this.HidePassword);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.TypeUser);
             this.Controls.Add(this.Register);
             this.Controls.Add(this.ManageUser);
             this.Controls.Add(this.BtnLogin);
@@ -347,7 +346,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
@@ -367,7 +366,6 @@
         private Guna.UI2.WinForms.Guna2Button BtnLogin;
         private System.Windows.Forms.LinkLabel ManageUser;
         private System.Windows.Forms.LinkLabel Register;
-        private Guna.UI2.WinForms.Guna2HtmlLabel TypeUser;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2PictureBox UserProfil;
         private Guna.UI2.WinForms.Guna2Button HidePassword;
@@ -375,6 +373,7 @@
         private System.Windows.Forms.LinkLabel ForgotPassword;
         private System.Windows.Forms.Label NameLogin;
         private System.Windows.Forms.Label Error;
+        private System.Windows.Forms.Label label1;
     }
 }
 

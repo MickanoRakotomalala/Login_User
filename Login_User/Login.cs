@@ -15,6 +15,7 @@ using System.Data.SqlClient;
 using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Security.AccessControl;
+using System.Net;
 
 namespace Login_User
 {
@@ -49,18 +50,6 @@ namespace Login_User
             this.Register.TabIndex = 4;
             this.ManageUser.TabIndex = 5;
             this.BtnExit.TabIndex = 6;
-        }
-
-        private void Register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            signup signup = new signup(this);
-            signup.ShowDialog();
-
-        }
-
-        private void TypeUser_Click(object sender, EventArgs e)
-        {
-            
         }
 
         //LOGIN
@@ -179,19 +168,35 @@ namespace Login_User
             }
         }
 
-        private void ForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Forgot_password forgot_Password = new Forgot_password();
-
-            forgot_Password.ShowDialog();
-        }
-
-
-        private void ManageUser_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ManageUser_DoubleClick(object sender, EventArgs e)
         {
             ManageUser manageUser = new ManageUser();
             manageUser.ShowDialog();
+        }
 
+        private void ForgotPassword_DoubleClick(object sender, EventArgs e)
+        {
+
+            Forgot_password fp = new Forgot_password(this);
+            SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("select * from Users where Contact = @contact", conn);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@contact",UserName.Text);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                ID.id = reader["Id"].ToString();
+            }
+            fp.Contact.Text = UserName.Text;
+            fp.ShowDialog();
+            conn.Close();
+        }
+
+        private void Register_DoubleClick(object sender, EventArgs e)
+        {
+            signup signup = new signup(this);
+            signup.ShowDialog();
         }
     }
 }

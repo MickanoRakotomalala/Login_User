@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.RegisterAccount);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 562);
+            this.panel1.Size = new System.Drawing.Size(392, 692);
             this.panel1.TabIndex = 0;
             // 
             // RegisterAccount
@@ -65,19 +66,19 @@
             this.RegisterAccount.AutoSize = true;
             this.RegisterAccount.Font = new System.Drawing.Font("Calisto MT", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterAccount.ForeColor = System.Drawing.Color.White;
-            this.RegisterAccount.Location = new System.Drawing.Point(64, 332);
-            this.RegisterAccount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RegisterAccount.Location = new System.Drawing.Point(85, 409);
             this.RegisterAccount.Name = "RegisterAccount";
-            this.RegisterAccount.Size = new System.Drawing.Size(166, 32);
+            this.RegisterAccount.Size = new System.Drawing.Size(213, 41);
             this.RegisterAccount.TabIndex = 13;
             this.RegisterAccount.Text = "User Profile";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Login_User.Properties.Resources.ForgotPassword1;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 97);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 248);
+            this.pictureBox1.Size = new System.Drawing.Size(332, 305);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -93,10 +94,11 @@
             this.BtnExit.ForeColor = System.Drawing.Color.White;
             this.BtnExit.HoverState.Parent = this.BtnExit;
             this.BtnExit.Image = global::Login_User.Properties.Resources.Exit1;
-            this.BtnExit.Location = new System.Drawing.Point(835, 5);
+            this.BtnExit.Location = new System.Drawing.Point(1113, 6);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.ShadowDecoration.Parent = this.BtnExit;
-            this.BtnExit.Size = new System.Drawing.Size(27, 24);
+            this.BtnExit.Size = new System.Drawing.Size(36, 30);
             this.BtnExit.TabIndex = 8;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
@@ -105,11 +107,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(389, 32);
+            this.label1.Location = new System.Drawing.Point(606, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 36);
+            this.label1.Size = new System.Drawing.Size(324, 46);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Forgot password setting";
+            this.label1.Text = "Password setting";
             // 
             // LastName
             // 
@@ -129,16 +132,16 @@
             this.LastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.LastName.HoverState.Parent = this.LastName;
             this.LastName.IconLeft = global::Login_User.Properties.Resources.New_User;
-            this.LastName.Location = new System.Drawing.Point(601, 149);
-            this.LastName.Margin = new System.Windows.Forms.Padding(4);
+            this.LastName.Location = new System.Drawing.Point(801, 183);
+            this.LastName.Margin = new System.Windows.Forms.Padding(5);
             this.LastName.Name = "LastName";
             this.LastName.PasswordChar = '\0';
             this.LastName.PlaceholderText = "Last Name";
             this.LastName.SelectedText = "";
             this.LastName.ShadowDecoration.Parent = this.LastName;
-            this.LastName.Size = new System.Drawing.Size(240, 26);
+            this.LastName.Size = new System.Drawing.Size(320, 32);
             this.LastName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.LastName.TabIndex = 16;
+            this.LastName.TabIndex = 2;
             // 
             // FirstName
             // 
@@ -158,16 +161,16 @@
             this.FirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.FirstName.HoverState.Parent = this.FirstName;
             this.FirstName.IconLeft = global::Login_User.Properties.Resources.New_User;
-            this.FirstName.Location = new System.Drawing.Point(320, 149);
-            this.FirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.FirstName.Location = new System.Drawing.Point(427, 183);
+            this.FirstName.Margin = new System.Windows.Forms.Padding(5);
             this.FirstName.Name = "FirstName";
             this.FirstName.PasswordChar = '\0';
             this.FirstName.PlaceholderText = "First Name";
             this.FirstName.SelectedText = "";
             this.FirstName.ShadowDecoration.Parent = this.FirstName;
-            this.FirstName.Size = new System.Drawing.Size(240, 26);
+            this.FirstName.Size = new System.Drawing.Size(320, 32);
             this.FirstName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.FirstName.TabIndex = 15;
+            this.FirstName.TabIndex = 1;
             // 
             // Register
             // 
@@ -180,12 +183,12 @@
             this.Register.HoverState.Parent = this.Register;
             this.Register.Image = global::Login_User.Properties.Resources.Register;
             this.Register.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Register.Location = new System.Drawing.Point(496, 373);
-            this.Register.Margin = new System.Windows.Forms.Padding(2);
+            this.Register.Location = new System.Drawing.Point(661, 459);
+            this.Register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Register.Name = "Register";
             this.Register.ShadowDecoration.Parent = this.Register;
-            this.Register.Size = new System.Drawing.Size(138, 27);
-            this.Register.TabIndex = 24;
+            this.Register.Size = new System.Drawing.Size(184, 33);
+            this.Register.TabIndex = 10;
             this.Register.Text = "Register";
             this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
@@ -197,16 +200,18 @@
             this.ShowPassword.CheckedState.BorderThickness = 0;
             this.ShowPassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ShowPassword.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ShowPassword.Location = new System.Drawing.Point(720, 338);
+            this.ShowPassword.Location = new System.Drawing.Point(960, 416);
+            this.ShowPassword.Margin = new System.Windows.Forms.Padding(4);
             this.ShowPassword.Name = "ShowPassword";
-            this.ShowPassword.Size = new System.Drawing.Size(102, 17);
-            this.ShowPassword.TabIndex = 23;
+            this.ShowPassword.Size = new System.Drawing.Size(125, 20);
+            this.ShowPassword.TabIndex = 9;
             this.ShowPassword.Text = "Show Password";
             this.ShowPassword.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowPassword.UncheckedState.BorderRadius = 2;
             this.ShowPassword.UncheckedState.BorderThickness = 0;
             this.ShowPassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.ShowPassword.UseVisualStyleBackColor = true;
+            this.ShowPassword.CheckedChanged += new System.EventHandler(this.ShowPassword_CheckedChanged);
             // 
             // ConfirmPassword
             // 
@@ -226,16 +231,16 @@
             this.ConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ConfirmPassword.HoverState.Parent = this.ConfirmPassword;
             this.ConfirmPassword.IconLeft = global::Login_User.Properties.Resources.Password_User;
-            this.ConfirmPassword.Location = new System.Drawing.Point(606, 294);
-            this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.ConfirmPassword.Location = new System.Drawing.Point(808, 362);
+            this.ConfirmPassword.Margin = new System.Windows.Forms.Padding(5);
             this.ConfirmPassword.Name = "ConfirmPassword";
             this.ConfirmPassword.PasswordChar = '\0';
             this.ConfirmPassword.PlaceholderText = "Password Confirmation";
             this.ConfirmPassword.SelectedText = "";
             this.ConfirmPassword.ShadowDecoration.Parent = this.ConfirmPassword;
-            this.ConfirmPassword.Size = new System.Drawing.Size(240, 26);
+            this.ConfirmPassword.Size = new System.Drawing.Size(320, 32);
             this.ConfirmPassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.ConfirmPassword.TabIndex = 22;
+            this.ConfirmPassword.TabIndex = 8;
             this.ConfirmPassword.UseSystemPasswordChar = true;
             // 
             // Password
@@ -256,16 +261,16 @@
             this.Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Password.HoverState.Parent = this.Password;
             this.Password.IconLeft = global::Login_User.Properties.Resources.Password_User;
-            this.Password.Location = new System.Drawing.Point(319, 294);
-            this.Password.Margin = new System.Windows.Forms.Padding(4);
+            this.Password.Location = new System.Drawing.Point(425, 362);
+            this.Password.Margin = new System.Windows.Forms.Padding(5);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '\0';
-            this.Password.PlaceholderText = "Password";
+            this.Password.PlaceholderText = "New Password";
             this.Password.SelectedText = "";
             this.Password.ShadowDecoration.Parent = this.Password;
-            this.Password.Size = new System.Drawing.Size(240, 26);
+            this.Password.Size = new System.Drawing.Size(320, 32);
             this.Password.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.Password.TabIndex = 21;
+            this.Password.TabIndex = 7;
             this.Password.UseSystemPasswordChar = true;
             // 
             // Address
@@ -286,16 +291,16 @@
             this.Address.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Address.HoverState.Parent = this.Address;
             this.Address.IconLeft = global::Login_User.Properties.Resources.Address_User;
-            this.Address.Location = new System.Drawing.Point(604, 233);
-            this.Address.Margin = new System.Windows.Forms.Padding(4);
+            this.Address.Location = new System.Drawing.Point(805, 287);
+            this.Address.Margin = new System.Windows.Forms.Padding(5);
             this.Address.Name = "Address";
             this.Address.PasswordChar = '\0';
             this.Address.PlaceholderText = "Address";
             this.Address.SelectedText = "";
             this.Address.ShadowDecoration.Parent = this.Address;
-            this.Address.Size = new System.Drawing.Size(240, 26);
+            this.Address.Size = new System.Drawing.Size(320, 32);
             this.Address.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.Address.TabIndex = 20;
+            this.Address.TabIndex = 6;
             // 
             // Contact
             // 
@@ -315,16 +320,16 @@
             this.Contact.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Contact.HoverState.Parent = this.Contact;
             this.Contact.IconLeft = global::Login_User.Properties.Resources.Contact_User;
-            this.Contact.Location = new System.Drawing.Point(318, 233);
-            this.Contact.Margin = new System.Windows.Forms.Padding(4);
+            this.Contact.Location = new System.Drawing.Point(424, 287);
+            this.Contact.Margin = new System.Windows.Forms.Padding(5);
             this.Contact.Name = "Contact";
             this.Contact.PasswordChar = '\0';
             this.Contact.PlaceholderText = "Contact : 034 12 345 67";
             this.Contact.SelectedText = "";
             this.Contact.ShadowDecoration.Parent = this.Contact;
-            this.Contact.Size = new System.Drawing.Size(240, 26);
+            this.Contact.Size = new System.Drawing.Size(320, 32);
             this.Contact.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.Contact.TabIndex = 19;
+            this.Contact.TabIndex = 5;
             // 
             // GenderFemale
             // 
@@ -334,31 +339,33 @@
             this.GenderFemale.CheckedState.BorderThickness = 0;
             this.GenderFemale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.GenderFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GenderFemale.Location = new System.Drawing.Point(380, 192);
+            this.GenderFemale.Location = new System.Drawing.Point(507, 236);
+            this.GenderFemale.Margin = new System.Windows.Forms.Padding(4);
             this.GenderFemale.Name = "GenderFemale";
-            this.GenderFemale.Size = new System.Drawing.Size(60, 17);
-            this.GenderFemale.TabIndex = 18;
+            this.GenderFemale.Size = new System.Drawing.Size(75, 20);
+            this.GenderFemale.TabIndex = 4;
             this.GenderFemale.Text = "Female";
             this.GenderFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.GenderFemale.UncheckedState.BorderRadius = 2;
             this.GenderFemale.UncheckedState.BorderThickness = 0;
             this.GenderFemale.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.GenderFemale.UseVisualStyleBackColor = true;
+            this.GenderFemale.CheckedChanged += new System.EventHandler(this.GenderFemale_CheckedChanged);
             // 
             // GenderMale
             // 
             this.GenderMale.AutoSize = true;
             this.GenderMale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GenderMale.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.GenderMale.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(140)))), ((int)(((byte)(179)))));
             this.GenderMale.CheckedState.BorderRadius = 0;
             this.GenderMale.CheckedState.BorderThickness = 0;
             this.GenderMale.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.GenderMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GenderMale.Location = new System.Drawing.Point(325, 192);
+            this.GenderMale.Location = new System.Drawing.Point(433, 236);
+            this.GenderMale.Margin = new System.Windows.Forms.Padding(4);
             this.GenderMale.Name = "GenderMale";
-            this.GenderMale.Size = new System.Drawing.Size(49, 17);
-            this.GenderMale.TabIndex = 17;
+            this.GenderMale.Size = new System.Drawing.Size(59, 20);
+            this.GenderMale.TabIndex = 3;
             this.GenderMale.Text = "Male";
             this.GenderMale.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.GenderMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -366,12 +373,13 @@
             this.GenderMale.UncheckedState.BorderThickness = 0;
             this.GenderMale.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.GenderMale.UseVisualStyleBackColor = true;
+            this.GenderMale.CheckedChanged += new System.EventHandler(this.GenderMale_CheckedChanged);
             // 
             // Forgot_password
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 560);
+            this.ClientSize = new System.Drawing.Size(1156, 689);
             this.Controls.Add(this.Register);
             this.Controls.Add(this.ShowPassword);
             this.Controls.Add(this.ConfirmPassword);
@@ -386,6 +394,7 @@
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Forgot_password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forgot_password";
@@ -405,15 +414,15 @@
         private Guna.UI2.WinForms.Guna2Button BtnExit;
         private System.Windows.Forms.Label RegisterAccount;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2TextBox LastName;
-        private Guna.UI2.WinForms.Guna2TextBox FirstName;
         private Guna.UI2.WinForms.Guna2Button Register;
         private Guna.UI2.WinForms.Guna2CheckBox ShowPassword;
-        private Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
-        private Guna.UI2.WinForms.Guna2TextBox Password;
-        private Guna.UI2.WinForms.Guna2TextBox Address;
-        private Guna.UI2.WinForms.Guna2TextBox Contact;
-        private Guna.UI2.WinForms.Guna2CheckBox GenderFemale;
-        private Guna.UI2.WinForms.Guna2CheckBox GenderMale;
+        public Guna.UI2.WinForms.Guna2TextBox FirstName;
+        public Guna.UI2.WinForms.Guna2TextBox LastName;
+        public Guna.UI2.WinForms.Guna2TextBox ConfirmPassword;
+        public Guna.UI2.WinForms.Guna2TextBox Password;
+        public Guna.UI2.WinForms.Guna2TextBox Address;
+        public Guna.UI2.WinForms.Guna2TextBox Contact;
+        public Guna.UI2.WinForms.Guna2CheckBox GenderFemale;
+        public Guna.UI2.WinForms.Guna2CheckBox GenderMale;
     }
 }
