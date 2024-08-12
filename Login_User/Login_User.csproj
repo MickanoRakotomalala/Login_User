@@ -163,6 +163,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbCSharpDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Forgot_password.cs">
       <SubType>Form</SubType>
     </Compile>

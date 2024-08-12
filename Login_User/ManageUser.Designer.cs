@@ -313,6 +313,7 @@
             this.btnPrint.Size = new System.Drawing.Size(100, 29);
             this.btnPrint.TabIndex = 19;
             this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnPanel
             // 

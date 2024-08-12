@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Security.AccessControl;
 using System.Drawing.Imaging;
 using System.IO;
+using DGVPrinterHelper;
 
 namespace Login_User
 {
@@ -206,6 +207,21 @@ namespace Login_User
                 //MessageBox.Show(up.GenderFemale.Checked.ToString());
                 up.ShowDialog();
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "MANAGE USERS";
+            printer.SubTitle = string.Format("List Users",printer.SubTitleColor = Color.Teal,printer);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit|StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.PrintMargins = new System.Drawing.Printing.Margins(0,0,0,0);
+            printer.Footer = "List users by Mickano";
+            printer.FooterSpacing = 10;
+            printer.PrintDataGridView(ListUsers);
         }
     }   
 }
