@@ -18,7 +18,6 @@ namespace Login_User
     {
 
         public Login login;
-        SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
       (
@@ -44,7 +43,7 @@ namespace Login_User
 
         private void Forgot_password_Load(object sender, EventArgs e)
         {
-            //Contact.Enabled = false;
+
         }
 
         private void Register_Click(object sender, EventArgs e)
@@ -99,6 +98,7 @@ namespace Login_User
             }
             else
             {
+                SqlConnection conn = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
                 SqlCommand commandContact = new SqlCommand("select * from Users Where  Id = @Id AND Contact = @contact AND FirstName = @FirstName AND Address = @Address AND LastName = @LastName AND GenderMale = @GenderMale AND GenderFemale = @GenderFemale ", conn);
                 conn.Open();
 
@@ -115,9 +115,97 @@ namespace Login_User
                 {
                     UPDATE();
                 }
-                else
+                else if (reader.Read() == false)
                 {
-                    MessageBox.Show("Error information !");
+                    SqlConnection connFirstName = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+                    SqlCommand commandFirstName = new SqlCommand("select * from Users Where  Id = @Id AND Contact = @contact AND FirstName != @FirstName AND Address = @Address AND LastName = @LastName AND GenderMale = @GenderMale AND GenderFemale = @GenderFemale ", connFirstName);
+                    connFirstName.Open();
+
+                    commandFirstName.CommandType = CommandType.Text;
+                    commandFirstName.Parameters.AddWithValue("@Id", ID.id);
+                    commandFirstName.Parameters.AddWithValue("@contact", Contact.Text);
+                    commandFirstName.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                    commandFirstName.Parameters.AddWithValue("@LastName", LastName.Text);
+                    commandFirstName.Parameters.AddWithValue("@Address", Address.Text);
+                    commandFirstName.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
+                    commandFirstName.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
+                    SqlDataReader readerFirstName = commandFirstName.ExecuteReader();
+                    if (readerFirstName.Read() == true)
+                    {
+                        MessageBox.Show("Incorrect FirstName","FirstName",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        FirstName.TabIndex = 1;
+                        FirstName.Focus();
+                    }
+                    else if (readerFirstName.Read() == false)
+                    {
+                        SqlConnection connLastName = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+                        SqlCommand commandLastName = new SqlCommand("select * from Users Where  Id = @Id AND Contact = @contact AND FirstName = @FirstName AND Address = @Address AND LastName != @LastName AND GenderMale = @GenderMale AND GenderFemale = @GenderFemale ", connLastName);
+                        connLastName.Open();
+
+                        commandLastName.CommandType = CommandType.Text;
+                        commandLastName.Parameters.AddWithValue("@Id", ID.id);
+                        commandLastName.Parameters.AddWithValue("@contact", Contact.Text);
+                        commandLastName.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                        commandLastName.Parameters.AddWithValue("@LastName", LastName.Text);
+                        commandLastName.Parameters.AddWithValue("@Address", Address.Text);
+                        commandLastName.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
+                        commandLastName.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
+                        SqlDataReader readerLastName = commandLastName.ExecuteReader();
+                        if (readerLastName.Read() == true)
+                        {
+                            MessageBox.Show("Incorrect LastName","LastName",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                            LastName.TabIndex = 2;
+                            LastName.Focus();
+                        }
+                        else if (readerLastName.Read() == false)
+                        {
+                            SqlConnection connGender = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+                            SqlCommand commandGender = new SqlCommand("select * from Users Where  Id = @Id AND Contact = @contact AND FirstName = @FirstName AND Address = @Address AND LastName = @LastName AND (GenderMale != @GenderMale OR GenderFemale != @GenderFemale) ", connGender);
+                            connGender.Open();
+
+                            commandGender.CommandType = CommandType.Text;
+                            commandGender.Parameters.AddWithValue("@Id", ID.id);
+                            commandGender.Parameters.AddWithValue("@contact", Contact.Text);
+                            commandGender.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                            commandGender.Parameters.AddWithValue("@LastName", LastName.Text);
+                            commandGender.Parameters.AddWithValue("@Address", Address.Text);
+                            commandGender.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
+                            commandGender.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
+                            SqlDataReader readerGender = commandGender.ExecuteReader();
+                            if (readerGender.Read() == true)
+                            {
+                                MessageBox.Show("Incorrect Gender Type","Gender",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                                GenderMale.TabIndex = 3;
+                                GenderMale.Focus();
+                            }
+                            else if (readerGender.Read() == false)
+                            {
+                                SqlConnection connAddress = new SqlConnection("data source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\dbCSharp.mdf;Integrated Security=True;Connect Timeout=30");
+                                SqlCommand commandAddress = new SqlCommand("select * from Users Where  Id = @Id AND Contact = @contact AND FirstName = @FirstName AND Address != @Address AND LastName = @LastName AND GenderMale = @GenderMale AND GenderFemale = @GenderFemale ", connAddress);
+                                connAddress.Open();
+
+                                commandAddress.CommandType = CommandType.Text;
+                                commandAddress.Parameters.AddWithValue("@Id", ID.id);
+                                commandAddress.Parameters.AddWithValue("@contact", Contact.Text);
+                                commandAddress.Parameters.AddWithValue("@FirstName", FirstName.Text);
+                                commandAddress.Parameters.AddWithValue("@LastName", LastName.Text);
+                                commandAddress.Parameters.AddWithValue("@Address", Address.Text);
+                                commandAddress.Parameters.AddWithValue("@GenderMale", SqlDbType.Bit).Value = GenderMale.Checked;
+                                commandAddress.Parameters.AddWithValue("@GenderFemale", SqlDbType.Bit).Value = GenderFemale.Checked;
+                                SqlDataReader readerAddress = commandAddress.ExecuteReader();
+                                if (readerAddress.Read() == true)
+                                {
+                                    MessageBox.Show("Incorrect Address","Address",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                                    Address.TabIndex = 6;
+                                    Address.Focus();
+                                }
+                                connAddress.Close();
+                            }
+                            connGender.Close();
+                        }
+                        connLastName.Close();
+                    }
+                    connFirstName.Close();
                 }
                 conn.Close();
             }
