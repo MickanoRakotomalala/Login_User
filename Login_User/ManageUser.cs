@@ -70,7 +70,7 @@ namespace Login_User
             // TODO: cette ligne de code charge les données dans la table 'dbCSharpDataSet.Users'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.usersTableAdapter.Fill(this.dbCSharpDataSet.Users);
             RefreshData();
-
+            ListUsers.RowTemplate.Height = 30;
         }
 
         private void BtnCreate_Click(object sender, EventArgs e)
@@ -95,6 +95,7 @@ namespace Login_User
                 }
                 else
                 {
+                    MessageBox.Show("No line selected");
                     btnDelete.Enabled = false;
                 }
             }
@@ -211,17 +212,23 @@ namespace Login_User
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            //ListUsers.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             DGVPrinter printer = new DGVPrinter();
+            printer.RowHeight = (DGVPrinter.RowHeightSetting)30;
+            printer.ColumnWidth = (DGVPrinter.ColumnWidthSetting)10;
             printer.Title = "MANAGE USERS";
+            printer.TitleAlignment = StringAlignment.Center;
             printer.SubTitle = string.Format("List Users",printer.SubTitleColor = Color.Teal,printer);
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit|StringFormatFlags.NoClip;
             printer.PageNumbers = true;
             printer.PageNumberInHeader = false;
-            printer.PorportionalColumns = true;
-            printer.PrintMargins = new System.Drawing.Printing.Margins(0,0,0,0);
+            printer.PorportionalColumns = false;
+            printer.HeaderCellAlignment = StringAlignment.Near;
             printer.Footer = "List users by Mickano";
             printer.FooterSpacing = 10;
-            printer.PrintDataGridView(ListUsers);
+            printer.PageSettings.Landscape = true;
+            printer.PrintMargins = new System.Drawing.Printing.Margins(10,10,10,10);
+            printer.PrintPreviewDataGridView(ListUsers);
         }
     }   
 }
