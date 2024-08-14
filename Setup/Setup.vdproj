@@ -51,7 +51,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_753DE7500CB24888A4F8309B12549740"
+        "MsmKey" = "8:_6722CD1EF22E4EC7961EBC22F891155E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,14 +63,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A8B8640DEDD6286B11FE742F5EA61AD8"
-        "OwnerKey" = "8:_3FEBA09AA2CD452094A016CE4FAA25DD"
+        "MsmKey" = "8:_AB66AAA94CBE4661AB1562062E192C3C"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AB66AAA94CBE4661AB1562062E192C3C"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_B731908E8CC523A68C442CBC87354A1D"
+        "OwnerKey" = "8:_3FEBA09AA2CD452094A016CE4FAA25DD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A8B8640DEDD6286B11FE742F5EA61AD8"
+        "OwnerKey" = "8:_B731908E8CC523A68C442CBC87354A1D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -169,17 +169,17 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_3FB81EBA0D0946F2A2A9C96B99B7AC93"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_86038708C9CF4B2B86F9105C08D068D0"
             {
-            "Name" = "8:Fullcontrol.exe"
+            "Name" = "8:FullcontrolFolder.exe"
             "Condition" = "8:"
-            "Object" = "8:_753DE7500CB24888A4F8309B12549740"
+            "Object" = "8:_6722CD1EF22E4EC7961EBC22F891155E"
             "FileType" = "3:2"
             "InstallAction" = "3:2"
             "Arguments" = "8:/Commit"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_C4BCE9F6_99E7_47F1_8DEB_7C6826681C6F"
+            "Identifier" = "8:_B5F0F45B_28BD_427C_9D74_76F4DC40CC30"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -317,10 +317,10 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_753DE7500CB24888A4F8309B12549740"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6722CD1EF22E4EC7961EBC22F891155E"
             {
-            "SourcePath" = "8:..\\..\\TutomanCSharp\\Fullcontrol.exe"
-            "TargetName" = "8:Fullcontrol.exe"
+            "SourcePath" = "8:..\\Login_User\\FullcontrolFolder.exe"
+            "TargetName" = "8:FullcontrolFolder.exe"
             "Tag" = "8:"
             "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
             "Condition" = "8:"
@@ -357,14 +357,34 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A8B8640DEDD6286B11FE742F5EA61AD8"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB66AAA94CBE4661AB1562062E192C3C"
+            {
+            "SourcePath" = "8:..\\Login_User\\dbCSharp_log.ldf"
+            "TargetName" = "8:dbCSharp_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B731908E8CC523A68C442CBC87354A1D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Guna.UI2, Version=2.0.0.1, Culture=neutral, PublicKeyToken=ad275b4be6718d4b, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A8B8640DEDD6286B11FE742F5EA61AD8"
+                    "_B731908E8CC523A68C442CBC87354A1D"
                     {
                     "Name" = "8:Guna.UI2.dll"
                     "Attributes" = "3:512"
@@ -386,26 +406,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB66AAA94CBE4661AB1562062E192C3C"
-            {
-            "SourcePath" = "8:..\\Login_User\\dbCSharp_log.ldf"
-            "TargetName" = "8:dbCSharp_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD5D3FCC6C6F4B448033AA92133DED6E"
@@ -497,7 +497,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_Login"
         "ProductCode" = "8:{FF3F7DD4-8638-4AFE-B773-373369AE6150}"
-        "PackageCode" = "8:{E319734B-F148-43A9-95A9-6736629034A4}"
+        "PackageCode" = "8:{9DC2E14B-CC08-40F0-9463-CFB776707C6C}"
         "UpgradeCode" = "8:{26F9E28C-18EC-4251-A1DE-B6B0806F391D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
