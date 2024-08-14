@@ -80,12 +80,12 @@
             this.ListUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.ListUsers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calisto MT", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ListUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ListUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -110,7 +110,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ListUsers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ListUsers.Location = new System.Drawing.Point(80, 127);
+            this.ListUsers.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ListUsers.Location = new System.Drawing.Point(134, 127);
             this.ListUsers.MultiSelect = false;
             this.ListUsers.Name = "ListUsers";
             this.ListUsers.ReadOnly = true;
@@ -125,11 +126,10 @@
             this.ListUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ListUsers.RowHeadersWidth = 30;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Empty;
             this.ListUsers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ListUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListUsers.ShowCellErrors = false;
-            this.ListUsers.Size = new System.Drawing.Size(733, 345);
+            this.ListUsers.Size = new System.Drawing.Size(713, 345);
             this.ListUsers.TabIndex = 9;
             this.ListUsers.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListUsers_CellContentDoubleClick);
             // 

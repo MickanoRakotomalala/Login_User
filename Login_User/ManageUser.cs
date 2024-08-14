@@ -227,7 +227,7 @@ namespace Login_User
             printer.Footer = "List users by Mickano";
             printer.FooterSpacing = 10;
             printer.PageSettings.Landscape = true;
-            printer.PrintMargins = new System.Drawing.Printing.Margins(10,10,10,10);
+            printer.PrintMargins = new System.Drawing.Printing.Margins(20,20,20,20);
             printer.PrintPreviewDataGridView(ListUsers);
         }
     }   
