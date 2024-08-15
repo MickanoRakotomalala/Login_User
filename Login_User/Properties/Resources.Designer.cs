@@ -183,6 +183,16 @@ namespace Login_User.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menu {
+            get {
+                object obj = ResourceManager.GetObject("Menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap New_User {
             get {
                 object obj = ResourceManager.GetObject("New_User", resourceCulture);
