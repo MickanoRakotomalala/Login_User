@@ -20,7 +20,7 @@ namespace Login_User
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePage());
+            Application.Run(new Login());
         }
 
     }
@@ -31,7 +31,7 @@ namespace Login_User
             public static String LastNameUser 
             { get; set; }
         }
-        public static class ID
+    public static class ID
         {
          public static String id { get; set; }
         }

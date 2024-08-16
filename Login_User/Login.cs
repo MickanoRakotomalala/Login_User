@@ -65,7 +65,15 @@ namespace Login_User
             {
                 Globals.NameUser = reader["FirstName"].ToString();
                 Globals.LastNameUser = reader["LastName"].ToString();
-                HomePage homePage = new HomePage();
+                HomePage homePage = new HomePage(this);
+                // Lecture des données de l'image sous forme de tableau de bytes
+                byte[] imageData = (byte[])reader["Profil"];
+
+                // Conversion du tableau de bytes en image
+                using (MemoryStream ms = new MemoryStream(imageData))
+                {
+                  homePage.Session_Name.Image = Image.FromStream(ms);
+                }
                 this.Hide();
                 homePage.ShowDialog();
                 this.Close();

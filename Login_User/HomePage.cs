@@ -14,6 +14,7 @@ namespace Login_User
 {
     public partial class HomePage : Form
     {
+        private Login login;
         //Windows State Maximized with taskbar
         // Import user32.dll to get the taskbar size
         [DllImport("user32.dll", SetLastError = true)]
@@ -46,16 +47,18 @@ namespace Login_User
             this.WindowState = FormWindowState.Normal;
         }
 
-        public HomePage()
+        public HomePage(Login login)
         {
             InitializeComponent();
             this.Load += new EventHandler(HomePage_Load);
-
+            this.login = login;
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
             SessionName.Text =Globals.NameUser + " " + Globals.LastNameUser;
+            Session_Name.Text = Globals.NameUser + " " + Globals.LastNameUser;
+            //byte[] imageData = (byte[](Globals.ImageProfil));
             MaximizeWithTaskbar();
         }
 
