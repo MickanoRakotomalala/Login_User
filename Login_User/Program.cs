@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.AccessControl;
 using System.IO;
+using System.Drawing;
 
 namespace Login_User
 {
@@ -29,6 +30,24 @@ namespace Login_User
             public static String NameUser
             {get; set; }
             public static String LastNameUser 
+            { get; set; }
+            public static String GenderMaleUser
+            { get; set; }
+            public static String GenderFemaleUser
+            { get; set; }
+            public static String ContactUser
+            { get; set; }
+            public static String AddressUser 
+            { get; set; }
+            public static String PasswordUser
+            { get; set; }
+            public static String UserAccount
+            { get; set; }
+            public static String Supervisor 
+            { get; set; }
+            public static String Admin
+            { get; set; }
+            public static Image ProfilUser
             { get; set; }
         }
     public static class ID

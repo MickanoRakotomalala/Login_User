@@ -274,6 +274,8 @@
     <Content Include="Properties\Asset\home.ico" />
     <Content Include="Properties\Asset\ForgotPassword.png" />
     <Content Include="Properties\Asset\Edit_user.png" />
+    <Content Include="Properties\Asset\Drop_Down.png" />
+    <Content Include="Properties\Asset\AccountMenu.ico" />
     <Content Include="Properties\Asset\Menu.ico" />
     <Content Include="Properties\Asset\User_list.ico" />
     <Content Include="Properties\Asset\Login_Form_icon.ico" />

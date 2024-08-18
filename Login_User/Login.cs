@@ -63,9 +63,19 @@ namespace Login_User
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
+                ID.id = reader["Id"].ToString();
                 Globals.NameUser = reader["FirstName"].ToString();
                 Globals.LastNameUser = reader["LastName"].ToString();
-                HomePage homePage = new HomePage(this);
+                Globals.ContactUser = reader["Contact"].ToString();
+                Globals.AddressUser = reader["Address"].ToString();
+                Globals.GenderMaleUser = reader["GenderMale"].ToString();
+                Globals.GenderFemaleUser = reader["GenderFemale"].ToString();
+                Globals.PasswordUser = reader["Password"].ToString();
+                Globals.UserAccount = reader["UserAccount"].ToString();
+                Globals.Supervisor = reader["Supervisor"].ToString();
+                Globals.Admin = reader["Admin"].ToString();
+
+                HomePage homePage = new HomePage(this);              
                 // Lecture des données de l'image sous forme de tableau de bytes
                 byte[] imageData = (byte[])reader["Profil"];
 
@@ -73,7 +83,9 @@ namespace Login_User
                 using (MemoryStream ms = new MemoryStream(imageData))
                 {
                   homePage.Session_Name.Image = Image.FromStream(ms);
+                  Globals.ProfilUser = Image.FromStream(ms);
                 }
+
                 this.Hide();
                 homePage.ShowDialog();
                 this.Close();

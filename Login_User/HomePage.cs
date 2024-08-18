@@ -52,13 +52,16 @@ namespace Login_User
             InitializeComponent();
             this.Load += new EventHandler(HomePage_Load);
             this.login = login;
+        }        
+        public HomePage()
+        {
+            InitializeComponent();
+            this.Load += new EventHandler(HomePage_Load);
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            SessionName.Text =Globals.NameUser + " " + Globals.LastNameUser;
             Session_Name.Text = Globals.NameUser + " " + Globals.LastNameUser;
-            //byte[] imageData = (byte[](Globals.ImageProfil));
             MaximizeWithTaskbar();
         }
 
@@ -69,6 +72,33 @@ namespace Login_User
             {
                 this.Close();
             }
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Your are sure to Logout this Session ?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void Session_Name_Click(object sender, EventArgs e)
+        {
+            Update_users UpU = new Update_users(this);
+            UpU.FirstName.Text = Globals.NameUser;
+            UpU.LastName.Text = Globals.LastNameUser;
+            UpU.Contact.Text = Globals.ContactUser;
+            UpU.Address.Text = Globals.AddressUser;
+            UpU.GenderMale.Checked = Convert.ToBoolean(Globals.GenderMaleUser);
+            UpU.GenderFemale.Checked = Convert.ToBoolean(Globals.GenderFemaleUser);
+            UpU.Password.Text = Globals.PasswordUser;
+            UpU.ConfirmPassword.Text = Globals.PasswordUser;
+            UpU.UserAccount.Checked = Convert.ToBoolean(Globals.UserAccount);
+            UpU.Supervisor.Checked = Convert.ToBoolean(Globals.Supervisor);
+            UpU.Admin.Checked = Convert.ToBoolean(Globals.Admin);
+            UpU.Profil.Image = Globals.ProfilUser;
+            UpU.ShowDialog();
         }
     }
 }

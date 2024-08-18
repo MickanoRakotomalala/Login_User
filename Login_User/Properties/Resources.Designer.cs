@@ -63,6 +63,16 @@ namespace Login_User.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AccountMenu {
+            get {
+                object obj = ResourceManager.GetObject("AccountMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_Picture {
             get {
                 object obj = ResourceManager.GetObject("Add_Picture", resourceCulture);
@@ -86,6 +96,16 @@ namespace Login_User.Properties {
         internal static System.Drawing.Bitmap Contact_User {
             get {
                 object obj = ResourceManager.GetObject("Contact_User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Drop_Down {
+            get {
+                object obj = ResourceManager.GetObject("Drop_Down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

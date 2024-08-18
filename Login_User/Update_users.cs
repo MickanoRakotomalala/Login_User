@@ -31,12 +31,28 @@ namespace Login_User
         );
 
         public ManageUser manageUser;
+        public HomePage homePage;
+        public Login login;
         public Update_users(ManageUser manageUser)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             this.manageUser = manageUser;
+        }        
+        public Update_users(HomePage homePage)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.homePage = homePage;
+        }        
+        public Update_users(Login login)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.login = login;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -134,7 +150,14 @@ namespace Login_User
                 Supervisor.Visible = true;
                 Admin.Visible = true;
             }
-            //this.Register.Enabled = false;
+            if(this.homePage != null)
+            {
+                UserAccount.Visible= false;
+                Supervisor.Visible= false;
+                Admin.Visible= false;
+                this.TitleUpdateUser.Text = "Update Account";
+                this.Register.Text = "Update";
+            }
         }
 
         Image IMG;
