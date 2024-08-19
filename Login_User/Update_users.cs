@@ -157,6 +157,7 @@ namespace Login_User
                 Admin.Visible= false;
                 this.TitleUpdateUser.Text = "Update Account";
                 this.Register.Text = "Update";
+                this.RegisterAccount.Text = Globals.NameUser + " " + Globals.LastNameUser;
             }
         }
 
@@ -236,6 +237,16 @@ namespace Login_User
                 if (reader.Read() == true)
                 {
                     UPDATE();
+                    if (this.homePage != null)
+                    {
+                        DialogResult dialogResult = new DialogResult();
+                        dialogResult = MessageBox.Show("You must close this session to apply the update","Update",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            this.Close();
+                            this.homePage.Close();    
+                        }
+                    }
                 }
                 else
                 {
@@ -321,7 +332,10 @@ namespace Login_User
                     }
                 }
             }
-            MessageBox.Show("Successfully Updated");
+            if (this.homePage == null)
+            {
+                MessageBox.Show("Successfully Updated");
+            }
         }
     }
 }

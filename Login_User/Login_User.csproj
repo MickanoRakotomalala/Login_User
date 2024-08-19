@@ -230,6 +230,7 @@
     <EmbeddedResource Include="ManageUser.resx">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
     <None Include="dbCSharpDataSet.xsc">
       <DependentUpon>dbCSharpDataSet.xsd</DependentUpon>
     </None>
