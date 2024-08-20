@@ -33,12 +33,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_334ACE02BD9A4351B756CD8CA2F2D825"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_3A8898F323064B1A812D4E405B6C093F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -71,12 +65,6 @@
         {
         "MsmKey" = "8:_B731908E8CC523A68C442CBC87354A1D"
         "OwnerKey" = "8:_3FEBA09AA2CD452094A016CE4FAA25DD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BEA96587480E48E5A22CF2ABADC853CD"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -175,20 +163,6 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_5BD01C74D2374885B72379E688A4AB2F"
-            {
-            "Name" = "8:FullcontrolFolder.exe"
-            "Condition" = "8:"
-            "Object" = "8:_334ACE02BD9A4351B756CD8CA2F2D825"
-            "FileType" = "3:2"
-            "InstallAction" = "3:2"
-            "Arguments" = "8:/Commit"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_CEF6F3C0_F961_41B0_9945_734D7595D503"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            }
         }
         "DefaultFeature"
         {
@@ -256,26 +230,6 @@
             {
             "SourcePath" = "8:..\\Login_User\\dbCSharpDataSet.xsc"
             "TargetName" = "8:dbCSharpDataSet.xsc"
-            "Tag" = "8:"
-            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_334ACE02BD9A4351B756CD8CA2F2D825"
-            {
-            "SourcePath" = "8:..\\..\\..\\TutomanCSharp\\FullcontrolFolder.exe"
-            "TargetName" = "8:FullcontrolFolder.exe"
             "Tag" = "8:"
             "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
             "Condition" = "8:"
@@ -412,26 +366,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BEA96587480E48E5A22CF2ABADC853CD"
-            {
-            "SourcePath" = "8:..\\..\\..\\PartageVM\\SqlLocalDB.msi"
-            "TargetName" = "8:SqlLocalDB.msi"
-            "Tag" = "8:"
-            "Folder" = "8:_247B4DF2AD884B16B80A550B35189BF9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F2D306CF135744018A07B9D67C2875B4"
