@@ -100,5 +100,6 @@ namespace Login_User
             UpU.Profil.Image = Globals.ProfilUser;
             UpU.ShowDialog();
         }
+        
     }
 }

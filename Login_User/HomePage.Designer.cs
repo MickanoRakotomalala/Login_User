@@ -39,6 +39,7 @@
             // 
             // MenuStrip
             // 
+            this.MenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
@@ -55,21 +56,26 @@
             this.Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Session_Name,
             this.Logout});
-            this.Menu.Image = global::Login_User.Properties.Resources.AccountMenu;
+            this.Menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.Menu.Image = global::Login_User.Properties.Resources.Menu_White;
             this.Menu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.Menu.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.Menu.Name = "Menu";
             this.Menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu.Size = new System.Drawing.Size(152, 36);
+            this.Menu.Size = new System.Drawing.Size(50, 36);
             this.Menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Session_Name
             // 
+            this.Session_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.Session_Name.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Session_Name.ForeColor = System.Drawing.SystemColors.Control;
             this.Session_Name.Image = global::Login_User.Properties.Resources.User;
             this.Session_Name.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Session_Name.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.Session_Name.Name = "Session_Name";
             this.Session_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Session_Name.Size = new System.Drawing.Size(151, 24);
+            this.Session_Name.Size = new System.Drawing.Size(180, 24);
             this.Session_Name.Text = "Session_Name";
             this.Session_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Session_Name.Click += new System.EventHandler(this.Session_Name_Click);
@@ -78,9 +84,10 @@
             // 
             this.Logout.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.Logout.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.ForeColor = System.Drawing.SystemColors.Control;
             this.Logout.Image = global::Login_User.Properties.Resources.logout;
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(151, 24);
+            this.Logout.Size = new System.Drawing.Size(180, 24);
             this.Logout.Text = "Logout";
             this.Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -121,8 +128,8 @@
         #endregion
         private System.Windows.Forms.MenuStrip MenuStrip;
         public System.Windows.Forms.ToolStripMenuItem Menu;
+        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.ToolStripMenuItem Session_Name;
         private System.Windows.Forms.ToolStripMenuItem Logout;
-        private System.Windows.Forms.Panel panel1;
     }
 }

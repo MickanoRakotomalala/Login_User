@@ -213,6 +213,16 @@ namespace Login_User.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Menu_White {
+            get {
+                object obj = ResourceManager.GetObject("Menu_White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap New_User {
             get {
                 object obj = ResourceManager.GetObject("New_User", resourceCulture);
