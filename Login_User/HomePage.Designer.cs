@@ -86,7 +86,8 @@
             this.Session_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Session_Name.Size = new System.Drawing.Size(180, 24);
             this.Session_Name.Text = "Session_Name";
-            this.Session_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Session_Name.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Session_Name.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Session_Name.Click += new System.EventHandler(this.Session_Name_Click);
             // 
             // Logout
