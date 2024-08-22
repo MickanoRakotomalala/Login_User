@@ -75,7 +75,7 @@
             this.Session_Name.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.Session_Name.Name = "Session_Name";
             this.Session_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Session_Name.Size = new System.Drawing.Size(180, 24);
+            this.Session_Name.Size = new System.Drawing.Size(151, 24);
             this.Session_Name.Text = "Session_Name";
             this.Session_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Session_Name.Click += new System.EventHandler(this.Session_Name_Click);
@@ -87,7 +87,7 @@
             this.Logout.ForeColor = System.Drawing.SystemColors.Control;
             this.Logout.Image = global::Login_User.Properties.Resources.logout;
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(180, 24);
+            this.Logout.Size = new System.Drawing.Size(151, 24);
             this.Logout.Text = "Logout";
             this.Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -127,9 +127,9 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip MenuStrip;
-        public System.Windows.Forms.ToolStripMenuItem Menu;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.ToolStripMenuItem Session_Name;
         private System.Windows.Forms.ToolStripMenuItem Logout;
+        private new System.Windows.Forms.ToolStripMenuItem  Menu;
     }
 }
