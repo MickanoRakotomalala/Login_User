@@ -33,37 +33,46 @@
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
             this.Session_Name = new System.Windows.Forms.ToolStripMenuItem();
             this.Logout = new System.Windows.Forms.ToolStripMenuItem();
+            this.Dashboard = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuStrip
             // 
+            this.MenuStrip.AutoSize = false;
             this.MenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.MenuStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Menu});
+            this.Menu,
+            this.Dashboard});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
             this.MenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.MenuStrip.Size = new System.Drawing.Size(885, 40);
+            this.MenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.MenuStrip.Size = new System.Drawing.Size(885, 36);
             this.MenuStrip.TabIndex = 11;
             this.MenuStrip.Text = "Menu";
             // 
             // Menu
             // 
             this.Menu.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.Menu.AutoSize = false;
             this.Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Session_Name,
             this.Logout});
-            this.Menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.Menu.Font = new System.Drawing.Font("Calisto MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu.ForeColor = System.Drawing.SystemColors.Control;
             this.Menu.Image = global::Login_User.Properties.Resources.Menu_White;
-            this.Menu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.Menu.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.Menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Menu.ImageTransparentColor = System.Drawing.SystemColors.Control;
             this.Menu.Name = "Menu";
             this.Menu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu.Size = new System.Drawing.Size(50, 36);
+            this.Menu.Size = new System.Drawing.Size(95, 32);
+            this.Menu.Text = "Name_user";
             this.Menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Menu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Menu.DropDownClosed += new System.EventHandler(this.Menu_DropDownClosed);
+            this.Menu.DropDownOpened += new System.EventHandler(this.Menu_DropDownOpened);
             // 
             // Session_Name
             // 
@@ -75,7 +84,7 @@
             this.Session_Name.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.Session_Name.Name = "Session_Name";
             this.Session_Name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Session_Name.Size = new System.Drawing.Size(151, 24);
+            this.Session_Name.Size = new System.Drawing.Size(180, 24);
             this.Session_Name.Text = "Session_Name";
             this.Session_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Session_Name.Click += new System.EventHandler(this.Session_Name_Click);
@@ -87,11 +96,17 @@
             this.Logout.ForeColor = System.Drawing.SystemColors.Control;
             this.Logout.Image = global::Login_User.Properties.Resources.logout;
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(151, 24);
+            this.Logout.Size = new System.Drawing.Size(180, 24);
             this.Logout.Text = "Logout";
             this.Logout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
+            // Dashboard
+            // 
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(76, 32);
+            this.Dashboard.Text = "Dashboard";
             // 
             // panel1
             // 
@@ -108,8 +123,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 501);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MenuStrip);
+            this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
@@ -121,7 +137,6 @@
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -131,5 +146,6 @@
         public System.Windows.Forms.ToolStripMenuItem Session_Name;
         private System.Windows.Forms.ToolStripMenuItem Logout;
         private new System.Windows.Forms.ToolStripMenuItem  Menu;
+        private System.Windows.Forms.ToolStripMenuItem Dashboard;
     }
 }

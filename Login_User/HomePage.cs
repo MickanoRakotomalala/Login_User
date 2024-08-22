@@ -62,6 +62,8 @@ namespace Login_User
         private void HomePage_Load(object sender, EventArgs e)
         {
             Session_Name.Text = Globals.NameUser + " " + Globals.LastNameUser;
+            Menu.Text = Globals.LastNameUser;
+            Menu.Image = Globals.ProfilUser;
             MaximizeWithTaskbar();
         }
 
@@ -100,6 +102,14 @@ namespace Login_User
             UpU.Profil.Image = Globals.ProfilUser;
             UpU.ShowDialog();
         }
-        
+        private void Menu_DropDownOpened(object sender, EventArgs e)
+        {
+            Menu.ForeColor = Color.Teal;
+        }
+
+        private void Menu_DropDownClosed(object sender, EventArgs e)
+        {
+            Menu.ForeColor = Color.White;
+        }
     }
 }
