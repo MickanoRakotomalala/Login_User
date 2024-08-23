@@ -37,12 +37,12 @@
             this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Facturation = new System.Windows.Forms.ToolStripMenuItem();
             this.tESTToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.journalDeVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Stock = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.Paramètres = new System.Windows.Forms.ToolStripMenuItem();
             this.prixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.journalDeVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +128,7 @@
             // tESTToolStripMenuItem
             // 
             this.tESTToolStripMenuItem.Name = "tESTToolStripMenuItem";
-            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.tESTToolStripMenuItem.Text = "TEST";
             // 
             // Facturation
@@ -149,10 +149,16 @@
             this.tESTToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.tESTToolStripMenuItem1.Name = "tESTToolStripMenuItem1";
             this.tESTToolStripMenuItem1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tESTToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.tESTToolStripMenuItem1.Size = new System.Drawing.Size(166, 22);
             this.tESTToolStripMenuItem1.Text = "Facture Proforma";
             this.tESTToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tESTToolStripMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // journalDeVenteToolStripMenuItem
+            // 
+            this.journalDeVenteToolStripMenuItem.Name = "journalDeVenteToolStripMenuItem";
+            this.journalDeVenteToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.journalDeVenteToolStripMenuItem.Text = "Journal de Vente";
             // 
             // Stock
             // 
@@ -197,12 +203,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 501);
             this.panel1.TabIndex = 12;
-            // 
-            // journalDeVenteToolStripMenuItem
-            // 
-            this.journalDeVenteToolStripMenuItem.Name = "journalDeVenteToolStripMenuItem";
-            this.journalDeVenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.journalDeVenteToolStripMenuItem.Text = "Journal de Vente";
             // 
             // HomePage
             // 

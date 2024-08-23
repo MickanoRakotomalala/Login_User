@@ -149,5 +149,9 @@ namespace Login_User
             Paramètres.ForeColor = Color.FromArgb(19, 140, 172);
         }
 
+        private void Paramètres_DropDownClosed(object sender, EventArgs e)
+        {
+            Paramètres.ForeColor = Color.White;
+        }
     }
 }
