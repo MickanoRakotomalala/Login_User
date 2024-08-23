@@ -103,6 +103,16 @@ namespace Login_User.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dashboard {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Drop_Down {
             get {
                 object obj = ResourceManager.GetObject("Drop_Down", resourceCulture);
@@ -186,6 +196,16 @@ namespace Login_User.Properties {
         internal static System.Drawing.Bitmap icons8_check_male_124px {
             get {
                 object obj = ResourceManager.GetObject("icons8_check_male_124px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoShop {
+            get {
+                object obj = ResourceManager.GetObject("LogoShop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Security.AccessControl;
 using static Guna.UI2.Native.WinApi;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 namespace Login_User
 {
     public partial class HomePage : Form
@@ -57,13 +58,20 @@ namespace Login_User
         {
             InitializeComponent();
             this.Load += new EventHandler(HomePage_Load);
+            this.IsMdiContainer = true;
+
+            this.MainMenuStrip = new MenuStrip();
+            this.Controls.Add(MenuStrip);
+            this.Controls.Add(DashMenu);
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            Session_Name.Text = Globals.NameUser + " " + Globals.LastNameUser;
+            Session_Name.Text = Globals.LastNameUser + " " + Globals.NameUser;
             Menu.Text = Globals.LastNameUser;
             Menu.Image = Globals.ProfilUser;
+            // Dans le constructeur ou dans la méthode `Load` du formulaire parent
+            this.Resize += MainForm_Resize;
             MaximizeWithTaskbar();
         }
 
@@ -102,26 +110,51 @@ namespace Login_User
             UpU.Profil.Image = Globals.ProfilUser;
             UpU.ShowDialog();
         }
+       
+
+        private void Dashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.MdiParent = this;
+            AdjustMDIChild(dashboard);
+            dashboard.WindowState = FormWindowState.Maximized;
+            dashboard.Show();
+        }
+
+        private void AdjustMDIChild(Form childForm)
+        {
+            // Calcul de l'espace disponible
+            int xOffset = DashMenu.Width;
+            int yOffset = MenuStrip.Height;
+            int availableWidth = this.ClientSize.Width - xOffset;
+            int availableHeight = this.ClientSize.Height - yOffset;
+
+            // Ajuster la position et la taille du formulaire enfant
+            childForm.Location = new Point(xOffset, yOffset);
+            childForm.Size = new Size(availableWidth, availableHeight);
+
+            // Optionnel : Définir l'enfant en mode Maximized pour qu'il occupe tout l'espace disponible
+            childForm.WindowState = FormWindowState.Maximized;
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null)
+            {
+                AdjustMDIChild(this.ActiveMdiChild);
+            }
+        }
+
         private void Menu_DropDownOpened(object sender, EventArgs e)
         {
-            Menu.ForeColor = Color.FromArgb(19,140,172);
-            
+            Menu.ForeColor = Color.FromArgb(19, 140, 172);
+
         }
 
         private void Menu_DropDownClosed(object sender, EventArgs e)
         {
             Menu.ForeColor = Color.White;
-            
-        }
 
-        private void Fichier_DropDownOpened(object sender, EventArgs e)
-        {
-            Fichier.ForeColor = Color.FromArgb(19, 140, 172);
-        }
-
-        private void Fichier_DropDownClosed(object sender, EventArgs e)
-        {
-            Fichier.ForeColor = Color.White;
         }
 
         private void Facturation_DropDownOpened(object sender, EventArgs e)
@@ -144,14 +177,24 @@ namespace Login_User
             Stock.ForeColor = Color.White;
         }
 
-        private void Paramètres_DropDownOpened(object sender, EventArgs e)
+        private void Settings_DropDownClosed(object sender, EventArgs e)
         {
-            Paramètres.ForeColor = Color.FromArgb(19, 140, 172);
+            Settings.ForeColor = Color.White;
         }
 
-        private void Paramètres_DropDownClosed(object sender, EventArgs e)
+        private void Settings_DropDownOpened(object sender, EventArgs e)
         {
-            Paramètres.ForeColor = Color.White;
+            Settings.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
+        private void File_DropDownClosed(object sender, EventArgs e)
+        {
+            File.ForeColor = Color.White;
+        }
+
+        private void File_DropDownOpened(object sender, EventArgs e)
+        {
+            File.ForeColor = Color.FromArgb(19, 140, 172);
         }
     }
 }

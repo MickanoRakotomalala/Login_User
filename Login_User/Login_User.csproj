@@ -371,6 +371,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbCSharpDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -420,6 +426,9 @@
     <Compile Include="ManageUser.Designer.cs">
       <DependentUpon>ManageUser.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forgot_password.resx">
       <DependentUpon>Forgot_password.cs</DependentUpon>
     </EmbeddedResource>
@@ -491,6 +500,8 @@
     <Content Include="Properties\Asset\Edit_user.png" />
     <Content Include="Properties\Asset\Drop_Down.png" />
     <Content Include="Properties\Asset\AccountMenu.ico" />
+    <Content Include="Properties\Asset\Dashboard.ico" />
+    <Content Include="Properties\Asset\Dashboard2.ico" />
     <Content Include="Properties\Asset\Menu_White.ico" />
     <Content Include="Properties\Asset\Menu.ico" />
     <Content Include="Properties\Asset\User_list.ico" />
