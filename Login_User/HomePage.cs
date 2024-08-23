@@ -104,12 +104,50 @@ namespace Login_User
         }
         private void Menu_DropDownOpened(object sender, EventArgs e)
         {
-            Menu.ForeColor = Color.Teal;
+            Menu.ForeColor = Color.FromArgb(19,140,172);
+            
         }
 
         private void Menu_DropDownClosed(object sender, EventArgs e)
         {
             Menu.ForeColor = Color.White;
+            
         }
+
+        private void Fichier_DropDownOpened(object sender, EventArgs e)
+        {
+            Fichier.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
+        private void Fichier_DropDownClosed(object sender, EventArgs e)
+        {
+            Fichier.ForeColor = Color.White;
+        }
+
+        private void Facturation_DropDownOpened(object sender, EventArgs e)
+        {
+            Facturation.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
+        private void Facturation_DropDownClosed(object sender, EventArgs e)
+        {
+            Facturation.ForeColor = Color.White;
+        }
+
+        private void Stock_DropDownOpened(object sender, EventArgs e)
+        {
+            Stock.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
+        private void Stock_DropDownClosed(object sender, EventArgs e)
+        {
+            Stock.ForeColor = Color.White;
+        }
+
+        private void Paramètres_DropDownOpened(object sender, EventArgs e)
+        {
+            Paramètres.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
     }
 }
