@@ -59,8 +59,7 @@ namespace Login_User
             InitializeComponent();
             this.Load += new EventHandler(HomePage_Load);
             this.IsMdiContainer = true;
-
-            this.MainMenuStrip = new MenuStrip();
+            this.AutoScroll = false;
             this.Controls.Add(MenuStrip);
             this.Controls.Add(DashMenu);
         }
@@ -71,7 +70,6 @@ namespace Login_User
             Menu.Text = Globals.LastNameUser;
             Menu.Image = Globals.ProfilUser;
             // Dans le constructeur ou dans la méthode `Load` du formulaire parent
-            this.Resize += MainForm_Resize;
             MaximizeWithTaskbar();
         }
 
@@ -116,34 +114,22 @@ namespace Login_User
         {
             Dashboard dashboard = new Dashboard();
             dashboard.MdiParent = this;
-            AdjustMDIChild(dashboard);
-            dashboard.WindowState = FormWindowState.Maximized;
+
+            // Calculer l'espace disponible en fonction des MenuStrip
+            int availableWidth = this.ClientSize.Width - DashMenu.Width;
+            int availableHeight = this.ClientSize.Height - MenuStrip.Height;
+
+            // Ajuster la taille de la fenêtre enfant
+            dashboard.Size = new Size(availableWidth, availableHeight);
+
+            // Placer la fenêtre enfant à l'origine (0, 0)
+            dashboard.Location = new Point(DashMenu.Width, MenuStrip.Height);
+
+            this.AutoScroll = false;
+            //dashboard.WindowState = FormWindowState.Maximized;
             dashboard.Show();
         }
 
-        private void AdjustMDIChild(Form childForm)
-        {
-            // Calcul de l'espace disponible
-            int xOffset = DashMenu.Width;
-            int yOffset = MenuStrip.Height;
-            int availableWidth = this.ClientSize.Width - xOffset;
-            int availableHeight = this.ClientSize.Height - yOffset;
-
-            // Ajuster la position et la taille du formulaire enfant
-            childForm.Location = new Point(xOffset, yOffset);
-            childForm.Size = new Size(availableWidth, availableHeight);
-
-            // Optionnel : Définir l'enfant en mode Maximized pour qu'il occupe tout l'espace disponible
-            childForm.WindowState = FormWindowState.Maximized;
-        }
-
-        private void MainForm_Resize(object sender, EventArgs e)
-        {
-            if (this.ActiveMdiChild != null)
-            {
-                AdjustMDIChild(this.ActiveMdiChild);
-            }
-        }
 
         private void Menu_DropDownOpened(object sender, EventArgs e)
         {
@@ -195,6 +181,16 @@ namespace Login_User
         private void File_DropDownOpened(object sender, EventArgs e)
         {
             File.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
+        private void Dashboard_DropDownOpened(object sender, EventArgs e)
+        {
+            Dashboard.ForeColor = Color.FromArgb(19, 140, 172);
+        }
+
+        private void Dashboard_DropDownClosed(object sender, EventArgs e)
+        {
+            Dashboard.ForeColor = Color.White;
         }
     }
 }

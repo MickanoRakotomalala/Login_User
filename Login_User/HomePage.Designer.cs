@@ -56,6 +56,7 @@
             // 
             this.MenuStrip.AutoSize = false;
             this.MenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.MenuStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Menu,
             this.File,
@@ -222,6 +223,7 @@
             this.DashMenu.AutoSize = false;
             this.DashMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.DashMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.DashMenu.GripMargin = new System.Windows.Forms.Padding(0);
             this.DashMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Dashboard});
             this.DashMenu.Location = new System.Drawing.Point(0, 0);
@@ -266,6 +268,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.DashMenu;
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
