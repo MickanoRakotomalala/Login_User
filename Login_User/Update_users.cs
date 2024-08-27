@@ -33,6 +33,7 @@ namespace Login_User
         public ManageUser manageUser;
         public HomePage homePage;
         public Login login;
+        public Menu menu;
         public Update_users(ManageUser manageUser)
         {
             InitializeComponent();
@@ -53,6 +54,13 @@ namespace Login_User
             this.FormBorderStyle = FormBorderStyle.None;
             this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             this.login = login;
+        }        
+        public Update_users(Menu menu)
+        {
+            InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            this.menu = menu;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using Guna.UI2;
+﻿using Guna.UI2.WinForms;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;

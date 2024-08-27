@@ -39,9 +39,18 @@
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Sidebar = new System.Windows.Forms.Panel();
+            this.slogan = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.mdiPanelChild = new System.Windows.Forms.Panel();
+            this.factureToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.factureProformaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.journalDeVenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeFactureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificationDePrixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.etatDeStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entréeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Navbar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Sidebar.SuspendLayout();
@@ -88,15 +97,22 @@
             // 
             // Session_Name
             // 
+            this.Session_Name.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Session_Name.ForeColor = System.Drawing.Color.Black;
             this.Session_Name.Name = "Session_Name";
-            this.Session_Name.Size = new System.Drawing.Size(150, 22);
+            this.Session_Name.Size = new System.Drawing.Size(160, 22);
             this.Session_Name.Text = "Session_Name";
+            this.Session_Name.Click += new System.EventHandler(this.Session_Name_Click);
             // 
             // Logout
             // 
+            this.Logout.Font = new System.Drawing.Font("Calisto MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Logout.Image = global::Login_User.Properties.Resources.LogoutBlack;
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(150, 22);
+            this.Logout.Size = new System.Drawing.Size(160, 22);
             this.Logout.Text = "Déconnexion";
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // fichierToolStripMenuItem
             // 
@@ -107,6 +123,11 @@
             // 
             // factureToolStripMenuItem
             // 
+            this.factureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.factureToolStripMenuItem1,
+            this.factureProformaToolStripMenuItem,
+            this.journalDeVenteToolStripMenuItem,
+            this.listeFactureToolStripMenuItem});
             this.factureToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.factureToolStripMenuItem.Name = "factureToolStripMenuItem";
             this.factureToolStripMenuItem.Size = new System.Drawing.Size(79, 39);
@@ -114,6 +135,10 @@
             // 
             // stockToolStripMenuItem
             // 
+            this.stockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.etatDeStockToolStripMenuItem,
+            this.entréeToolStripMenuItem,
+            this.sortieToolStripMenuItem});
             this.stockToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
             this.stockToolStripMenuItem.Size = new System.Drawing.Size(48, 39);
@@ -121,6 +146,8 @@
             // 
             // paramToolStripMenuItem
             // 
+            this.paramToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modificationDePrixToolStripMenuItem});
             this.paramToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.paramToolStripMenuItem.Name = "paramToolStripMenuItem";
             this.paramToolStripMenuItem.Size = new System.Drawing.Size(73, 39);
@@ -129,6 +156,7 @@
             // Sidebar
             // 
             this.Sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
+            this.Sidebar.Controls.Add(this.slogan);
             this.Sidebar.Controls.Add(this.pictureBox1);
             this.Sidebar.Controls.Add(this.btnDashboard);
             this.Sidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -137,12 +165,23 @@
             this.Sidebar.Size = new System.Drawing.Size(200, 450);
             this.Sidebar.TabIndex = 1;
             // 
+            // slogan
+            // 
+            this.slogan.Font = new System.Drawing.Font("Calisto MT", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slogan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.slogan.Location = new System.Drawing.Point(12, 108);
+            this.slogan.Name = "slogan";
+            this.slogan.Size = new System.Drawing.Size(170, 23);
+            this.slogan.TabIndex = 2;
+            this.slogan.Text = "Shop Mada";
+            this.slogan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Login_User.Properties.Resources.LogoShop;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 14);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(42, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(111, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -171,6 +210,54 @@
             this.mdiPanelChild.Size = new System.Drawing.Size(600, 407);
             this.mdiPanelChild.TabIndex = 2;
             // 
+            // factureToolStripMenuItem1
+            // 
+            this.factureToolStripMenuItem1.Name = "factureToolStripMenuItem1";
+            this.factureToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.factureToolStripMenuItem1.Text = "Facture";
+            // 
+            // factureProformaToolStripMenuItem
+            // 
+            this.factureProformaToolStripMenuItem.Name = "factureProformaToolStripMenuItem";
+            this.factureProformaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.factureProformaToolStripMenuItem.Text = "Facture Proforma";
+            // 
+            // journalDeVenteToolStripMenuItem
+            // 
+            this.journalDeVenteToolStripMenuItem.Name = "journalDeVenteToolStripMenuItem";
+            this.journalDeVenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.journalDeVenteToolStripMenuItem.Text = "Journal de Vente";
+            // 
+            // listeFactureToolStripMenuItem
+            // 
+            this.listeFactureToolStripMenuItem.Name = "listeFactureToolStripMenuItem";
+            this.listeFactureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeFactureToolStripMenuItem.Text = "Liste Facture";
+            // 
+            // modificationDePrixToolStripMenuItem
+            // 
+            this.modificationDePrixToolStripMenuItem.Name = "modificationDePrixToolStripMenuItem";
+            this.modificationDePrixToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.modificationDePrixToolStripMenuItem.Text = "Modification de prix";
+            // 
+            // etatDeStockToolStripMenuItem
+            // 
+            this.etatDeStockToolStripMenuItem.Name = "etatDeStockToolStripMenuItem";
+            this.etatDeStockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.etatDeStockToolStripMenuItem.Text = "Etat de Stock";
+            // 
+            // entréeToolStripMenuItem
+            // 
+            this.entréeToolStripMenuItem.Name = "entréeToolStripMenuItem";
+            this.entréeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entréeToolStripMenuItem.Text = "Entrée";
+            // 
+            // sortieToolStripMenuItem
+            // 
+            this.sortieToolStripMenuItem.Name = "sortieToolStripMenuItem";
+            this.sortieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sortieToolStripMenuItem.Text = "Sortie";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +267,7 @@
             this.Controls.Add(this.mdiPanelChild);
             this.Controls.Add(this.Navbar);
             this.Controls.Add(this.Sidebar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
@@ -211,5 +299,14 @@
         private System.Windows.Forms.ToolStripMenuItem factureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paramToolStripMenuItem;
+        private System.Windows.Forms.Label slogan;
+        private System.Windows.Forms.ToolStripMenuItem factureToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem factureProformaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem journalDeVenteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeFactureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem etatDeStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificationDePrixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entréeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sortieToolStripMenuItem;
     }
 }
