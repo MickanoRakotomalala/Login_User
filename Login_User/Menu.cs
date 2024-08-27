@@ -16,56 +16,42 @@ namespace Login_User
         {
             InitializeComponent();
             this.IsMdiContainer = true;
-
-            InitializeSidebar();
-            InitializeNavbar();
-
-        }
-        private void InitializeSidebar()
-        {
-            Panel sidebar = new Panel();
-            sidebar.Dock = DockStyle.Left;
-            sidebar.Width = 200;
-            sidebar.BackColor = Color.Gray;
-
-            Button dashboard = new Button();
-            dashboard.Text = "Tableau de bord";
-            dashboard.Dock = DockStyle.Top;
-
-            Button reception = new Button();
-            reception.Text = "Reception";
-            reception.Dock = DockStyle.Top;
-
-            // Ajouter les boutons à la sidebar
-            sidebar.Controls.Add(dashboard);
-            sidebar.Controls.Add(reception);
-
-            // Ajouter la sidebar au formulaire principal
-            this.Controls.Add(sidebar);
         }
 
-        private void InitializeNavbar()
+        private void btnDashboard_Click(object sender, EventArgs e)
         {
-            Panel navbar = new Panel();
-            navbar.Dock = DockStyle.Top;
-            navbar.Height = 50;
-            navbar.BackColor = Color.DarkBlue;
+            Dashboard dashboard = new Dashboard();
+            OpenChildForm(dashboard);
+        }
 
-            Label title = new Label();
-            title.Text = "Fichier";
-            title.ForeColor = Color.White;
-            title.Dock = DockStyle.Left;
-            title.TextAlign = ContentAlignment.MiddleCenter;
+        private Form activeForm = null;
 
-            Button logoutButton  = new Button();
-            logoutButton.Text = "Déconnexion";
-            logoutButton.Dock = DockStyle.Right;
-            logoutButton.Click += (s, e) => { this.Close(); };
+        private void OpenChildForm(Form childForm)
+        {
+            // Fermer le formulaire enfant actuel s'il existe
+            if (activeForm != null)
+                activeForm.Close();
 
-            navbar.Controls.Add(logoutButton);
-            navbar.Controls.Add(title);
+            activeForm = childForm;
 
-            this.Controls.Add(navbar);
+            // Configurer le formulaire enfant pour l'imbriquer dans mainPanel
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Ajouter le formulaire enfant au panneau principal
+            this.mdiPanelChild.Controls.Add(childForm);
+            this.mdiPanelChild.Tag = childForm;
+
+            // Afficher le formulaire enfant
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            OpenChildForm(dashboard);
         }
     }
 }
