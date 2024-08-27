@@ -75,19 +75,18 @@ namespace Login_User
                 Globals.Supervisor = reader["Supervisor"].ToString();
                 Globals.Admin = reader["Admin"].ToString();
 
-                HomePage homePage = new HomePage(this);              
+                Menu menu = new Menu(this);              
                 // Lecture des données de l'image sous forme de tableau de bytes
                 byte[] imageData = (byte[])reader["Profil"];
 
                 // Conversion du tableau de bytes en image
                 using (MemoryStream ms = new MemoryStream(imageData))
                 {
-                  homePage.Session_Name.Image = Image.FromStream(ms);
                   Globals.ProfilUser = Image.FromStream(ms);
                 }
 
                 this.Hide();
-                homePage.ShowDialog();
+                menu.ShowDialog();
                 this.Close();
             }
             else

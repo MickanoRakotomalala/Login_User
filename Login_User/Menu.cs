@@ -12,6 +12,13 @@ namespace Login_User
 {
     public partial class Menu : Form
     {
+        private Login login;
+        public Menu(Login login)
+        {
+            InitializeComponent();
+            this.IsMdiContainer = true;
+            this.login = login;
+        }        
         public Menu()
         {
             InitializeComponent();
@@ -52,6 +59,12 @@ namespace Login_User
         {
             Dashboard dashboard = new Dashboard();
             OpenChildForm(dashboard);
+
+            Name_User.Text = Globals.LastNameUser;
+            Name_User.Image = Globals.ProfilUser;
+
+            Session_Name.Text = Globals.NameUser + " " + Globals.LastNameUser;
+            Session_Name.Image = Globals.ProfilUser;
         }
     }
 }

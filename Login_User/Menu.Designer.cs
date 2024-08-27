@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.Navbar = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.nameUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sessionNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.déconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Name_User = new System.Windows.Forms.ToolStripMenuItem();
+            this.Session_Name = new System.Windows.Forms.ToolStripMenuItem();
+            this.Logout = new System.Windows.Forms.ToolStripMenuItem();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.factureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Sidebar = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -59,8 +63,11 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nameUserToolStripMenuItem,
-            this.fichierToolStripMenuItem});
+            this.Name_User,
+            this.fichierToolStripMenuItem,
+            this.factureToolStripMenuItem,
+            this.stockToolStripMenuItem,
+            this.paramToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -68,28 +75,28 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "OptionNavbar";
             // 
-            // nameUserToolStripMenuItem
+            // Name_User
             // 
-            this.nameUserToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.nameUserToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sessionNameToolStripMenuItem,
-            this.déconnexionToolStripMenuItem});
-            this.nameUserToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.nameUserToolStripMenuItem.Name = "nameUserToolStripMenuItem";
-            this.nameUserToolStripMenuItem.Size = new System.Drawing.Size(79, 39);
-            this.nameUserToolStripMenuItem.Text = "Name_User";
+            this.Name_User.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Name_User.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Session_Name,
+            this.Logout});
+            this.Name_User.ForeColor = System.Drawing.Color.White;
+            this.Name_User.Name = "Name_User";
+            this.Name_User.Size = new System.Drawing.Size(79, 39);
+            this.Name_User.Text = "Name_User";
             // 
-            // sessionNameToolStripMenuItem
+            // Session_Name
             // 
-            this.sessionNameToolStripMenuItem.Name = "sessionNameToolStripMenuItem";
-            this.sessionNameToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.sessionNameToolStripMenuItem.Text = "Session_Name";
+            this.Session_Name.Name = "Session_Name";
+            this.Session_Name.Size = new System.Drawing.Size(150, 22);
+            this.Session_Name.Text = "Session_Name";
             // 
-            // déconnexionToolStripMenuItem
+            // Logout
             // 
-            this.déconnexionToolStripMenuItem.Name = "déconnexionToolStripMenuItem";
-            this.déconnexionToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.déconnexionToolStripMenuItem.Text = "Déconnexion";
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(150, 22);
+            this.Logout.Text = "Déconnexion";
             // 
             // fichierToolStripMenuItem
             // 
@@ -97,6 +104,27 @@
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
             this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 39);
             this.fichierToolStripMenuItem.Text = "Fichier";
+            // 
+            // factureToolStripMenuItem
+            // 
+            this.factureToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.factureToolStripMenuItem.Name = "factureToolStripMenuItem";
+            this.factureToolStripMenuItem.Size = new System.Drawing.Size(79, 39);
+            this.factureToolStripMenuItem.Text = "Facturation";
+            // 
+            // stockToolStripMenuItem
+            // 
+            this.stockToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(48, 39);
+            this.stockToolStripMenuItem.Text = "Stock";
+            // 
+            // paramToolStripMenuItem
+            // 
+            this.paramToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.paramToolStripMenuItem.Name = "paramToolStripMenuItem";
+            this.paramToolStripMenuItem.Size = new System.Drawing.Size(73, 39);
+            this.paramToolStripMenuItem.Text = "Paramètre";
             // 
             // Sidebar
             // 
@@ -123,11 +151,14 @@
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(140)))), ((int)(((byte)(172)))));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.Location = new System.Drawing.Point(3, 142);
+            this.btnDashboard.Image = global::Login_User.Properties.Resources.Dashboard;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(12, 150);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(194, 31);
+            this.btnDashboard.Size = new System.Drawing.Size(162, 41);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Tableau de bord";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
@@ -149,6 +180,7 @@
             this.Controls.Add(this.mdiPanelChild);
             this.Controls.Add(this.Navbar);
             this.Controls.Add(this.Sidebar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu";
@@ -171,10 +203,13 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel mdiPanelChild;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem nameUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Name_User;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sessionNameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem déconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Session_Name;
+        private System.Windows.Forms.ToolStripMenuItem Logout;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem factureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem paramToolStripMenuItem;
     }
 }
