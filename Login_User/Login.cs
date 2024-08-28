@@ -169,23 +169,23 @@ namespace Login_User
             this.Close();
         }
 
-        private void ShowPw_Click(object sender, EventArgs e)
-        {
-            if (Password.UseSystemPasswordChar == true)
-            {
-                HidePassword.BringToFront();
-                Password.UseSystemPasswordChar = false;
-            }
-        }
+        //private void ShowPw_Click(object sender, EventArgs e)
+        //{
+        //    if (Password.UseSystemPasswordChar == true)
+        //    {
+        //        HidePassword.BringToFront();
+        //        Password.UseSystemPasswordChar = false;
+        //    }
+        //}
 
-        private void HidePassword_Click(object sender, EventArgs e)
-        {
-            if (Password.UseSystemPasswordChar == false)
-            {
-                ShowPw.BringToFront();
-                Password.UseSystemPasswordChar = true;
-            }
-        }
+        //private void HidePassword_Click(object sender, EventArgs e)
+        //{
+        //    if (Password.UseSystemPasswordChar == false)
+        //    {
+        //        ShowPw.BringToFront();
+        //        Password.UseSystemPasswordChar = true;
+        //    }
+        //}
 
         private void ManageUser_DoubleClick(object sender, EventArgs e)
         {
@@ -216,6 +216,18 @@ namespace Login_User
         {
             signup signup = new signup(this);
             signup.ShowDialog();
+        }
+
+        private void ShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPassword.Checked == true)
+            {
+                Password.UseSystemPasswordChar = false;
+            }
+            else if (ShowPassword.Checked == false)
+            {
+                Password.UseSystemPasswordChar = true;
+            }
         }
     }
 }
